@@ -66,7 +66,7 @@ jobs:
         if: ${{ github.ref_name == 'main' }}
         run: | 
           cd $GITHUB_WORKSPACE/web/_build
-          git push
+          git push -f
         
       - name: Push develop
         if: ${{ github.ref_name == 'develop' }}

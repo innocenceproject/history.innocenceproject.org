@@ -35,6 +35,7 @@ sass:
   sass_dir: ../_sass # This is relative to "source" variable, not working direcotry
 
 include: [pages]
+exclude: [_build]
 
 disable_disk_cache: true
 
@@ -46,12 +47,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://docker.test" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ten7
 github_username: ten7
 
 collections:
   posts:
     output: true
-    
-    
