@@ -55,8 +55,11 @@ jobs:
       - name: Commit changes
         run: |
           cd $GITHUB_WORKSPACE/web/_build
+          touch .nojekyll
           git config --global user.email "madeline.holland@ten7.com"
           git config --global user.name "Madeline Holland"
+          echo $(ls)
+          git add .
           git commit -a -m "Automated build from commit: $GITHUB_SHA"
           
       - name: Deploy main
