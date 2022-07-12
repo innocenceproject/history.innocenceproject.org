@@ -48,7 +48,9 @@ jobs:
       
       # Build Jekyll
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: |
+          cd $GITHUB_WORKSPACE/web
+          bundle exec jekyll build
         
       - name: Commit changes
         run: |
