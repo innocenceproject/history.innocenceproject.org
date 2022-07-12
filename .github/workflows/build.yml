@@ -37,6 +37,7 @@ jobs:
         with:
           bundler-cache: true
           working-directory: web
+          ruby-version: '3.0'
           
       # Set Jekyll to build into _build
       - name: Replace build directory
