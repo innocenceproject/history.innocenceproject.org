@@ -1,0 +1,26 @@
+---
+flightdeck_debug: yes
+flightdeck_web:
+  vhosts:
+    - name: "docker.test"
+      docroot: "/var/www/web"
+      aliases: 
+        - "example.test"
+      env:
+        - name: "T7_SITE_ENVIRONMENT"
+          value: "docker"
+  # For Docker for macOS or Windows, you need to provide your IP address.
+  #
+  # For macOS, you can create an alias of your loopback (127.0.0.1) address
+  # with the following command:
+  #
+  # sudo ifconfig en0 alias 10.254.254.254 255.255.255.0
+  #
+  # If you are running Linux and sharing your .env with mixed-OS team members,
+  # you can also create a URL alias using the following:
+  #
+  # sudo ip -4 addr add 10.254.254.254/32 dev lo
+  xdebug:
+    enabled: "{{ lookup('env', 'PHP_XDEBUG_ENABLED') | default(false, true) }}"
+    autostart: yes
+    remoteHost: 10.254.254.254

@@ -1,0 +1,12 @@
+# The docker-compose.override.yml file can be used to make local changes
+# to the configuration set in the base docker-compose.yml file.
+# See https://docs.docker.com/compose/extends for more information.
+#
+# It is recommended you do *not* track docker-compose.override.yml in your
+# repo. Instead, .gitignore it so that devs can make customizations.
+#
+version: '3'
+services:
+  web:
+    #volumes:
+     #- ./build:/var/www/web:cached

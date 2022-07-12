@@ -1,0 +1,57 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# Build theme settings
+theme: minima
+
+# List of plugins to use
+plugins:
+  - jekyll-feed
+  
+# Build output location for local development
+destination: /var/www/web
+
+# Set build paths
+source: .
+collections_dir: collections
+plugins_dir: _plugins
+layouts_dir: _layouts
+data_dir: _data
+includes_dir: _includes
+sass:
+  sass_dir: ../_sass # This is relative to "source" variable, not working direcotry
+
+include: [pages]
+
+disable_disk_cache: true
+
+# Site metadata
+title: Innocence Project Site
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://docker.test" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ten7
+github_username: ten7
+
+collections:
+  posts:
+    output: true
+    
+    
