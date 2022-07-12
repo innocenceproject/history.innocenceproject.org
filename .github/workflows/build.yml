@@ -55,16 +55,18 @@ jobs:
       - name: Commit changes
         run: |
           cd $GITHUB_WORKSPACE/web/_build
-          git commit --author="${{ github.actor }}" -a -m "Automated build from commit: $GITHUB_SHA"
+          git config --global user.email "madeline.holland@ten7.com"
+          git config --global user.name "Madeline Holland"
+          git commit -a -m "Automated build from commit: $GITHUB_SHA"
           
       - name: Deploy main
         if: ${{ github.ref_name == 'main' }}
         run: | 
           cd $GITHUB_WORKSPACE/web/_build
-          git push --author="${{ github.actor }}"
+          git push
         
       - name: Push develop
         if: ${{ github.ref_name == 'develop' }}
         run: |
           cd $GITHUB_WORKSPACE/web/_build
-          git push --author="${{ github.actor }}" --force origin HEAD:gh-pages-develop
+          git push --force origin HEAD:gh-pages-develop
