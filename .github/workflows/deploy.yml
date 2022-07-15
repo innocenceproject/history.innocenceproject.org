@@ -16,21 +16,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  setup:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
- 
-      # Set up Ruby environment
-      - name: Setup Ruby Pkgs
-        uses: ruby/setup-ruby-pkgs@v1.32.0
-        with:
-          bundler-cache: true
-          working-directory: web
-          ruby-version: '3.0'
   clone:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -44,6 +29,20 @@ jobs:
         with:
           ref: gh-pages
           path: web/_build
+
+  setup:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+
+      # Set up Ruby environment
+      - name: Setup Ruby Pkgs
+        uses: ruby/setup-ruby-pkgs@v1.32.0
+        with:
+          bundler-cache: true
+          working-directory: web
+          ruby-version: '3.0'
   
   build:
     # The type of runner that the job will run on
