@@ -47,7 +47,7 @@ jobs:
           cd $GITHUB_WORKSPACE/web
         
       - name: Build Preview or Develop 
-        if: inputs.branch == ('develop' || 'preview')
+        if: github.ref_name == ('develop' || 'preview')
         run: |
           cd $GITHUB_WORKSPACE/web
           bundle config set --local path 'vendor/bundle'
