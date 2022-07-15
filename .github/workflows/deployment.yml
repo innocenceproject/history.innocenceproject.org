@@ -27,6 +27,21 @@ jobs:
         with:
           ref: gh-pages
           path: web/_build
+        if: github.ref_name == 'main'
+        
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-pages-${{ github.ref_name }}
+          path: web/_build
+        if: github.ref_name != 'main'
+          
+     - name: Git Clean
+        run: | 
+          cd $GITHUB_WORKSPACE/web
+          git clean -fd
+          cd $GITHUB_WORKSPACE/web/_build
+          git clean -fd
+          cd $GITHUB_WORKSPACE/web
           
       - name: Setup Ruby Pkgs
         uses: ruby/setup-ruby-pkgs@v1.32.0
@@ -34,17 +49,6 @@ jobs:
           bundler-cache: true
           working-directory: web
           ruby-version: '3.0'
-          
-      - name: Checkout branch
-        run: git checkout ${{ github.ref_name }}
-        
-      - name: Git Clean
-        run: | 
-          cd $GITHUB_WORKSPACE/web
-          git clean -fd
-          cd $GITHUB_WORKSPACE/web/_build
-          git clean -fd
-          cd $GITHUB_WORKSPACE/web
         
       - name: Build Preview or Develop 
         if: github.ref_name == ('develop' || 'preview')
@@ -52,8 +56,8 @@ jobs:
           cd $GITHUB_WORKSPACE/web
           bundle config set --local path 'vendor/bundle'
           bundle install
-          bundle exec jekyll clean
-          bundle exec jekyll build --config _config.yml,_config_dev.yml --destination $GITHUB_WORKSPACE/web/_build
+          bundle exec jekyll clean --destination $GITHUB_WORKSPACE/web/_build
+          bundle exec jekyll build --config _config.yml,_config_dev.yml --destination _build
         
       # Build Main branch
       - name: Build main
