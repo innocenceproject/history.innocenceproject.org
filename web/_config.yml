@@ -34,18 +34,33 @@ includes_dir: _includes
 sass:
   sass_dir: ../_sass # This is relative to "source" variable, not working direcotry
 
+# Make sure to explicitly include the pages directory
 include: [pages]
-exclude: ["_build","vendor","Gemfile","Gemfile.lock"]
 
-disable_disk_cache: true
+# List of files and directories to exclude from processing when building the site.
+exclude:
+  - _build # Only used on GitHub CI
+  - vendor # Ruby Jekyll dependencies
+  - Gemfile # Jekyll site dependency definitions
+  - Gemfile.lock # Version lock.
+  - *.gitkeep # Used to keep folders from being culled by Git
+
+# Disk cache has issues with the Docker setup, so we disable it.
+disable_disk_cache: true 
 
 # Site metadata
-title: Innocence Project Site
+#  Note:
+#    These files do not update inside the Docker container when changed
+#    Run 'docker compose restart' to update its state inside the container 
+#    Then restart building with 'bundle exec jekyll build --watch'
+#
+title: Innocence Project History
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+# These two are important for GitHub, do not change until ready! 
 url: "https://ten7.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/history.innocenceproject.org" # the subpath of your site, e.g. /blog
 twitter_username: ten7

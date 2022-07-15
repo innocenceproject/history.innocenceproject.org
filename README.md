@@ -6,11 +6,26 @@ docker compose build               # Build the custom Docker container.
 docker compose up -d               # Start it.
 docker compose web /bin/bash       # Enter the container (by default at /var/www)
 
-cd src                             # Change directory to /var/www/src (outside the container this is 'web')
-bundle install                     # Install Ruby dependencies and Jekyll from the Gemfile.
-bundle exec jekyll build --watch   # Build the site using jekyll, rebuilding automatically when changes are made.
+# Change directory to /var/www/src (outside the container this is 'web')
+cd src                             
+# Install Ruby dependencies and Jekyll from the Gemfile.
+bundle install                     
+# Build the site using jekyll, rebuilding automatically when changes are made.
+# --config overrides config optons in _config.yml with the same ones in _config_dev.yml
+bundle exec jekyll build --config _config.yml,_config_dev.yml --watch
 ```
 
+### Checking a build from GitHub locally:
+
+When pushing to the Develop branch the CI builds the site on GitHub using the same process that is used for the live site. But instead of the site building to the actual site, it pushes the resultant build (build artifacts) to the [gh-pages-develop](https://github.com/ten7/history.innocenceproject.org/tree/gh-pages-develop) branch on GitHub. 
+Steps to check the build:
+  1. Download the [zip of that branch](https://github.com/ten7/history.innocenceproject.org/archive/refs/heads/gh-pages-develop.zip) and unzip to the "site"
+  2. Unzip the files inside the folder inside to the `site` folder.
+    - The site build is in <zip file>/<folder that doesn't matter>/<here>
+  3. Start the docker container.
+  4. Do _not_ run `bundle exec jekyll build`
+  5. Instead go to `history.innocenceproject.test` to see the built site.
+  
 ### Notes: 
 - Prefix all `jekyll` commands with `bundle exec` to run them. 
 - Any changes made to _config.yml won't be detected by `jekyll build --watch`

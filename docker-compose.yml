@@ -5,7 +5,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./web:/var/www/src:cached
+      - ./web:/var/www/src:cached # Source Directory
+      - ./site:/var/www/web:cached # Build directory
       - ./db-backups:/var/www/db-backups:cached
       - ./flight-deck.yml:/config/web/flightdeck-web.yml
     environment:

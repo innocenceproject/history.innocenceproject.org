@@ -5,7 +5,7 @@ flightdeck_web:
     - name: "docker.test"
       docroot: "/var/www/web"
       aliases: 
-        - "history.test"
+        - "history.innocenceproject.test"
       env:
         - name: "T7_SITE_ENVIRONMENT"
           value: "docker"
