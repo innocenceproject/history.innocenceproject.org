@@ -18,8 +18,8 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
-      - uses: setup.yml
-      - uses: build.yml
+      - uses: ./.github/actions/setup.yml
+      - uses: ./.github/actions/build.yml
         with:
           git-email: "madeline.holland@ten7.com"
           git-username: "madeline-holland"
