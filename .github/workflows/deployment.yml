@@ -44,6 +44,7 @@ jobs:
           cd $GITHUB_WORKSPACE/web
           bundle config set --local path 'vendor/bundle'
           bundle install
+          bundle exec jekyll clean
           bundle exec jekyll build --config _config.yml,_config_dev.yml --destination $GITHUB_WORKSPACE/web/_build
         
       # Build Main branch
@@ -53,6 +54,7 @@ jobs:
           cd $GITHUB_WORKSPACE/web
           bundle config set --local path 'vendor/bundle'
           bundle install
+          bundle exec jekyll clean
           bundle exec jekyll build
         
       - name: Commit changes
@@ -63,9 +65,10 @@ jobs:
           git config --global user.name ${{ env.GH_USER }}
           git add .
           git commit -a -m "Automated build from commit: $GITHUB_SHA"
+        continue-on-error: true
          
       - name: Deploy main
-        if: ${{ github.ref_name == 'main' }}
+        if: ${{ github.ref_name == 'main' }} 
         run: | 
           cd $GITHUB_WORKSPACE/web/_build
           git push -f
