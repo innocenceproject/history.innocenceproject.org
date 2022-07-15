@@ -1,5 +1,4 @@
-# TEN7 Jekyll Site Basics
----
+# History of the Innocence Project
 
 ### To use this repo:
 ```
@@ -20,7 +19,7 @@ bundle exec jekyll build --watch   # Build the site using jekyll, rebuilding aut
   - See docker-compose.override.example to map that folder outside the container if needed.
 
 ### Next steps:
-See the (jekyll)[https://jekyllrb.com/docs/] documentation for info on Jekyll.
+See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
 
 ---
 ### Repository setup:
