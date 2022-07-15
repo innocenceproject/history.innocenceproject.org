@@ -44,6 +44,8 @@ exclude:
   - Gemfile # Jekyll site dependency definitions
   - Gemfile.lock # Version lock.
   - *.gitkeep # Used to keep folders from being culled by Git
+  - *.gitignore # Just in case this is accidentily in the repo
+  - CNAME # Used for Domains by GitHub
 
 # Disk cache has issues with the Docker setup, so we disable it.
 disable_disk_cache: true 

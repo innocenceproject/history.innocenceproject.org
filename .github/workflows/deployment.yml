@@ -38,6 +38,14 @@ jobs:
       - name: Checkout branch
         run: git checkout ${{ github.ref_name }}
         
+      - name: Git Clean
+        run: | 
+          cd $GITHUB_WORKSPACE/web
+          git clean -fd
+          cd $GITHUB_WORKSPACE/web/_build
+          git clean -fd
+          cd $GITHUB_WORKSPACE/web
+        
       - name: Build Preview or Develop 
         if: inputs.branch == ('develop' || 'preview')
         run: |
