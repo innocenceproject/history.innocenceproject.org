@@ -21,8 +21,8 @@ theme: minima
 plugins:
   - jekyll-feed
   
-# Build output location for local development
-destination: /var/www/web
+# Build output location for GitHub
+destination: _build
 
 # Set build paths
 source: .

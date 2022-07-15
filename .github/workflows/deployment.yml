@@ -1,0 +1,43 @@
+# TEN7 Jekyll Deployment Workflow
+name: Deployment
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: 
+      - main
+      - develop
+      - preview
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: setup.yml
+      - uses: build.yml
+        with:
+          git-email: "madeline.holland@ten7.com"
+          git-username: "madeline-holland"
+         
+      - name: Deploy main
+        if: ${{ github.ref_name == 'main' }}
+        run: | 
+          cd $GITHUB_WORKSPACE/web/_build
+          git push -f
+          
+      - name: Push develop
+        if: ${{ github.ref_name == 'develop' }}
+        run: |
+          cd $GITHUB_WORKSPACE/web/_build
+          git push --force origin HEAD:gh-pages-develop
+          
+      - name: Push preview
+        if: ${{ github.ref_name == 'preview' }}
+        run: |
+          cd $GITHUB_WORKSPACE/web/_build
+          git push --force origin HEAD:gh-pages-preview
