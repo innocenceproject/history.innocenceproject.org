@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v3
         if: github.ref_name != 'main'
         with:
-          ref: ${{ format('{{gh-pages-{0}}}',github.ref_name }}
+          ref: ${{ format('{{gh-pages-{0}}}',github.ref_name) }}
           path: web/_build
 
           
