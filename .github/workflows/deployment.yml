@@ -1,6 +1,9 @@
 # TEN7 Jekyll Deployment Workflow
 name: Deployment
 
+env:
+  GH_USER: madeline-holland
+  GH_USER_EMAIL: madeline.holland@ten7.com
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -9,7 +12,6 @@ on:
       - main
       - develop
       - preview
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -20,15 +22,47 @@ jobs:
     steps:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      
       - uses: actions/checkout@v3
         with:
           ref: gh-pages
           path: web/_build
-      - uses: ./.github/actions/setup.yml
-      - uses: ./.github/actions/build.yml
+          
+      - name: Setup Ruby Pkgs
+        uses: ruby/setup-ruby-pkgs@v1.32.0
         with:
-          git-email: "madeline.holland@ten7.com"
-          git-username: "madeline-holland"
+          bundler-cache: true
+          working-directory: web
+          ruby-version: '3.0'
+          
+      - name: Checkout branch
+        run: git checkout ${{ github.ref_name }}
+        
+      - name: Build Preview or Develop 
+        if: inputs.branch == ('develop' || 'preview')
+        run: |
+          cd $GITHUB_WORKSPACE/web
+          bundle config set --local path 'vendor/bundle'
+          bundle install
+          bundle exec jekyll build --config _config.yml,_config_dev.yml --destination $GITHUB_WORKSPACE/web/_build
+        
+      # Build Main branch
+      - name: Build main
+        if: github.ref_name == 'main'
+        run: | 
+          cd $GITHUB_WORKSPACE/web
+          bundle config set --local path 'vendor/bundle'
+          bundle install
+          bundle exec jekyll build
+        
+      - name: Commit changes
+        run: |
+          cd $GITHUB_WORKSPACE/web/_build
+          touch .nojekyll
+          git config --global user.email ${{ env.GH_USER_EMAIL }}
+          git config --global user.name ${{ env.GH_USER }}
+          git add .
+          git commit -a -m "Automated build from commit: $GITHUB_SHA"
          
       - name: Deploy main
         if: ${{ github.ref_name == 'main' }}
