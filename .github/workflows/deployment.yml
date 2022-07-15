@@ -36,7 +36,7 @@ jobs:
           path: web/_build
 
           
-     - name: Git Clean
+      - name: Git Clean
         run: | 
           cd $GITHUB_WORKSPACE/web
           git clean -fd
