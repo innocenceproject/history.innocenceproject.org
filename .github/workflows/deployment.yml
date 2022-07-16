@@ -36,13 +36,11 @@ jobs:
           path: web/_build
 
           
-      - name: Git Clean
+      - name: Git clean build folder
         run: | 
-          cd $GITHUB_WORKSPACE/web
-          git clean -fd
           cd $GITHUB_WORKSPACE/web/_build
           git clean -fd
-          cd $GITHUB_WORKSPACE/web
+          cd $GITHUB_WORKSPACE
           
       - name: Setup Ruby Pkgs
         uses: ruby/setup-ruby-pkgs@v1.32.0
