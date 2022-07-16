@@ -9,6 +9,10 @@ web/.jekyll-metadata
 web/.bundle/
 web/vendor/
 
+# Ignore build directory
+site/
+!site/.gitkeep
+
 # Databases #
 #############
 db-backups/*.zip
