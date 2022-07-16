@@ -33,13 +33,6 @@ jobs:
           ref: gh-pages
           path: web/_build
 
-      - name: Checkout dev / preview build repo
-        if: github.ref_name == ('develop' || 'preview')
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ format('gh-pages-{0}', github.ref_name) }}
-          path: web/_build
-
       - name: Setup Ruby Pkgs
         uses: ruby/setup-ruby-pkgs@v1.32.0
         with:
