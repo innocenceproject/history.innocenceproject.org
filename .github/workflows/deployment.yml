@@ -41,11 +41,11 @@ jobs:
         with:
           node-version: 18.6.x
           cache: npm
-          cache-dependency-path: ${{ env.REPO_DIR }}/package-lock.json
+          cache-dependency-path: ${{ env.WEBROOT }}/package-lock.json
 
       - name: Install
         run: |
-          cd ${{ env.REPO_DIR }}
+          cd ${{ env.WEBROOT }}
           npm ci
 
       - name: Setup Ruby Pkgs
