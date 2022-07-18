@@ -24,8 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          mkdir ${{ env.REPO_SUBDIR }}
-          mkdir ${{ env.BUILD_SUBDIR }}
+          mkdir ${GITHUB_WORKSPACE}${{ env.REPO_SUBDIR }}
+          mkdir ${GITHUB_WORKSPACE}${{ env.BUILD_SUBDIR }}
  
       - name: Checkout Repo
         uses: actions/checkout@v3
