@@ -1,0 +1,48 @@
+// navbar
+.navbar {
+    display: flex;
+    height: $navbar-height;
+}
+
+.navbar-brand {
+    align-items: center;
+}
+
+.navbar-item {
+    padding-left: 1.5rem;
+}
+
+.navbar-item img {
+    max-height: 3rem;
+    transform: translateX(-25px);
+}
+
+.logo-divider {
+    border-left: 2px solid #000;
+    height: 2rem;
+    position: absolute;
+    left: 139px;
+}
+
+.nav-header {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    width: 7rem;
+    line-height: 1.1;
+    transform: translateX(-25px);
+    letter-spacing: -0.02em;
+}
+
+.nav-button {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: $color-purple !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    height: $navbar-height;
+    width: 6rem;
+}

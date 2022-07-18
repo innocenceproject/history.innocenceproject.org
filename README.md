@@ -9,7 +9,9 @@ docker compose web /bin/bash       # Enter the container (by default at /var/www
 # Change directory to /var/www/src (outside the container this is 'web')
 cd src                             
 # Install Ruby dependencies and Jekyll from the Gemfile.
-bundle install                     
+bundle install
+# Install the NPM Dependencies.
+npm ci
 # Build the site using jekyll, rebuilding automatically when changes are made.
 # --config overrides config optons in _config.yml with the same ones in _config_dev.yml
 bundle exec jekyll build --config _config.yml,_config_dev.yml --watch
@@ -27,11 +29,11 @@ Steps to check the build:
   5. Instead go to `history.innocenceproject.test` to see the built site.
   
 ### Notes: 
-- Prefix all `jekyll` commands with `bundle exec` to run them. 
+- Prefix all `jekyll` commands with `bundle exec` to run them in `/var/www/src` inside the container. 
 - Any changes made to _config.yml won't be detected by `jekyll build --watch`
- - You must Control-C the jekyll process and restart it manually to update changes to that file.
- - Files are built to /var/www/data inside the container. 
-  - See docker-compose.override.example to map that folder outside the container if needed.
+ - You must Control/Command-C the jekyll process and restart it manually to update changes to that file.
+ - Files are built to /var/www/web inside the container. 
+   - This is the `site` folder outside the container.
 
 ### Next steps:
 See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
@@ -40,6 +42,7 @@ See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
 ### Repository setup:
 ```
 . (This folder)       
+├── assets            |Site fonts, JS scripts, and images
 ├── db-backups        |Unused  (here if needed)
 ├── scripts           |Scripts (if needed)        
 ├── site              |Site build directory [/var/www/web]

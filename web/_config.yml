@@ -34,8 +34,8 @@ includes_dir: _includes
 sass:
   sass_dir: _sass # This is relative to "source" variable, not working direcotry
 
-# Make sure to explicitly include the pages directory
-include: [pages]
+# Make sure to explicitly include the pages and assets directories
+include: [pages,assets]
 
 # List of files and directories to exclude from processing when building the site.
 exclude:
@@ -46,6 +46,11 @@ exclude:
   - "*.gitkeep" # Used to keep folders from being culled by Git
   - "*.gitignore" # Just in case
   - CNAME # Used for Domains by GitHub
+  - gemfiles # gem
+  - vendor # Node dependencies
+  - node_modules
+  - package-lock.json
+  - package.json
 
 # Disk cache has issues with the Docker setup, so we disable it.
 disable_disk_cache: true 
@@ -71,3 +76,8 @@ github_username: ten7
 collections:
   posts:
     output: true
+  timeline-blocks:
+    order:
+      - 1992-our-founding.md
+    output: false
+
