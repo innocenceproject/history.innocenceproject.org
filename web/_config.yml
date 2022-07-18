@@ -22,7 +22,7 @@ plugins:
   - jekyll-feed
   
 # Build output location for GitHub
-destination: _build
+destination: ../../build
 
 # Set build paths
 source: .

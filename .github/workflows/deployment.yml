@@ -6,6 +6,7 @@ env:
   GH_USER_EMAIL: madeline.holland@ten7.com
   BUILD_DIR: ${GITHUB_WORKSPACE}/build
   REPO_DIR: ${GITHUB_WORKSPACE}/src
+  WEBROOT: ${GITHUB_WORKSPACE}/src/web
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -25,43 +26,57 @@ jobs:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          path: ${{ env.REPO_DIR }}
 
       - name: Checkout build repo
         if: github.ref_name == 'main'
         uses: actions/checkout@v3
         with:
           ref: gh-pages
-          path: web/_build
+          path: ${{ env.BUILD_DIR }}
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.6.x
+          cache: npm
+          cache-dependency-path: ${{ env.REPO_DIR }}/package-lock.json
+
+      - name: Install
+        run: |
+          cd ${{ env.REPO_DIR }}
+          npm ci
 
       - name: Setup Ruby Pkgs
         uses: ruby/setup-ruby-pkgs@v1.32.0
         with:
           bundler-cache: true
-          working-directory: web
+          working-directory: ${{ env.WEBROOT }}
           ruby-version: '3.0'
         
       - name: Build Preview or Develop 
         if: github.ref_name == ('develop' || 'preview')
         run: |
-          cd $GITHUB_WORKSPACE/web
+          cd ${{ env.WEBROOT }}
           bundle config set --local path 'vendor/bundle'
+          npm install
           bundle install
-          bundle exec jekyll clean --destination _build
-          bundle exec jekyll build --config _config.yml,_config_dev.yml --destination _build
+          JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config_dev.yml --destination ${{ env.BUILD_DIR }}
         
       # Build Main branch
       - name: Build main
         if: github.ref_name == 'main'
         run: | 
-          cd $GITHUB_WORKSPACE/web
+          cd ${{ env.WEBROOT }}
           bundle config set --local path 'vendor/bundle'
           bundle install
           bundle exec jekyll clean
-          bundle exec jekyll build
+          JEKYLL_ENV=production bundle exec jekyll build
         
       - name: Commit changes
         run: |
-          cd $GITHUB_WORKSPACE/web/_build
+          cd ${{ env.BUILD_DIR }}
           touch .nojekyll
           git config --global user.email ${{ env.GH_USER_EMAIL }}
           git config --global user.name ${{ env.GH_USER }}
@@ -72,17 +87,17 @@ jobs:
       - name: Deploy main
         if: ${{ github.ref_name == 'main' }} 
         run: | 
-          cd $GITHUB_WORKSPACE/web/_build
+          cd ${{ env.BUILD_DIR }}
           git push -f
           
       - name: Push develop
         if: ${{ github.ref_name == 'develop' }}
         run: |
-          cd $GITHUB_WORKSPACE/web/_build
+          cd ${{ env.BUILD_DIR }}
           git push --force origin HEAD:gh-pages-develop
           
       - name: Push preview
         if: ${{ github.ref_name == 'preview' }}
         run: |
-          cd $GITHUB_WORKSPACE/web/_build
+          cd ${{ env.BUILD_DIR }}
           git push --force origin HEAD:gh-pages-preview
