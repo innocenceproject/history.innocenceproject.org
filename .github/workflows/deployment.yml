@@ -23,7 +23,8 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - run: mkdir ${{ env.REPO_DIR }}
+
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
