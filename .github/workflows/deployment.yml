@@ -4,9 +4,9 @@ name: Deployment
 env:
   GH_USER: madeline-holland
   GH_USER_EMAIL: madeline.holland@ten7.com
-  BUILD_SUBDIR: /build
-  REPO_SUBDIR: /src
-  WEBROOT_SUBDIR: /src/web
+  BUILD_SUBDIR: build
+  REPO_SUBDIR: src
+  WEBROOT_SUBDIR: src/web
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -24,8 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          mkdir ${GITHUB_WORKSPACE}${{ env.REPO_SUBDIR }}
-          mkdir ${GITHUB_WORKSPACE}${{ env.BUILD_SUBDIR }}
+          mkdir ${GITHUB_WORKSPACE}/${{ env.REPO_SUBDIR }}
+          mkdir ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
  
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -47,7 +47,7 @@ jobs:
 
       - name: Install
         run: |
-          cd ${GITHUB_WORKSPACE}${{ env.WEBROOT_SUBDIR }}
+          cd ${GITHUB_WORKSPACE}/${{ env.WEBROOT_SUBDIR }}
           npm ci
 
       - name: Setup Ruby Pkgs
@@ -60,17 +60,17 @@ jobs:
       - name: Build Preview or Develop 
         if: github.ref_name == ('develop' || 'preview')
         run: |
-          cd ${GITHUB_WORKSPACE}${{ env.WEBROOT_SUBDIR }}
+          cd ${GITHUB_WORKSPACE}/${{ env.WEBROOT_SUBDIR }}
           bundle config set --local path 'vendor/bundle'
           npm install
           bundle install
-          JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config_dev.yml --destination ${GITHUB_WORKSPACE}${{ env.BUILD_SUBDIR }}
+          JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config_dev.yml --destination ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
         
       # Build Main branch
       - name: Build main
         if: github.ref_name == 'main'
         run: | 
-          cd ${GITHUB_WORKSPACE}${{ env.WEBROOT_SUBDIR }}
+          cd ${GITHUB_WORKSPACE}/${{ env.WEBROOT_SUBDIR }}
           bundle config set --local path 'vendor/bundle'
           bundle install
           bundle exec jekyll clean
@@ -78,7 +78,7 @@ jobs:
         
       - name: Commit changes
         run: |
-          cd ${GITHUB_WORKSPACE}${{ env.BUILD_SUBDIR }}
+          cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           touch .nojekyll
           git config --global user.email ${{ env.GH_USER_EMAIL }}
           git config --global user.name ${{ env.GH_USER }}
@@ -89,17 +89,17 @@ jobs:
       - name: Deploy main
         if: ${{ github.ref_name == 'main' }} 
         run: | 
-          cd ${GITHUB_WORKSPACE}${{ env.BUILD_SUBDIR }}
+          cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           git push -f
           
       - name: Push develop
         if: ${{ github.ref_name == 'develop' }}
         run: |
-          cd ${GITHUB_WORKSPACE}${{ env.BUILD_SUBDIR }}
+          cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           git push --force origin HEAD:gh-pages-develop
           
       - name: Push preview
         if: ${{ github.ref_name == 'preview' }}
         run: |
-          cd ${GITHUB_WORKSPACE}${{ env.BUILD_SUBDIR }}
+          cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           git push --force origin HEAD:gh-pages-preview
