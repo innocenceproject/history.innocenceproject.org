@@ -32,7 +32,7 @@ layouts_dir: _layouts
 data_dir: _data
 includes_dir: _includes
 sass:
-  sass_dir: ../_sass # This is relative to "source" variable, not working direcotry
+  sass_dir: _sass # This is relative to "source" variable, not working direcotry
 
 # Make sure to explicitly include the pages directory
 include: [pages]
