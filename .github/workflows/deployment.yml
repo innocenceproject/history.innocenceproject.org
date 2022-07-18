@@ -5,11 +5,11 @@ env:
   GH_USER: madeline-holland
   GH_USER_EMAIL: madeline.holland@ten7.com
   BUILD_SUBDIR: /build
-  BUILD_DIR: ${GITHUB_WORKSPACE}${{env.BUILD_SUBDIR}}
+  BUILD_DIR: ${GITHUB_WORKSPACE}/build
   REPO_SUBDIR: /src
-  REPO_DIR: ${GITHUB_WORKSPACE}${{env.REPO_SUBDIR}}
-  WEBROOT_SUBDIR: ${{env.REPO_SUBDIR}}/web
-  WEBROOT: ${GITHUB_WORKSPACE}${{env.WEBROOT_SUBDIR}}
+  REPO_DIR: ${GITHUB_WORKSPACE}/src
+  WEBROOT_SUBDIR: /src/web
+  WEBROOT: ${GITHUB_WORKSPACE}/src/web
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
