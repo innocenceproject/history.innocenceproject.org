@@ -24,8 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo ${{ env.REPO_DIR }}
-          echo ${{ env.BUILD_DIR }}
           mkdir ${{ env.REPO_DIR }}
           mkdir ${{ env.BUILD_DIR }}
  
@@ -33,9 +31,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.ref_name }}
-          path: ${{ env.REPO_DIR }}
-          
-      - run: ls ${{ env.REPO_DIR }}
+          path: src # This is from the root of the 'container' rather than the root
 
       - name: Checkout build repo
         if: github.ref_name == 'main'
