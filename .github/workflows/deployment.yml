@@ -24,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo ${{ env.REPO_DIR }}
+          echo ${{ env.BUILD_DIR }}
           mkdir ${{ env.REPO_DIR }}
           mkdir ${{ env.BUILD_DIR }}
  
