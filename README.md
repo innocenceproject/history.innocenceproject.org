@@ -41,8 +41,9 @@ See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
 ```
 . (This folder)       
 ├── db-backups        |Unused  (here if needed)
-├── scripts           |Scripts (if needed)         
-├── web               |Jekyll source dir
+├── scripts           |Scripts (if needed)        
+├── site              |Site build directory [/var/www/web]
+├── web               |Jekyll source dir [/var/www/src]
 │   ├── collections   |Collections dir (like posts)
 │   ├── _data         |Additional data that can be used by Jekyll (is reloaded live)
 │   ├── _includes     |Snippets "partials" of code that can be included in layouts and posts.
