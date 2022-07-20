@@ -72,11 +72,15 @@ description: >- # this means to ignore newlines until "twitter_username:"
 twitter_username: ten7
 github_username: ten7
 
+feed:
+  disable_in_development: true
+
 collections:
   posts:
-    output: true
+    output: false
   timeline-blocks:
     order:
       - 1992-our-founding.md
     output: false
+
 
