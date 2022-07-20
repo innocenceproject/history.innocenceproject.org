@@ -1,0 +1,23 @@
+{
+  "name": "innocence-project-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bundle exec jekyll serve --livereload",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "bulma": "^0.9.4",
+    "cssnano": "^5.1.12",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-scss": "^4.3.0"
+  }
+}

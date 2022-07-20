@@ -1,0 +1,119 @@
+// hero
+.hero-subtitle {
+    text-align: center;
+
+    font-size: 29px;
+    font-weight: 700;
+    color: #000;
+    line-height: 115%;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+}
+
+.hero-body {
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    text-align: center;
+
+    font-size: 70px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 70px;
+}
+
+.hero-highlight {
+    background-color: $color-purple;
+    padding: 0.5rem;
+}
+
+.hero-spacer {
+    display: block;
+    height: 1.25rem;
+    width: auto;
+}
+
+.masonry {
+    display: flex;
+    flex-flow: column wrap;
+    gap: $hero-masonry-gap;
+    box-sizing: border-box;
+    height: 19rem;
+    width: 100vw;
+
+    .brick {
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-grow: 0;
+        justify-content: center;
+    }
+
+    &.top {
+        .brick {
+            // setting heights so they meet evenly at the bottom
+            &:nth-child(1) {
+                height: calc(40% - #{$hero-masonry-gap});
+                // width: calc(30% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(2) {
+                height: calc(60% - #{$hero-masonry-gap});
+                // width: calc(30% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(3) {
+                height: calc(50% - #{$hero-masonry-gap});
+                // width: calc(30% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(4) {
+                height: calc(50% - #{$hero-masonry-gap});
+                // width: calc(30% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(5) {
+                height: calc(30% - #{$hero-masonry-gap});
+                // width: calc(30% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(6) {
+                height: calc(70% - #{$hero-masonry-gap});
+                // width: calc(30% - #{$hero-masonry-gap});
+            }
+        }
+    }
+
+    &.bottom {
+        .brick {
+            // setting heights so they meet evenly at the bottom
+            &:nth-child(1) {
+                height: calc(60% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(2) {
+                height: calc(40% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(3) {
+                height: calc(50% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(4) {
+                height: calc(50% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(5) {
+                height: calc(35% - #{$hero-masonry-gap});
+            }
+
+            &:nth-child(6) {
+                height: calc(65% - #{$hero-masonry-gap});
+            }
+        }
+    }
+}

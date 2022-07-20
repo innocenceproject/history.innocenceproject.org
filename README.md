@@ -4,19 +4,36 @@
 ```
 docker compose build               # Build the custom Docker container.
 docker compose up -d               # Start it.
-docker compose web /bin/bash       # Enter the container (by default at /var/www)
+docker compose exec web /bin/bash  # Enter the container (by default at /var/www)
 
-cd src                             # Change directory to /var/www/src (outside the container this is 'web')
-bundle install                     # Install Ruby dependencies and Jekyll from the Gemfile.
-bundle exec jekyll build --watch   # Build the site using jekyll, rebuilding automatically when changes are made.
+# Change directory to /var/www/src (outside the container this is 'web')
+cd src                             
+# Install Ruby dependencies and Jekyll from the Gemfile.
+bundle install
+# Install the NPM Dependencies.
+npm ci
+# Build the site using jekyll, rebuilding automatically when changes are made.
+# --config overrides config optons in _config.yml with the same ones in _config_dev.yml
+bundle exec jekyll build --config _config.yml,_config_dev.yml --watch
 ```
 
+### Checking a build from GitHub locally:
+
+When pushing to the Develop branch the CI builds the site on GitHub using the same process that is used for the live site. But instead of the site building to the actual site, it pushes the resultant build (build artifacts) to the [gh-pages-develop](https://github.com/ten7/history.innocenceproject.org/tree/gh-pages-develop) branch on GitHub. 
+Steps to check the build:
+  1. Download the [zip of that branch](https://github.com/ten7/history.innocenceproject.org/archive/refs/heads/gh-pages-develop.zip) and unzip to the "site"
+  2. Unzip the files inside the folder inside to the `site` folder.
+    - The site build is in <zip file>/<folder that doesn't matter>/<here>
+  3. Start the docker container.
+  4. Do _not_ run `bundle exec jekyll build`
+  5. Instead go to `history.innocenceproject.test` to see the built site.
+  
 ### Notes: 
-- Prefix all `jekyll` commands with `bundle exec` to run them. 
+- Prefix all `jekyll` commands with `bundle exec` to run them in `/var/www/src` inside the container. 
 - Any changes made to _config.yml won't be detected by `jekyll build --watch`
- - You must Control-C the jekyll process and restart it manually to update changes to that file.
- - Files are built to /var/www/data inside the container. 
-  - See docker-compose.override.example to map that folder outside the container if needed.
+ - You must Control/Command-C the jekyll process and restart it manually to update changes to that file.
+ - Files are built to /var/www/web inside the container. 
+   - This is the `site` folder outside the container.
 
 ### Next steps:
 See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
@@ -25,9 +42,11 @@ See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
 ### Repository setup:
 ```
 . (This folder)       
+├── assets            |Site fonts, JS scripts, and images
 ├── db-backups        |Unused  (here if needed)
-├── scripts           |Scripts (if needed)         
-├── web               |Jekyll source dir
+├── scripts           |Scripts (if needed)        
+├── site              |Site build directory [/var/www/web]
+├── web               |Jekyll source dir [/var/www/src]
 │   ├── collections   |Collections dir (like posts)
 │   ├── _data         |Additional data that can be used by Jekyll (is reloaded live)
 │   ├── _includes     |Snippets "partials" of code that can be included in layouts and posts.

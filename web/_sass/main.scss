@@ -1,0 +1,87 @@
+$color-purple: #5860f4;
+$color-light-beige: #f8f7f0;
+$color-light-beige_2: #f0efe8;
+$color-tan: #dc9d7e;
+$color-accent-blue: #ECEFFC;
+$color-blue: #4368e8;
+$color-gray: #808080;
+$color-light-gray: #ECEFFC;
+$color-white: #fff;
+$color-black: #000;
+$color-copyright-gray: rgba(255,255,255,.5);
+
+$timeline-eyebrow-height: 1.25rem;
+$timeline-description-bullet-height: .65rem;
+
+$navbar-height: 4.5rem;
+$hero-masonry-gap: 0.4rem;
+
+@font-face {
+    font-family: aktiv-grotesk;
+    src: url('/assets/fonts/AktivGrotesk-Bold.otf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: aktiv-grotesk;
+    src: url('/assets/fonts/AktivGrotesk-Regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    font-family: aktiv-grotesk, sans-serif;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: $color-purple;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 3rem 0 1rem 0;
+}
+
+.subtext {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 400;
+    color: #000;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    margin: 3rem 0 4rem 0;
+}
+
+.summary-block {
+    background-color: $color-light-beige;
+}
+
+.victory-seal {
+    height: 150px;
+    width: auto;
+}
+
+.year-dropdown .select:not(.is-multiple):not(.is-loading)::after {
+    // remove bulma icon
+    display: none;
+}
+
+.year-dropdown {
+    select {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: #000;
+        border-radius: 0;
+        border: none;
+        border-bottom: 2px solid $color-purple;
+    }
+
+    .icon img {
+        height: 2rem;
+        width: auto;
+        position: absolute;
+        top: 11px;
+    }
+}

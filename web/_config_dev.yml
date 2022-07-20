@@ -1,0 +1,4 @@
+# Override URL and subpath for Local development
+url: "http://history.innocenceproject.test" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of the site
+destination: /var/www/web
