@@ -13,8 +13,7 @@ bundle install
 # Install the NPM Dependencies.
 npm ci
 # Build the site using jekyll, rebuilding automatically when changes are made.
-# --config overrides config optons in _config.yml with the same ones in _config_dev.yml
-bundle exec jekyll build --config _config.yml,_config_dev.yml --watch
+bundle exec jekyll build --watch --incremental # Add -V (verbose) for more information how long each build step is taking
 ```
 
 ### Checking a build from GitHub locally:
@@ -25,7 +24,7 @@ Steps to check the build:
   2. Unzip the files inside the folder inside to the `site` folder.
     - The site build is in <zip file>/<folder that doesn't matter>/<here>
   3. Start the docker container.
-  4. Do _not_ run `bundle exec jekyll build`
+  4. Do _not_ enter the container or run `bundle exec jekyll build`
   5. Instead go to `history.innocenceproject.test` to see the built site.
   
 ### Notes: 
