@@ -33,13 +33,20 @@ jobs:
           ref: ${{ github.ref_name }}
           path: ${{ env.REPO_SUBDIR }} # This is from the root of the 'container' rather than the root
 
-      - name: Checkout build repo
+      - name: Checkout main build repo
         if: github.ref_name == 'main'
         uses: actions/checkout@v3
         with:
           ref: gh-pages
           path: ${{ env.BUILD_SUBDIR }}
-
+          
+      - name: Checkout dev or preview build repo
+        if: github.ref_name == ('develop' || 'preview')
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages-${{ github.ref_name }}
+          path: ${{ env.BUILD_SUBDIR }}
+          
       - name: Setup node
         uses: actions/setup-node@v3
         with:
