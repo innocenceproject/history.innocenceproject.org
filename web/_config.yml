@@ -21,8 +21,10 @@ theme: minima
 plugins:
   - jekyll-feed
   
-# Build output location for GitHub
-destination: ../../build
+# Set URL and subpath for Local development
+url: "http://history.innocenceproject.test" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of the site
+destination: /var/www/web
 
 # Set build paths
 source: .
@@ -63,13 +65,10 @@ disable_disk_cache: true
 #
 title: Innocence Project History
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until "twitter_username:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-# These two are important for GitHub, do not change until ready! 
-url: "https://ten7.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/history.innocenceproject.org" # the subpath of your site, e.g. /blog
 twitter_username: ten7
 github_username: ten7
 
