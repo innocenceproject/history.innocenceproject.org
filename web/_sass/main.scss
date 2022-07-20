@@ -16,20 +16,6 @@ $timeline-description-bullet-height: .65rem;
 $navbar-height: 4.5rem;
 $hero-masonry-gap: 0.4rem;
 
-@font-face {
-    font-family: aktiv-grotesk;
-    src: url('/assets/fonts/AktivGrotesk-Bold.otf');
-    font-style: normal;
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: aktiv-grotesk;
-    src: url('/assets/fonts/AktivGrotesk-Regular.otf');
-    font-style: normal;
-    font-weight: 400;
-}
-
 body {
     font-family: aktiv-grotesk, sans-serif;
 }
