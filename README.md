@@ -4,7 +4,7 @@
 ```
 docker compose build               # Build the custom Docker container.
 docker compose up -d               # Start it.
-docker compose web /bin/bash       # Enter the container (by default at /var/www)
+docker compose exec web /bin/bash  # Enter the container (by default at /var/www)
 
 # Change directory to /var/www/src (outside the container this is 'web')
 cd src                             
