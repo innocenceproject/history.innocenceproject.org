@@ -71,7 +71,7 @@ jobs:
           bundle config set --local path 'vendor/bundle'
           npm install
           bundle install
-          JEKYLL_ENV=development bundle exec jekyll build --config _config.yml,_config_gh_predev.yml
+          JEKYLL_ENV=development bundle exec jekyll build -V --config _config.yml,_config_gh_predev.yml
         
       # Build Main branch
       - name: Build main
@@ -81,7 +81,7 @@ jobs:
           bundle config set --local path 'vendor/bundle'
           bundle install
           bundle exec jekyll clean
-          JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_gh_main.yml
+          JEKYLL_ENV=production bundle exec jekyll build -V --config _config.yml,_config_gh_main.yml
         
       - name: Commit changes
         run: |
