@@ -87,6 +87,7 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           touch .nojekyll
+          echo "history.innocenceproject.org" > CNAME
           git config --global user.email ${{ env.GH_USER_EMAIL }}
           git config --global user.name ${{ env.GH_USER }}
           git add .
