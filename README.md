@@ -6,12 +6,8 @@ docker compose build               # Build the custom Docker container.
 docker compose up -d               # Start it.
 docker compose exec web /bin/bash  # Enter the container (by default at /var/www)
 
-# Change directory to /var/www/src (outside the container this is 'web')
-cd src                             
-# Install Ruby dependencies and Jekyll from the Gemfile.
-bundle install
-# Install the NPM Dependencies.
-npm ci
+# When you enter the container it will automatically install jekyll and dependencies, but not build the site. 
+
 # Build the site using jekyll, rebuilding automatically when changes are made.
 bundle exec jekyll build --watch --incremental # Add -V (verbose) for more information how long each build step is taking
 ```
