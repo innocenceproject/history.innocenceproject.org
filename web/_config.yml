@@ -15,11 +15,11 @@
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # Build theme settings
-theme: minima
+# theme: minima
 
 # List of plugins to use
-plugins:
-  - jekyll-feed
+# plugins:
+  # - jekyll-feed
   
 # Set URL and subpath for Local development
 url: "http://history.innocenceproject.test" # the base hostname & protocol for your site, e.g. http://example.com
@@ -72,8 +72,8 @@ description: >- # this means to ignore newlines until "twitter_username:"
 twitter_username: ten7
 github_username: ten7
 
-feed:
-  disable_in_development: true
+# feed:
+#   disable_in_development: true
 
 collections:
   timeline-blocks:
