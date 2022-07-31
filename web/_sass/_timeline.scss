@@ -44,10 +44,11 @@
 }
 
 .timeline-header {
+    color: $color-black;
     font-size: 1.75rem;
     font-weight: 700;
     text-align: left;
-    line-height: 0.8rem;
+    line-height: 2.5rem;
     letter-spacing: -0.01em;
     margin-bottom: 2rem;
 }
@@ -57,6 +58,7 @@
 }
 
 .timeline-subheader {
+    color: $color-black;
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -89,7 +91,7 @@
     top: 1px;
 }
 
-.history-beige-block {
+.history-beige2-block {
     background-color: $color-light-beige_2;
 
     .timeline-header {
@@ -173,7 +175,76 @@
 
 }
 
-.restoring-beige-block {
+.restoring-blue-block {
+    background-color: $color-blue;
+
+    .header-container {
+        background-color: $color-accent-blue;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        .header-icon {
+            padding: 1.3rem;
+
+            img {
+                height: auto;
+                max-width: 5rem;
+            }
+        }
+
+        .timeline-header {
+            color: $color-blue;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 0;
+            padding-right: 2.5rem;
+
+            .highlight {
+                color: $color-white;
+                background-color: $color-blue;
+                font-weight: 700;
+                padding: .1rem .25rem 0 .25rem;
+            }
+        }
+    }
+
+    .eyebrow {
+        background-color: $color-blue;
+        margin-bottom: 2rem;
+        border: 1px solid $color-white;
+    }
+
+    .eyebrow-header {
+        color: $color-white;
+    }
+
+    .eyebrow-dot {
+        background-color: $color-white;
+    }
+
+    .description-bullet {
+        background-color: $color-accent-blue;
+    }
+
+    .timeline-description {
+        color: $color-accent-blue;
+    }
+
+    .timeline-subheader {
+        color: $color-white;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+
+        strong {
+            color: $color-white;
+        }
+    }
+
+}
+
+.restoring-beige2-block {
     background-color: $color-light-beige_2;
 
     .header-container {
@@ -258,8 +329,12 @@
         color: $color-white;
     }
 
+    .timeline-description {
+        color: $color-accent-blue;
+    }
+
     .description-bullet {
-        background-color: $color-blue;
+        background-color: $color-accent-blue;
     }
 }
 
@@ -304,7 +379,7 @@
     }
 }
 
-.restoring-beige-blue-block {
+.restoring-beige2-blue-block {
     background-color: $color-light-beige_2;
 
     .header-container {
@@ -409,6 +484,11 @@
 .transforming-beige-block {
     background-color: $color-light-beige;
 
+    .header-icon-solo {
+        max-width: 80px;
+        margin-bottom: 2rem;
+    }
+
     .header-container {
         background-color: $color-light-beige_2;
         display: flex;
@@ -466,8 +546,102 @@
 
 }
 
+.transforming-beige2-block {
+    background-color: $color-light-beige_2;
+
+    .header-container {
+        background-color: $color-light-beige;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        .header-icon {
+            padding: 1.3rem;
+
+            img {
+                height: auto;
+                max-width: 5rem;
+            }
+        }
+
+        .timeline-header {
+            color: $color-purple;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 0;
+            padding-right: 2.5rem;
+
+            .highlight {
+                color: $color-white;
+                background-color: $color-blue;
+                font-weight: 700;
+                padding: .1rem .25rem 0 .25rem;
+            }
+        }
+    }
+
+    .eyebrow {
+        background-color: $color-white;
+        margin-bottom: 2rem;
+
+        &-header {
+            color: $color-black;
+        }
+
+        &-dot {
+            background-color: $color-tan;
+        }
+    }
+
+
+    .description-bullet {
+        background-color: $color-blue;
+    }
+
+    .timeline-header {
+        color: $color-black;
+    }
+
+    .timeline-subheader {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+}
+
 .history-white-block {
     background-color: $color-white;
+
+    .header-icon-solo {
+        max-width: 80px;
+        margin-bottom: 2rem;
+    }
+
+    .header-container {
+        background-color: $color-light-beige;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        .header-icon {
+            padding: 1.3rem;
+
+            img {
+                height: auto;
+                max-width: 5rem;
+            }
+        }
+
+        .timeline-header {
+            color: $color-black;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin: 0;
+            padding: 2.5rem 2.5rem 2.5rem 0;
+        }
+    }
 
     .eyebrow {
         background-color: $color-accent-blue;
@@ -485,6 +659,10 @@
 
     .timeline-subheader {
         color: $color-black;
+    }
+
+    .description-bullet {
+        background-color: $color-blue;
     }
 }
 
@@ -548,4 +726,31 @@
         margin-bottom: 3rem;
     }
 
+}
+
+.transforming-white-block {
+    background-color: $color-white;
+
+    .header-icon-solo {
+        max-width: 80px;
+        margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+        background-color: $color-light-beige;
+        margin-bottom: 2rem;
+    }
+
+    .eyebrow-header {
+        color: $color-black;
+    }
+
+    .eyebrow-dot {
+        background-color: $color-blue;
+    }
+
+    .timeline-subheader {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
 }
