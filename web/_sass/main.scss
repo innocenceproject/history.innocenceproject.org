@@ -2,22 +2,27 @@ $color-purple: #5860f4;
 $color-light-beige: #f8f7f0;
 $color-light-beige_2: #f0efe8;
 $color-tan: #dc9d7e;
-$color-accent-blue: #ECEFFC;
+$color-accent-blue: #eceffc;
 $color-blue: #4368e8;
 $color-gray: #808080;
-$color-light-gray: #ECEFFC;
+$color-light-gray: #eceffc;
 $color-white: #fff;
 $color-black: #000;
-$color-copyright-gray: rgba(255,255,255,.5);
+$color-copyright-gray: rgba(255, 255, 255, 0.5);
 
 $timeline-eyebrow-height: 1.25rem;
-$timeline-description-bullet-height: .65rem;
+$timeline-description-bullet-height: 0.65rem;
 
 $navbar-height: 4.5rem;
 $hero-masonry-gap: 0.4rem;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: aktiv-grotesk, sans-serif;
+    overflow-x: hidden;
 }
 
 .subtitle {
