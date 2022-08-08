@@ -3,13 +3,46 @@ a {
     text-decoration: underline;
 }
 
-.divider {
-    border: 1px solid $color-light-gray;
-    // margin-bottom: 3rem;
+.accent {
+    display: none;
+    padding-right: 15px;
+
+    @include desktop {
+        display: block;
+    }
+
+    &.accent-blue {
+        background-color: $color-accent-blue;
+    }
+
+    &.blue {
+        background-color: $color-blue;
+    }
+
+    &.tan {
+        background-color: $color-tan;
+    }
+
+    &.light-beige {
+        background-color: $color-light-beige;
+    }
+
+    &.light-beige2 {
+        background-color: $color-light-beige_2;
+    }
+
+    &.darker-blue {
+        background-color: $color-darker-blue;
+    }
 }
 
-.spacer {
-    margin-bottom: 3rem;
+.divider {
+    border: 1px solid $color-accent-blue;
+
+    @include desktop {
+        max-width: 1152px;
+        margin: 0 auto;
+    }
 }
 
 .quote-container {
@@ -28,11 +61,9 @@ a {
     width: 2.5rem;
 
     &-svg {
-        
         &.accent-blue {
             color: $color-accent-blue;
         }
-
         &.light-beige {
             color: $color-light-beige;
         }
@@ -72,9 +103,101 @@ a {
     margin-top: 1rem;
 }
 
+.pb-5rem {
+    @include desktop {
+        padding-bottom: 5rem !important;
+    }
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    @include desktop {
+        flex-direction: column;
+        width: 22rem;
+    }
+
+    &.row {
+        @include desktop {
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .header-icon {
+            width: 19rem;
+        }
+
+        .timeline-header {
+            text-align: left;
+            padding: 0 2.5rem 0 0;
+            max-width: 36rem;
+            line-height: 1.3;
+        }
+    }
+
+    &.width-36rem {
+        @include desktop {
+            width: 36rem;
+        }
+    }
+
+    .header-icon {
+        padding: 1.3rem;
+
+        img {
+            height: auto;
+            max-width: 5rem;
+
+            @include desktop {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .timeline-header {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        padding-right: 2.5rem;
+
+        @include desktop {
+            font-size: 1.75rem;
+            line-height: 1.3;
+            text-align: center;
+            padding: 0 2rem 2rem;
+        }
+    }
+}
+
+.year-dropdown .select:not(.is-multiple):not(.is-loading)::after {
+    // remove bulma icon
+    display: none;
+}
+
 .year-dropdown {
     margin-bottom: 3rem;
+
+    select {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: $color-black;
+        border-radius: 0;
+        border: none;
+        border-bottom: 2px solid $color-purple;
+    }
+
+    .icon img {
+        height: 2rem;
+        width: auto;
+        position: absolute;
+        top: 11px;
+    }
 }
+
+
 
 .year-header {
     scroll-margin-top: 55px;
@@ -85,11 +208,22 @@ a {
     line-height: 0.8rem;
     letter-spacing: -0.01em;
     margin: 3rem 0;
+
+    @include desktop {
+        font-size: 3.75rem;
+        margin: 6.75rem 0;
+        margin-left: 5.5rem;
+    }
 }
 
 .header-icon-solo {
-    max-width: 80px;
-    margin-bottom: 2rem;
+    width: 80px;
+    margin-bottom: 1rem;
+
+    @include desktop {
+        width: 29rem;
+        margin-left: 2rem;
+    }
 }
 
 .eyebrow {
@@ -97,12 +231,12 @@ a {
     width: fit-content;
     padding-right: 7px;
     align-items: center;
-    font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
-    line-height: 0;
+    margin-bottom: 3rem;
 
+    @include desktop {
+        margin-bottom: 4rem;
+    }
+    
     &.light-beige {
         background-color: $color-light-beige !important;
     }
@@ -110,6 +244,16 @@ a {
     &-header {
         display: inline;
         padding: 0.1rem 0 0 0.5rem;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        line-height: 0;
+        
+        @include desktop {
+            font-size: 1rem;
+            padding: 0.2rem .3rem 0 .8rem;
+        }
 
         &.black {
             color: $color-black !important;
@@ -121,8 +265,13 @@ a {
     }
 
     &-dot {
-        width: $timeline-eyebrow-height;
-        height: $timeline-eyebrow-height;
+        width: 1.25rem;
+        height: 1.25rem;
+
+        @include desktop {
+            width: 2rem;
+            height: 2rem;
+        }
 
         &.blue {
             background-color: $color-blue !important;
@@ -136,12 +285,17 @@ a {
 
 .timeline-header {
     color: $color-black;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     text-align: left;
     line-height: 2.5rem;
     letter-spacing: -0.01em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+
+    @include desktop {
+        font-size: 2.75rem;
+        margin-left: 2rem;
+    }
 
     &.white {
         color: $color-white;
@@ -149,21 +303,45 @@ a {
 }
 
 .timeline-image {
-    margin-bottom: 1.5rem;
+    .height-450px {
+        @include desktop {
+            height: 450px !important;
+        }
+    }
+
+    &.width-240rem {
+        @include desktop {
+            width: 240rem !important;
+            height: auto !important;
+        };
+    }
 }
 
 .timeline-subheader {
     color: $color-black;
     font-size: 1.2rem;
     margin-bottom: 2rem;
+
+    @include desktop {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+    }
 }
 
 .timeline-description {
     font-size: 0.9rem;
     color: $color-gray;
-    line-height: 1.3 !important;
+    line-height: 1.4 !important;
     letter-spacing: -0.01em;
-    display: inline;
+    margin-top: 1.5rem;
+    
+    @include desktop {
+        font-size: 1.1rem;
+        line-height: 1.6 !important;
+        padding: 0 1.5rem;
+        margin: 0 0 0 0.5rem;
+    }
 }
 
 .timeline-victory-seal {
@@ -172,22 +350,67 @@ a {
     margin-top: -1rem;
     margin-left: auto;
 
+    @include desktop {
+        width: 7rem;
+    }
+
     img {
         width: 100%;
     }
 }
 
 .description-bullet {
-    width: $timeline-description-bullet-height;
-    height: $timeline-description-bullet-height;
+    height: 0.65rem;
+    width: 0.65rem;
     margin-right: 0.2rem;
     display: inline-block;
     position: relative;
     top: 1px;
+
+    @include desktop {
+        height: 1rem;
+        width: 1rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.content-container {
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.timeline-block {
+    padding: 1.75rem 0 2rem 0;
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        max-width: 1152px;
+        padding: 0;
+        margin: 0 auto !important;
+    }
+
+    &-sub-container {
+        max-width: 100%;
+        padding: 1rem 0 0 0;
+
+        @include desktop {
+            padding: 5rem 5rem 2.5rem 3.5rem;
+        }
+    }
 }
 
 .block-black {
     background-color: $color-black;
+
+    img {
+        @include touch {
+            width: 25rem;
+            margin: 0 auto;
+        }
+    }
 
     .timeline-header {
         color: $color-white;
@@ -218,6 +441,7 @@ a {
     }
 
     .highlight {
+        font-style: italic;
         font-weight: 700;
         background-color: $color-blue;
         padding: .2rem .25rem 0 .25rem;
@@ -233,8 +457,38 @@ a {
 
     .timeline-header {
         color: $color-black;
+
+        @include desktop {
+            width: 36rem;
+            margin-top: 1rem;
+            margin-left: 3rem;
+        }
     }
 
+    .timeline-subheader {
+        @include desktop {
+            margin-left: 2rem;
+        }
+    }
+
+    img {
+        &.height-25rem {
+            @include desktop {
+                height: 25rem;
+                width: auto;
+            }
+        }
+    
+        &:nth-child(2) {
+            margin-left: .75rem;
+    
+            @include touch {
+                width: 20rem;
+                margin: 2rem 0 0 0;
+            }
+        }
+    }
+    
     .highlight {
         color: $color-white;
         background-color: $color-blue;
@@ -243,8 +497,7 @@ a {
     }
 
     .eyebrow {
-        background-color: $color-white;
-        margin-bottom: 3rem;
+        background-color: $color-white;        
     }
 
     .eyebrow-header {
@@ -260,31 +513,98 @@ a {
     }
 }
 
+.block-beige-full-image {
+    background-color: $color-light-beige;
+
+    strong {
+        color: $color-black;
+    }
+
+    .header-container {
+        background-color: $color-accent-blue;
+
+        .timeline-header {
+            color: $color-blue;
+
+            .highlight {
+                color: $color-white;
+                background-color: $color-blue;
+                padding: .1rem .25rem 0 .25rem;
+            }
+        }
+    }
+
+    .eyebrow {
+        background-color: $color-white;
+        margin-bottom: 2rem;
+
+        @include desktop {
+            margin-top: 5rem;
+            margin-left: 3.5rem;
+        }
+
+        &-header {
+            color: $color-black;
+        }
+
+        &-dot {
+            background-color: $color-blue;
+        }
+    }
+
+    .timeline-description {
+        color: $color-gray;
+
+        @include desktop {
+            margin: 3rem 0 3rem 5rem;
+            padding: 0 4rem 0 0;
+        }
+    }
+
+    .description-bullet {
+        background-color: $color-blue;
+    }
+
+    .timeline-header {
+        color: $color-black;
+
+        @include desktop {
+            margin: 4rem 0 0 5rem;
+            line-height: 1.2;
+        }
+    }
+
+    .timeline-image {
+        height: inherit;
+        width: inherit;
+
+        img {
+            @include desktop {
+                height: 100%;
+                width: 155rem;
+                background-size: cover;
+            }
+        }
+    }
+
+    .timeline-subheader {
+        color: $color-black;
+
+        @include desktop {
+            margin: 4rem 0 0 5rem;
+            padding-right: 4rem;
+        }
+    }
+}
+
 .block-beige2 {
     background-color: $color-light-beige_2;
 
     .header-container {
         background-color: $color-light-beige;
-        display: flex;
-        align-items: center;
-        margin-bottom: 3rem;
-
-        .header-icon {
-            padding: 1.3rem;
-
-            img {
-                height: auto;
-                max-width: 5rem;
-            }
-        }
 
         .timeline-header {
             color: $color-blue;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.4;
-            margin: 0;
-            padding-right: 2.5rem;
 
             .highlight {
                 color: $color-white;
@@ -301,7 +621,11 @@ a {
 
     .eyebrow {
         background-color: $color-white;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+
+        @include desktop {
+            margin-bottom: 4rem;
+        }
     }
 
     .eyebrow-header {
@@ -324,33 +648,23 @@ a {
         color: $color-white;
     }
 
+    img {
+        @include desktop {
+            height: 100%;
+            width: 75rem;
+            background-size: cover;
+        }
+    }
+
     .header-container {
         background-color: $color-accent-blue;
-        display: flex;
-        align-items: center;
-        margin-bottom: 3rem;
-
-        .header-icon {
-            padding: 1.3rem;
-
-            img {
-                height: auto;
-                max-width: 5rem;
-            }
-        }
 
         .timeline-header {
             color: $color-blue;
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 1.4;
-            margin: 0;
-            padding-right: 2.5rem;
 
             .highlight {
                 color: $color-white;
                 background-color: $color-blue;
-                font-weight: 700;
                 padding: .1rem .25rem 0 .25rem;
             }
         }
@@ -360,6 +674,10 @@ a {
         background-color: $color-blue;
         margin-bottom: 2rem;
         border: 1px solid $color-white;
+
+        @include desktop {
+            margin-bottom: 4rem;
+        }
 
         &-header {
             color: $color-white;
@@ -381,41 +699,118 @@ a {
 
     .timeline-header {
         color: $color-white;
+        @include desktop {
+            color: $color-white;
+            margin: 4rem 3rem 0 2rem;
+            line-height: 1.2;
+        }
+    }
+
+    .timeline-image {
+        height: inherit;
+        width: inherit;
     }
 
     .timeline-subheader {
         color: $color-white;
-        font-size: 1rem;
-        margin-bottom: 3rem;
+        @include desktop {
+            margin: 2rem 3rem 0 2rem;
+        }
+    }
+}
+
+.block-blue-full-image {
+    background-color: $color-blue;
+
+    strong {
+        color: $color-white;
     }
 
+    img {
+        @include desktop {
+            height: 100%;
+            width: 75rem;
+            background-size: cover;
+        }
+    }
+
+    .header-container {
+        background-color: $color-accent-blue;
+
+        .timeline-header {
+            color: $color-blue;
+
+            .highlight {
+                color: $color-white;
+                background-color: $color-blue;
+                padding: .1rem .25rem 0 .25rem;
+            }
+        }
+    }
+
+    .eyebrow {
+        background-color: $color-blue;
+        margin-bottom: 2rem;
+        border: 1px solid $color-white;
+
+        @include desktop {
+            margin-top: 5rem;
+            margin-left: 3.5rem;
+        }
+
+        &-header {
+            color: $color-white;
+        }
+
+        &-dot {
+            background-color: $color-white;
+        }
+    }
+
+
+    .timeline-description {
+        color: $color-accent-blue;
+    }
+
+    .description-bullet {
+        background-color: $color-accent-blue;
+    }
+
+    .timeline-header {
+        color: $color-white;
+        @include desktop {
+            color: $color-white;
+            margin: 4rem 3rem 0 5.5rem;
+            line-height: 1.2;
+        }
+    }
+
+    .timeline-image {
+        height: inherit;
+        width: inherit;
+    }
+
+    .timeline-subheader {
+        color: $color-white;
+
+        @include desktop {
+            margin: 2rem 3rem 0 5.5rem;
+        }
+    }
 }
 
 .block-white {
     background-color: $color-white;
 
     .header-container {
-        background-color: $color-accent-blue;
-        display: flex;
-        align-items: center;
-        margin-bottom: 3rem;
-        
-        .header-icon {
-            padding: 1.3rem;
-
-            img {
-                height: auto;
-                max-width: 5rem;
-            }
-        }
+        background-color: $color-accent-blue;  
 
         .timeline-header {
             color: $color-blue;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.4;
-            margin: 0;
-            padding-right: 2.5rem;
+
+            @include desktop {
+                padding: 0 2rem 0;
+            }
         }
     }
 
@@ -425,6 +820,10 @@ a {
         font-weight: 700;
         padding: .1rem .25rem 0 .25rem;
 
+        @include desktop {
+            padding: 0.2rem 0.25rem 0.1rem 0.25rem;
+        }
+
         &.blue {
             color: $color-white;
             background-color: $color-blue;
@@ -433,7 +832,6 @@ a {
 
     .eyebrow {
         background-color: $color-accent-blue;
-        margin-bottom: 3rem;
     }
 
     .eyebrow-header {
@@ -449,8 +847,117 @@ a {
     }
 
     .timeline-subheader {
-        font-size: 1.2rem;
         margin-bottom: 3rem;
+        
+        &.width-43rem {
+            @include desktop {
+                width: 43rem;
+            }
+        }
+
+        &.width-46rem {
+            @include desktop {
+                width: 46rem;
+            }
+        }
     }
 
+    .timeline-victory-seal {
+        @include desktop {
+            transform: translate(51px, 37px);
+        }
+
+        &.right {
+            @include desktop {
+                transform: translate(-41px, 120px);
+            }
+        }
+    }
+
+}
+
+.block-white-full-image {
+    background-color: $color-white;
+
+    strong {
+        color: $color-black;
+    }
+
+    img {
+        width: 15rem;
+
+        @include desktop {
+            height: 100%;
+            width: 35rem;
+            background-size: cover;
+        }
+    }
+
+    .header-container {
+        background-color: $color-accent-blue;
+    }
+
+    .highlight {
+        color: $color-black;
+        background-color: $color-accent-blue;
+        font-weight: 700;
+        padding: .1rem .25rem 0 .25rem;
+
+        @include desktop {
+            padding: 0.2rem 0.25rem 0.1rem 0.25rem;
+        }
+
+        &.blue {
+            color: $color-white;
+            background-color: $color-blue;
+        }
+    }
+
+    .eyebrow {
+        background-color: $color-accent-blue;
+        margin-bottom: 2rem;
+
+        @include desktop {
+            margin-top: 5rem;
+            margin-left: 3.55rem;
+        }
+
+        &-header {
+            color: $color-blue;
+        }
+
+        &-dot {
+            background-color: $color-blue;
+        }
+    }
+
+
+    .timeline-description {
+        color: $color-accent-blue;
+    }
+
+    .description-bullet {
+        background-color: $color-accent-blue;
+    }
+
+    .timeline-header {
+        color: $color-black;
+        @include desktop {
+            margin: 4rem 3rem 0 5.5rem;
+            line-height: 1.2;
+        }
+    }
+
+    .timeline-image {
+        height: inherit;
+        width: inherit;
+    }
+
+    .timeline-subheader {
+        color: $color-black;
+
+        @include desktop {
+            margin: 2rem 3rem 0 5.5rem;
+        }
+    }
 }
