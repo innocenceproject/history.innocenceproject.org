@@ -4,17 +4,23 @@ $color-light-beige_2: #f0efe8;
 $color-tan: #dc9d7e;
 $color-accent-blue: #eceffc;
 $color-blue: #4368e8;
+$color-darker-blue: #294ECE;
 $color-gray: #808080;
 $color-light-gray: #eceffc;
 $color-white: #fff;
 $color-black: #000;
 $color-copyright-gray: rgba(255, 255, 255, 0.5);
 
-$timeline-eyebrow-height: 1.25rem;
-$timeline-description-bullet-height: 0.65rem;
-
 $navbar-height: 4.5rem;
-$hero-masonry-gap: 0.4rem;
+
+:root {
+    --hero-masonry-gap: 0.4rem;
+
+    @include desktop {
+        --hero-masonry-gap: 0.6rem;
+    }
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -22,17 +28,35 @@ html {
 
 body {
     font-family: aktiv-grotesk, sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.container {
+    padding: 0 1.5rem;
+
+    @include desktop {
+        padding: 0;
+        background-color: transparent;
+        max-width: 1152px !important;
+    }
 }
 
 .subtitle {
     text-align: center;
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 700;
     color: $color-purple;
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin: 3rem 0 1rem 0;
+    // padding: 0 1.25rem;
+
+    @include desktop {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin: 3rem 7rem 1rem;
+        padding: 0;
+    }
 }
 
 .subtext {
@@ -43,36 +67,49 @@ body {
     line-height: 24px;
     letter-spacing: -0.01em;
     margin: 3rem 0 4rem 0;
+    // padding: 0 1.25rem;
+
+    @include desktop {
+        margin: 3rem 7rem 4rem;
+        padding: 0;
+        font-size: 22px;
+        line-height: 1.4;
+    }
 }
 
 .summary-block {
     background-color: $color-light-beige;
+    // padding: 0 1.5rem;
+
+    @include desktop {
+        padding: 5rem 5rem 2rem 5rem;
+        margin-bottom: 5.5rem;
+    }
 }
 
 .victory-seal {
-    height: 150px;
-    width: auto;
-}
+    height: auto;
+    width: 6rem;
+    margin: 0 auto 0 auto;
+    padding: 3rem 0 1.5rem 0;
 
-.year-dropdown .select:not(.is-multiple):not(.is-loading)::after {
-    // remove bulma icon
-    display: none;
-}
-
-.year-dropdown {
-    select {
-        font-size: 1.25rem;
-        font-weight: 400;
-        color: #000;
-        border-radius: 0;
-        border: none;
-        border-bottom: 2px solid $color-purple;
+    @include desktop {
+        width: 8rem;
+        padding: 0 0 1rem 0;
     }
+}
 
-    .icon img {
-        height: 2rem;
-        width: auto;
-        position: absolute;
-        top: 11px;
+.victory-header {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: $color-purple;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 3rem 0 2rem 0;
+
+    @include desktop {
+        font-size: 2.75rem;
+        margin: 3rem 7rem 1rem;
     }
 }

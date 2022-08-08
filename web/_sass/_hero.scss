@@ -1,4 +1,15 @@
-// hero
+.hero-body {
+    margin-bottom: 2rem;
+    width: 100vw;
+    
+    @include desktop {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 .hero-subtitle {
     text-align: center;
     font-size: 29px;
@@ -7,11 +18,11 @@
     line-height: 125%;
     letter-spacing: -0.01em;
     margin-bottom: 1.5rem;
-}
 
-.hero-body {
-    margin-bottom: 2rem;
-    width: 100vw;
+    @include desktop {
+        text-align: left;
+        width: fit-content;
+    }
 }
 
 .hero-title {
@@ -21,6 +32,21 @@
     color: #fff;
     letter-spacing: -0.01em;
     line-height: 63px;
+
+    @include desktop {
+        text-align: left;
+        width: fit-content;
+    }
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+        padding-right: 7rem;
+    }
 }
 
 .hero-highlight {
@@ -34,14 +60,35 @@
     width: auto;
 }
 
+.chevron-down {
+    height: 2.25rem;
+    width: 2.25rem;
+    background-color: #ECEFFC;
+    border-radius: 50%;
+    padding: 5px;
+    transform: translate(-88px, 181px);
+    
+    &:hover {
+        cursor: pointer;
+    }
+
+}
+
 .masonry {
     display: flex;
     flex-flow: column wrap;
-    gap: $hero-masonry-gap;
+    gap: var(--hero-masonry-gap);
     box-sizing: border-box;
-    height: 19rem;
     width: 100vw;
-
+    height: 19rem;
+    
+    @include desktop {
+        height: 52rem;
+        width: 54rem;
+        transform: translateY(-$navbar-height);
+        z-index: 100;
+    }
+    
     .brick {
         align-items: center;
         background-size: cover;
@@ -50,39 +97,43 @@
         display: flex;
         flex-grow: 0;
         justify-content: center;
+
+        &.top {
+            background-position: top;
+        }
     }
 
     &.top {
         .brick {
             // setting heights so they meet evenly at the bottom
             &:nth-child(1) {
-                height: calc(40% - #{$hero-masonry-gap});
-                // width: calc(30% - #{$hero-masonry-gap});
+                height: calc(40% - #{var(--hero-masonry-gap)});
+                // width: calc(30% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(2) {
-                height: calc(60% - #{$hero-masonry-gap});
-                // width: calc(30% - #{$hero-masonry-gap});
+                height: calc(60% - #{var(--hero-masonry-gap)});
+                // width: calc(30% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(3) {
-                height: calc(50% - #{$hero-masonry-gap});
-                // width: calc(30% - #{$hero-masonry-gap});
+                height: calc(50% - #{var(--hero-masonry-gap)});
+                // width: calc(30% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(4) {
-                height: calc(50% - #{$hero-masonry-gap});
-                // width: calc(30% - #{$hero-masonry-gap});
+                height: calc(50% - #{var(--hero-masonry-gap)});
+                // width: calc(30% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(5) {
-                height: calc(30% - #{$hero-masonry-gap});
-                // width: calc(30% - #{$hero-masonry-gap});
+                height: calc(30% - #{var(--hero-masonry-gap)});
+                // width: calc(30% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(6) {
-                height: calc(70% - #{$hero-masonry-gap});
-                // width: calc(30% - #{$hero-masonry-gap});
+                height: calc(70% - #{var(--hero-masonry-gap)});
+                // width: calc(30% - #{var(--hero-masonry-gap)});
             }
         }
     }
@@ -91,27 +142,82 @@
         .brick {
             // setting heights so they meet evenly at the bottom
             &:nth-child(1) {
-                height: calc(60% - #{$hero-masonry-gap});
+                height: calc(60% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(2) {
-                height: calc(40% - #{$hero-masonry-gap});
+                height: calc(40% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(3) {
-                height: calc(50% - #{$hero-masonry-gap});
+                height: calc(50% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(4) {
-                height: calc(50% - #{$hero-masonry-gap});
+                height: calc(50% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(5) {
-                height: calc(35% - #{$hero-masonry-gap});
+                height: calc(35% - #{var(--hero-masonry-gap)});
             }
 
             &:nth-child(6) {
-                height: calc(65% - #{$hero-masonry-gap});
+                height: calc(65% - #{var(--hero-masonry-gap)});
+            }
+        }
+    }
+
+    &.desktop {
+        .brick {
+            // setting heights so they meet evenly at the bottom
+            // COLUMN 1
+            &:nth-child(1) {
+                height: calc(22% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(2) {
+                height: calc(18% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(3) {
+                height: calc(40% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(4) {
+                height: calc(20% - #{var(--hero-masonry-gap)});
+            }
+
+            // COLUMN 2
+            &:nth-child(5) {
+                height: calc(28% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(6) {
+                height: calc(28% - #{var(--hero-masonry-gap)});
+            }
+            &:nth-child(7) {
+                height: calc(20% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(8) {
+                height: calc(24% - #{var(--hero-masonry-gap)});
+            }
+
+            // COLUMN 3
+            &:nth-child(9) {
+                height: calc(17% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(10) {
+                height: calc(28% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(11) {
+                height: calc(17% - #{var(--hero-masonry-gap)});
+            }
+
+            &:nth-child(12) {
+                height: calc(38% - #{var(--hero-masonry-gap)});
             }
         }
     }
