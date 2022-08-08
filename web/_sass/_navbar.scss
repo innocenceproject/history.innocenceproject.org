@@ -1,7 +1,13 @@
 // navbar
 .navbar {
     display: flex;
+    justify-content: space-between;
     height: $navbar-height;
+
+    @include desktop {
+        background-color: transparent;
+        z-index: 500;
+    }
 }
 
 .navbar-brand {
@@ -18,10 +24,15 @@
 }
 
 .logo-divider {
-    border-left: 2px solid #000;
+    border-left: 1px solid #000;
     height: 2rem;
     position: absolute;
     left: 139px;
+
+    @include desktop {
+        height: 1.7rem;
+        left: 146px;
+    }
 }
 
 .nav-header {
@@ -32,6 +43,12 @@
     line-height: 1.1;
     transform: translateX(-25px);
     letter-spacing: -0.02em;
+
+    @include desktop {
+        width: auto;
+    transform: translateX(-12px);
+
+    }
 }
 
 .nav-button {
@@ -45,4 +62,17 @@
     border-radius: 0;
     height: $navbar-height;
     width: 6rem;
+    text-decoration: none;
+
+    @include desktop {
+        position: relative;
+        border-radius: 5px;
+        width: 98px;
+        height: 50px;
+        margin-right: 2rem;
+    }
+
+    @include widescreen {
+        margin-right: 4rem;
+    }
 }
