@@ -3030,8 +3030,8 @@ a { color: inherit; text-decoration: underline; }
 
 .block-beige { background-color: #f8f7f0; }
 .block-beige .timeline-header { color: #000; }
-@media screen and (min-width: 1024px) { .block-beige .timeline-header { width: 36rem; margin-top: 1rem; margin-left: 3rem; } }
-@media screen and (min-width: 1024px) { .block-beige .timeline-subheader { margin-left: 2rem; } }
+@media screen and (min-width: 1024px) { .block-beige .timeline-header { width: 36rem; margin-top: 1rem; margin-left: 4rem; } }
+@media screen and (min-width: 1024px) { .block-beige .timeline-subheader { width: 36rem; margin-left: 4rem; } }
 @media screen and (min-width: 1024px) { .block-beige img.height-25rem { height: 25rem; width: auto; } }
 .block-beige img:nth-child(2) { margin-left: .75rem; }
 @media screen and (max-width: 1023px) { .block-beige img:nth-child(2) { width: 20rem; margin: 2rem 0 0 0; } }
@@ -3087,7 +3087,7 @@ a { color: inherit; text-decoration: underline; }
 @media screen and (min-width: 1024px) { .block-blue .timeline-header { color: #fff; margin: 4rem 3rem 0 2rem; line-height: 1.2; } }
 .block-blue .timeline-image { height: inherit; width: inherit; }
 .block-blue .timeline-subheader { color: #fff; }
-@media screen and (min-width: 1024px) { .block-blue .timeline-subheader { margin: 2rem 3rem 0 2rem; } }
+@media screen and (min-width: 1024px) { .block-blue .timeline-subheader { margin: 2rem 3rem 4rem 2rem; } }
 
 .block-blue-full-image { background-color: #4368e8; }
 .block-blue-full-image strong { color: #fff; }
