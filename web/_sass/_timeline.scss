@@ -393,11 +393,18 @@ a {
     }
 
     &-sub-container {
-        max-width: 100%;
+        width: 100%;
+        // max-width: 100%;
         padding: 1rem 0 0 0;
 
         @include desktop {
             padding: 5rem 5rem 2.5rem 3.5rem;
+        }
+    }
+
+    &:last-child {
+        @include desktop {
+            margin-bottom: 6rem !important;
         }
     }
 }
