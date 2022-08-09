@@ -49,6 +49,7 @@ db-backups/*.txt
 ehthumbs.db
 Thumbs.db
 ._*
+.idea
 
 # Vim generated files #
 ######################

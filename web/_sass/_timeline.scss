@@ -468,13 +468,14 @@ a {
         @include desktop {
             width: 36rem;
             margin-top: 1rem;
-            margin-left: 3rem;
+            margin-left: 4rem;
         }
     }
 
     .timeline-subheader {
         @include desktop {
-            margin-left: 2rem;
+            width: 36rem;
+            margin-left: 4rem;
         }
     }
 
@@ -721,7 +722,7 @@ a {
     .timeline-subheader {
         color: $color-white;
         @include desktop {
-            margin: 2rem 3rem 0 2rem;
+            margin: 2rem 3rem 4rem 2rem;
         }
     }
 }
