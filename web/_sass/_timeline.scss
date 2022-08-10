@@ -59,6 +59,9 @@ a {
     grid-area: open-quote;
     align-self: flex-start;
     width: 2.5rem;
+    @include desktop {
+        width: 3.2rem;
+    }
 
     &-svg {
         &.accent-blue {
@@ -75,12 +78,18 @@ a {
     color: $color-blue;
     font-size: 1.2rem;
     line-height: 1.4;
+    @include desktop {
+        font-size: 1.5rem;
+    }
 }
 
 .close-quote {
     grid-area: close-quote;
     align-self: flex-end;
     width: 2.5rem;
+    @include desktop {
+        width: 3.2rem;
+    }
 
     &-svg {
         
@@ -106,6 +115,12 @@ a {
 .pb-5rem {
     @include desktop {
         padding-bottom: 5rem !important;
+    }
+}
+
+.w-85 {
+    @include desktop {
+        width: 85%;
     }
 }
 
@@ -315,6 +330,27 @@ a {
             height: auto !important;
         };
     }
+
+    &.overflow-image {
+        @include desktop {
+            overflow: hidden;
+            position: relative;
+            img {
+                position: absolute;
+                top: -100%;
+                left: 0;
+                right: 0;
+                bottom: -100%;
+                margin: auto;
+            }
+        }
+    }
+    &.height-480px {
+        height: 480px;
+    }
+    &.height-550px {
+        height: 550px;
+    }
 }
 
 .timeline-subheader {
@@ -399,6 +435,12 @@ a {
 
         @include desktop {
             padding: 5rem 5rem 2.5rem 3.5rem;
+        }
+
+        .block-full-image & {
+            @include desktop {
+                padding-bottom: 1rem;
+            }
         }
     }
 
@@ -879,6 +921,14 @@ a {
             @include desktop {
                 transform: translate(-41px, 120px);
             }
+        }
+    }
+
+    .quote-container + .timeline-victory-seal {
+        @include desktop {
+            float: right;
+            transform: translate(51px, -15px);
+            margin-top: -4rem;
         }
     }
 
