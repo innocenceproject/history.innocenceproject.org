@@ -3155,7 +3155,7 @@ a { color: inherit; text-decoration: underline; }
 .block-white-full-image .timeline-subheader { color: #000; }
 @media screen and (min-width: 1024px) { .block-white-full-image .timeline-subheader { margin: 2rem 3rem 0 5.5rem; } }
 
-.sidebar-timeline { display: none; position: absolute; right: 100%; color: #808080; line-height: 2.0; transform: translate(-50px, 0px); height: 4150rem; }
+.sidebar-timeline { display: none; position: absolute; right: 100%; color: #808080; line-height: 2.0; transform: translate(-50px, 0px); height: 4100rem; }
 @media screen and (min-width: 1408px) { .sidebar-timeline { display: block; } }
 .sidebar-timeline a { text-decoration: none; }
 .sidebar-timeline .sticky-container { position: -webkit-sticky; position: sticky; top: 20px; }
