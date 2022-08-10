@@ -2836,9 +2836,9 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus { color: #ee2049 !imp
 
 html { scroll-behavior: smooth; }
 
-body { font-family: aktiv-grotesk, sans-serif; overflow: hidden; }
+body { font-family: aktiv-grotesk, sans-serif; }
 
-.container { padding: 0 1.5rem; }
+.container { position: relative; padding: 0 1.5rem; }
 @media screen and (min-width: 1024px) { .container { padding: 0; background-color: transparent; max-width: 1152px !important; } }
 
 .subtitle { text-align: center; font-size: 2rem; font-weight: 700; color: #5860f4; line-height: 1.1; letter-spacing: -0.01em; margin: 3rem 0 1rem 0; }
@@ -2971,7 +2971,7 @@ a { color: inherit; text-decoration: underline; }
 .year-dropdown select { font-size: 1.25rem; font-weight: 400; color: #000; border-radius: 0; border: none; border-bottom: 2px solid #5860f4; }
 .year-dropdown .icon img { height: 2rem; width: auto; position: absolute; top: 11px; }
 
-.year-header { scroll-margin-top: 55px; font-size: 2.25rem; font-weight: 700; text-align: left; color: #5860f4; line-height: 0.8rem; letter-spacing: -0.01em; margin: 3rem 0; }
+.year-header { scroll-margin-top: 115px; font-size: 2.25rem; font-weight: 700; text-align: left; color: #5860f4; line-height: 0.8rem; letter-spacing: -0.01em; margin: 3rem 0; }
 @media screen and (min-width: 1024px) { .year-header { font-size: 3.75rem; margin: 6.75rem 0; margin-left: 5.5rem; } }
 
 .header-icon-solo { width: 80px; margin-bottom: 1rem; }
@@ -3143,6 +3143,12 @@ a { color: inherit; text-decoration: underline; }
 .block-white-full-image .timeline-image { height: inherit; width: inherit; }
 .block-white-full-image .timeline-subheader { color: #000; }
 @media screen and (min-width: 1024px) { .block-white-full-image .timeline-subheader { margin: 2rem 3rem 0 5.5rem; } }
+
+.sidebar-timeline { display: none; position: absolute; right: 100%; color: #808080; line-height: 2.0; transform: translate(-50px, 0px); height: 5960vh; }
+@media screen and (min-width: 1408px) { .sidebar-timeline { display: block; } }
+.sidebar-timeline a { text-decoration: none; }
+.sidebar-timeline .sticky-container { position: -webkit-sticky; position: sticky; top: 20px; }
+.sidebar-timeline .active { color: #4368e8; font-weight: 700; }
 
 footer { background-color: #000; color: #fff; }
 footer a { color: #fff; font-weight: 700; }
