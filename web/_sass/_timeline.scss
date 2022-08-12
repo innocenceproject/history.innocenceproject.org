@@ -45,6 +45,82 @@ a {
     }
 }
 
+.ml-4rem {
+    margin-left: 4rem !important;
+}
+
+.height-100 {
+    height: 100% !important;
+}
+
+.height-250px {
+    height: 250px !important;
+}
+
+.height-646px {
+    height: 646px !important;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.width-459px {
+    width: 459px !important;
+}
+
+.width-750px {
+    width: 750px !important;
+}
+
+.width-15rem {
+    width: 15rem !important;
+}
+
+.width-16rem {
+    width: 16rem !important;
+}
+
+.width-18rem {
+    width: 18rem !important;
+}
+
+.width-19rem {
+    width: 19rem !important;
+}
+
+.width-50rem {
+    width: 50rem !important;
+}
+
+.mb-neg63px {
+    margin-bottom: -63px !important;
+};
+
+.mr-7rem {
+    margin-right: 7rem !important;
+}
+
+.transformX-40px {
+    transform: translateX(40px);
+}
+
+.transformX-neg97px {
+    transform: translateY(-97px);
+}
+
+.seal-far-right {
+    transform: translate(47px, -48px);
+}
+
+.fit {
+    object-fit: cover;
+}
+
+.fit-left {
+    object-position: left;
+}
+
 .quote-container {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -59,6 +135,9 @@ a {
     grid-area: open-quote;
     align-self: flex-start;
     width: 2.5rem;
+    @include desktop {
+        width: 3.2rem;
+    }
 
     &-svg {
         &.accent-blue {
@@ -75,12 +154,18 @@ a {
     color: $color-blue;
     font-size: 1.2rem;
     line-height: 1.4;
+    @include desktop {
+        font-size: 1.5rem;
+    }
 }
 
 .close-quote {
     grid-area: close-quote;
     align-self: flex-end;
     width: 2.5rem;
+    @include desktop {
+        width: 3.2rem;
+    }
 
     &-svg {
         
@@ -107,6 +192,16 @@ a {
     @include desktop {
         padding-bottom: 5rem !important;
     }
+}
+
+.w-85 {
+    @include desktop {
+        width: 85%;
+    }
+}
+
+.width-36rem {
+    width: 36rem;
 }
 
 .header-container {
@@ -164,10 +259,14 @@ a {
         padding-right: 2.5rem;
 
         @include desktop {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             line-height: 1.3;
             text-align: center;
             padding: 0 2rem 2rem;
+        }
+
+        &.large-font {
+            font-size: 1.6rem
         }
     }
 }
@@ -231,7 +330,7 @@ a {
     width: fit-content;
     padding-right: 7px;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     @include desktop {
         margin-bottom: 4rem;
@@ -295,6 +394,7 @@ a {
     @include desktop {
         font-size: 2.75rem;
         margin-left: 2rem;
+        margin-bottom: 3rem;
     }
 
     &.white {
@@ -314,6 +414,33 @@ a {
             width: 240rem !important;
             height: auto !important;
         };
+    }
+
+    &.overflow-image {
+        @include desktop {
+            overflow: hidden;
+            position: relative;
+            img {
+                position: absolute;
+                top: -100%;
+                left: 0;
+                right: 0;
+                bottom: -100%;
+                margin: auto;
+            }
+        }
+    }
+
+    &.height-480px {
+        height: 480px;
+    }
+    
+    &.height-550px {
+        height: 550px;
+    }
+
+    &.height-614px {
+        height: 614px;
     }
 }
 
@@ -400,6 +527,12 @@ a {
         @include desktop {
             padding: 5rem 5rem 2.5rem 3.5rem;
         }
+
+        .block-full-image & {
+            @include desktop {
+                padding-bottom: 1rem;
+            }
+        }
     }
 
     &:last-child {
@@ -427,7 +560,7 @@ a {
     .eyebrow {
         background-color: $color-black;
         width: fit-content;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         border: 1px solid $color-white;
     }
 
@@ -468,14 +601,24 @@ a {
         @include desktop {
             width: 36rem;
             margin-top: 1rem;
-            margin-left: 4rem;
+            margin-left: 2rem;
+            line-height: 1.2;
+        }
+
+        &.max-width-58rem {
+            max-width: 58rem;
         }
     }
 
     .timeline-subheader {
         @include desktop {
             width: 36rem;
-            margin-left: 4rem;
+            margin-left: 2rem;
+            line-height: 1.3;
+        }
+
+        &.line-height-wide {
+            line-height: 1.4;
         }
     }
 
@@ -882,6 +1025,14 @@ a {
         }
     }
 
+    .quote-container + .timeline-victory-seal {
+        @include desktop {
+            float: right;
+            transform: translate(51px, -15px);
+            margin-top: -4rem;
+        }
+    }
+
 }
 
 .block-white-full-image {
@@ -967,5 +1118,43 @@ a {
         @include desktop {
             margin: 2rem 3rem 0 5.5rem;
         }
+    }
+}
+
+.layout1 {
+    .timeline-header {
+        @include desktop {
+            width: 100%;
+            margin-left: 2rem;
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+.layout2 {
+    .header-container {
+        margin-top: -6rem;
+    }
+}
+
+.flex-30-70 {
+    > div:first-child {
+        width: 22rem;
+        align-self: flex-start;
+    }
+    > div:last-child {
+        width: 36rem;
+        margin-left: 4rem;
+    }
+}
+
+.flex-70-30 {
+    > div:first-child {
+        width: 36rem;
+        margin-right: 4rem;
+    }
+    > div:last-child {
+        width: 22rem;
+        align-self: flex-start;
     }
 }
