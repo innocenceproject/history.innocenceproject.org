@@ -24,14 +24,14 @@ $navbar-height: 4.5rem;
 
 html {
     scroll-behavior: smooth;
+
+    @include touch {
+        overflow: none;
+    }
 }
 
 body {
     font-family: aktiv-grotesk, sans-serif;
-}
-
-.width-100 {
-    width: 100%;
 }
 
 .container {
