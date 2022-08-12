@@ -1,8 +1,3 @@
-a {
-    color: inherit;
-    text-decoration: underline;
-}
-
 .accent {
     display: none;
     padding-right: 15px;
@@ -45,80 +40,14 @@ a {
     }
 }
 
-.ml-4rem {
-    margin-left: 4rem !important;
-}
 
-.height-100 {
-    height: 100% !important;
-}
 
-.height-250px {
-    height: 250px !important;
-}
-
-.height-646px {
-    height: 646px !important;
-}
-
-.width-100 {
-    width: 100% !important;
-}
-
-.width-459px {
-    width: 459px !important;
-}
-
-.width-750px {
-    width: 750px !important;
-}
-
-.width-15rem {
-    width: 15rem !important;
-}
-
-.width-16rem {
-    width: 16rem !important;
-}
-
-.width-18rem {
-    width: 18rem !important;
-}
-
-.width-19rem {
-    width: 19rem !important;
-}
-
-.width-50rem {
-    width: 50rem !important;
-}
-
-.mb-neg63px {
-    margin-bottom: -63px !important;
-};
-
-.mr-7rem {
-    margin-right: 7rem !important;
-}
-
-.transformX-40px {
-    transform: translateX(40px);
-}
-
-.transformX-neg97px {
-    transform: translateY(-97px);
-}
-
-.seal-far-right {
+.seal-right-up {
     transform: translate(47px, -48px);
 }
 
-.fit {
-    object-fit: cover;
-}
-
-.fit-left {
-    object-position: left;
+.seal-right {
+    transform: translateX(47px);
 }
 
 .quote-container {
@@ -186,22 +115,8 @@ a {
     font-weight: bold;
     font-size: .9rem;
     margin-top: 1rem;
-}
-
-.pb-5rem {
-    @include desktop {
-        padding-bottom: 5rem !important;
-    }
-}
-
-.w-85 {
-    @include desktop {
-        width: 85%;
-    }
-}
-
-.width-36rem {
-    width: 36rem;
+    padding-left: 1.5rem;
+    line-height: 1.5;
 }
 
 .header-container {
@@ -240,6 +155,10 @@ a {
 
     .header-icon {
         padding: 1.3rem;
+
+        @include desktop {
+            padding: 1.5rem;
+        }
 
         img {
             height: auto;
@@ -330,7 +249,7 @@ a {
     width: fit-content;
     padding-right: 7px;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     @include desktop {
         margin-bottom: 4rem;
@@ -519,6 +438,11 @@ a {
         margin: 0 auto !important;
     }
 
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
     &-sub-container {
         width: 100%;
         // max-width: 100%;
@@ -615,10 +539,6 @@ a {
             width: 36rem;
             margin-left: 2rem;
             line-height: 1.3;
-        }
-
-        &.line-height-wide {
-            line-height: 1.4;
         }
     }
 
