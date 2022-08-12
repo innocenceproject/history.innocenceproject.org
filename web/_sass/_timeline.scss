@@ -124,6 +124,10 @@ a {
     }
 }
 
+.width-36rem {
+    width: 36rem;
+}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -1017,5 +1021,43 @@ a {
         @include desktop {
             margin: 2rem 3rem 0 5.5rem;
         }
+    }
+}
+
+.layout1 {
+    .timeline-header {
+        @include desktop {
+            width: 100%;
+            margin-left: 2rem;
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+.layout2 {
+    .header-container {
+        margin-top: -6rem;
+    }
+}
+
+.flex-30-70 {
+    > div:first-child {
+        width: 22rem;
+        align-self: flex-start;
+    }
+    > div:last-child {
+        width: 36rem;
+        margin-left: 4rem;
+    }
+}
+
+.flex-70-30 {
+    > div:first-child {
+        width: 36rem;
+        margin-right: 4rem;
+    }
+    > div:last-child {
+        width: 22rem;
+        align-self: flex-start;
     }
 }
