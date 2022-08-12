@@ -2958,6 +2958,8 @@ a { color: inherit; text-decoration: underline; }
 
 @media screen and (min-width: 1024px) { .w-85 { width: 85%; } }
 
+.width-36rem { width: 36rem; }
+
 .header-container { display: flex; align-items: center; margin-bottom: 3rem; }
 @media screen and (min-width: 1024px) { .header-container { flex-direction: column; width: 22rem; } }
 @media screen and (min-width: 1024px) { .header-container.row { flex-direction: row; width: 100%; } }
@@ -3154,6 +3156,16 @@ a { color: inherit; text-decoration: underline; }
 .block-white-full-image .timeline-image { height: inherit; width: inherit; }
 .block-white-full-image .timeline-subheader { color: #000; }
 @media screen and (min-width: 1024px) { .block-white-full-image .timeline-subheader { margin: 2rem 3rem 0 5.5rem; } }
+
+@media screen and (min-width: 1024px) { .layout1 .timeline-header { width: 100%; margin-left: 2rem; margin-bottom: 4rem; } }
+
+.layout2 .header-container { margin-top: -6rem; }
+
+.flex-30-70 > div:first-child { width: 22rem; align-self: flex-start; }
+.flex-30-70 > div:last-child { width: 36rem; margin-left: 4rem; }
+
+.flex-70-30 > div:first-child { width: 36rem; margin-right: 4rem; }
+.flex-70-30 > div:last-child { width: 22rem; align-self: flex-start; }
 
 .sidebar-timeline { display: none; position: absolute; right: 100%; color: #808080; line-height: 2.0; transform: translate(-50px, 0px); height: 4100rem; }
 @media screen and (min-width: 1408px) { .sidebar-timeline { display: block; } }
