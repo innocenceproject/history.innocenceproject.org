@@ -10,7 +10,7 @@
     @include desktop {
         // font-size: 2.75rem;
         font-size: 3rem;
-        letter-spacing: -.03em;
+        letter-spacing: -0.03em;
         margin-left: 2rem;
         margin-bottom: 3rem;
     }
@@ -54,12 +54,11 @@
 }
 
 .highlight {
-    padding: .1rem .25rem 0 .25rem;
+    padding: 0.1rem 0.25rem 0 0.25rem;
 
     @include desktop {
         padding: 0.3rem 0.25rem 0.3rem 0.25rem;
     }
-    
 }
 
 .divider {
@@ -71,8 +70,6 @@
     }
 }
 
-
-
 .seal-right-up {
     transform: translate(47px, -48px);
 }
@@ -82,15 +79,17 @@
 }
 
 .quote-container {
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     column-gap: 1rem;
-    grid-template-areas: 
-        "open-quote quote close-quote"
-        " . quote-source . ";
-    
+    grid-template-areas:
+        'open-quote quote close-quote'
+        ' . quote-source . ';
+
     @include desktop {
+        padding: 0 0.75rem;
         margin: 0 1.5rem 3rem 2rem;
     }
 }
@@ -99,7 +98,6 @@
     grid-area: open-quote;
     align-self: flex-start;
     width: 2.5rem;
-    transform: translateX(15px);
 
     @include desktop {
         width: 3.2rem;
@@ -118,10 +116,12 @@
 }
 
 .quote {
+    padding: 0;
     grid-area: quote;
     color: $color-blue;
     font-size: 1.2rem;
     line-height: 1.4;
+
     @include desktop {
         font-size: 1.5rem;
     }
@@ -131,16 +131,14 @@
     grid-area: close-quote;
     align-self: flex-end;
     width: 2.5rem;
-    transform: translateX(-20px);
+    transform: translateX(-15px);
 
     @include desktop {
         width: 3.2rem;
         transform: translateX(0px);
-
     }
 
     &-svg {
-        
         &.accent-blue {
             color: $color-accent-blue;
         }
@@ -156,12 +154,13 @@
     text-transform: uppercase;
     color: $color-gray;
     font-weight: bold;
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-top: 1rem;
-    padding-left: 1.5rem;
+    padding: 0;
     line-height: 1.5;
 
     @include desktop {
+        padding-left: 0.75rem;
         margin-top: 1.5rem;
         padding-left: 0;
     }
@@ -233,7 +232,7 @@
         }
 
         &.large-font {
-            font-size: 1.6rem
+            font-size: 1.6rem;
         }
     }
 }
@@ -262,8 +261,6 @@
         top: 11px;
     }
 }
-
-
 
 .year-header {
     scroll-margin-top: 115px;
@@ -302,7 +299,7 @@
     @include desktop {
         margin-bottom: 5rem;
     }
-    
+
     &.light-beige {
         background-color: $color-light-beige !important;
     }
@@ -315,10 +312,10 @@
         text-transform: uppercase;
         letter-spacing: 0.04em;
         line-height: 0;
-        
+
         @include desktop {
             font-size: 1rem;
-            padding: 0.2rem .3rem 0 .8rem;
+            padding: 0.2rem 0.3rem 0 0.8rem;
         }
 
         &.black {
@@ -349,8 +346,6 @@
     }
 }
 
-
-
 .timeline-image {
     .height-450px {
         @include desktop {
@@ -362,7 +357,7 @@
         @include desktop {
             width: 240rem !important;
             height: auto !important;
-        };
+        }
     }
 
     &.overflow-image {
@@ -383,7 +378,7 @@
     &.height-480px {
         height: 480px;
     }
-    
+
     &.height-550px {
         height: 550px;
     }
@@ -412,7 +407,7 @@
     line-height: 1.4 !important;
     letter-spacing: -0.01em;
     margin-top: 1.5rem;
-    
+
     @include desktop {
         font-size: 1.1rem;
         line-height: 1.6 !important;
@@ -574,17 +569,17 @@
                 width: auto;
             }
         }
-    
+
         &:nth-child(2) {
-            margin-left: .75rem;
-    
+            margin-left: 0.75rem;
+
             @include touch {
                 width: 20rem;
                 margin: 2rem 0 0 0;
             }
         }
     }
-    
+
     .highlight {
         color: $color-white;
         background-color: $color-blue;
@@ -593,7 +588,7 @@
     }
 
     .eyebrow {
-        background-color: $color-white;        
+        background-color: $color-white;
     }
 
     .eyebrow-header {
@@ -784,7 +779,6 @@
         }
     }
 
-
     .timeline-description {
         color: $color-accent-blue;
     }
@@ -863,7 +857,6 @@
         }
     }
 
-
     .timeline-description {
         color: $color-accent-blue;
     }
@@ -899,7 +892,7 @@
     background-color: $color-white;
 
     .header-container {
-        background-color: $color-accent-blue;  
+        background-color: $color-accent-blue;
 
         .timeline-header {
             color: $color-blue;
@@ -948,7 +941,7 @@
 
     .timeline-subheader {
         margin-bottom: 3rem;
-        
+
         &.width-43rem {
             @include desktop {
                 width: 43rem;
@@ -981,7 +974,6 @@
             margin-top: -4rem;
         }
     }
-
 }
 
 .block-white-full-image {
@@ -1009,7 +1001,7 @@
         color: $color-black;
         background-color: $color-accent-blue;
         font-weight: 700;
-        padding: .1rem .25rem 0 .25rem;
+        padding: 0.1rem 0.25rem 0 0.25rem;
 
         @include desktop {
             // padding: 0.2rem 0.25rem 0.1rem 0.25rem;
@@ -1038,7 +1030,6 @@
             background-color: $color-blue;
         }
     }
-
 
     .timeline-description {
         color: $color-accent-blue;
@@ -1128,5 +1119,48 @@
     @include desktop {
         font-size: 1.2rem;
         margin: 4rem 0;
+    }
+}
+
+.image-group {
+    height: 250px !important;
+
+    > div {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    > div > img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    @include tablet {
+        height: 400px !important;
+    }
+
+    .tablet-position-1 {
+        @include tablet {
+            object-position: 50% -36px;
+        }
+    }
+
+    .tablet-position-2 {
+        @include tablet {
+            object-position: 50% -29px;
+        }
+    }
+
+    .tablet-position-3 {
+        @include tablet {
+            object-position: 50% -31px;
+        }
+    }
+
+    .tablet-position-4 {
+        @include tablet {
+            object-position: 50% -56px;
+        }
     }
 }
