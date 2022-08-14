@@ -3,6 +3,10 @@ footer {
     color: $color-white;
     padding-top: 4rem;
 
+    @include desktop {
+        padding-top: 7rem;
+    }
+
     a {
         color: $color-white;
         font-weight: 700;
@@ -10,12 +14,28 @@ footer {
     }
 
     .footer-links {
+        flex-grow: 2 !important;
         margin-bottom: 2rem;
     }
 
     .footer-links ul > li {
         font-size: 1.25rem;
         line-height: 1.563;
+        white-space: nowrap;
+        padding-right: 2rem;
+
+        @include desktop {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+    }
+
+    .links-column {
+        flex-grow: 0 !important;
+    }
+
+    .subscribe-container {
+        flex-shrink: 2 !important;
     }
 
     .subscribe-header {
@@ -31,7 +51,7 @@ footer {
             font-weight: 700;
             color: $color-white;
             margin: 0 auto;
-            padding: 1rem 0;
+            padding: 1rem 0 1.25rem 0;
             border-radius: 0;
             width: 100%;
             background-color: $color-black;
@@ -40,13 +60,13 @@ footer {
 
             &::placeholder {
                 color: $color-white;
-                font-size: 1rem;
+                font-size: 1.25rem;
             }
         }
     }
 
     .email-container {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
         button {
             position: absolute;
@@ -97,7 +117,7 @@ footer {
     }
 
     .affiliate-text {
-        font-size: .8rem;
+        font-size: .9rem;
     }
 
     .partner-logo {
@@ -118,7 +138,7 @@ footer {
             justify-content: center;
 
             li {
-                margin-right: 2rem;
+                margin-right: 3rem;
 
                 &:last-child {
                     margin-right: 0;
@@ -133,7 +153,7 @@ footer {
     }
 
     .credit > a, .credit {
-        font-size: .7rem;
+        font-size: .8rem;
         line-height: 1.545;
         letter-spacing: .3px;
         color: $color-copyright-gray;
