@@ -3051,6 +3051,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (min-width: 1216px) { .nav-button { margin-right: 10rem; } }
 
 .hero { overflow: hidden; }
+@media screen and (min-width: 1024px) { .hero { overflow: visible; } }
 
 .hero-body { margin-bottom: 2rem; width: 100vw; }
 @media screen and (min-width: 1024px) { .hero-body { width: auto; display: flex; flex-direction: column; justify-content: center; } }
