@@ -97,13 +97,45 @@
     }
     
     .brick {
-        align-items: center;
-        background-size: cover;
-        background-position: center;
+        opacity: 0;
+        width: 33%;
         box-sizing: border-box;
-        display: flex;
-        flex-grow: 0;
-        justify-content: center;
+        flex: auto;
+
+        &.fade-in-1, 
+        &.fade-in-2, 
+        &.fade-in-3,
+        &.fade-in-4 {
+            animation: fadeIn $hero-image-fade-in-time;
+            -webkit-animation: fadeIn $hero-image-fade-in-time;
+            -moz-animation: fadeIn $hero-image-fade-in-time;
+            -o-animation: fadeIn $hero-image-fade-in-time;
+            -ms-animation: fadeIn $hero-image-fade-in-time;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+
+        &.fade-in-1 {
+            animation-delay: 0.5s;
+        }
+
+        &.fade-in-2 {
+            animation-delay: 1.5s;
+        }
+
+        &.fade-in-3 {
+            animation-delay: 2.5s;
+        }
+
+        &.fade-in-4 {
+            animation-delay: 3.5s;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
 
         &.top {
             background-position: top;
