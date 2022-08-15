@@ -2,6 +2,7 @@ footer {
     background-color: $color-black;
     color: $color-white;
     padding-top: 4rem;
+    overflow: hidden;
 
     @include desktop {
         padding-top: 7rem;
