@@ -3371,6 +3371,10 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (min-width: 769px), print { .image-group .tablet-position-3 { object-position: 50% -31px; } }
 @media screen and (min-width: 769px), print { .image-group .tablet-position-4 { object-position: 50% -56px; } }
 
+.reveal { position: relative; transform: translateY(50px); opacity: 0; transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s ease-out; }
+
+.reveal.active { transform: translateY(0); opacity: 1; }
+
 .sidebar-timeline { display: none; position: absolute; right: 100%; line-height: 1.8; transform: translate(-50px, 0px); height: 50395px; }
 @media screen and (min-width: 1408px) { .sidebar-timeline { display: block; } }
 @media screen and (min-width: 1408px) and (min-height: 810px) { .sidebar-timeline { line-height: 2.0; } }
