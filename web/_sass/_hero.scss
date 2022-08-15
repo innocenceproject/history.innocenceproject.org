@@ -86,7 +86,7 @@
     flex-flow: column wrap;
     gap: var(--hero-masonry-gap);
     box-sizing: border-box;
-    width: 100vw;
+    width: calc(100vw - var(--hero-masonry-gap));
     height: 19rem;
     
     @include desktop {
