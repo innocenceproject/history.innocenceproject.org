@@ -3050,6 +3050,8 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (min-width: 1024px) { .nav-button { position: relative; border-radius: 5px; width: 98px; height: 50px; margin-right: 7rem; } }
 @media screen and (min-width: 1216px) { .nav-button { margin-right: 10rem; } }
 
+.hero { overflow: hidden; }
+
 .hero-body { margin-bottom: 2rem; width: 100vw; }
 @media screen and (min-width: 1024px) { .hero-body { width: auto; display: flex; flex-direction: column; justify-content: center; } }
 
@@ -3377,7 +3379,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .sidebar-timeline li a { color: #808080; text-decoration: none; }
 .sidebar-timeline .sticky-container { position: -webkit-sticky; position: sticky; top: 20px; }
 
-footer { background-color: #000; color: #fff; padding-top: 4rem; }
+footer { background-color: #000; color: #fff; padding-top: 4rem; overflow: hidden; }
 @media screen and (min-width: 1024px) { footer { padding-top: 7rem; } }
 footer a { color: #fff; font-weight: 700; text-decoration: none; }
 footer .footer-links { flex-grow: 2 !important; margin-bottom: 2rem; }
