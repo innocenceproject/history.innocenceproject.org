@@ -3070,7 +3070,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .chevron-down { height: 2.25rem; width: 2.25rem; background-color: #ECEFFC; border-radius: 50%; padding: 5px; transform: translate(-88px, 223px); }
 .chevron-down:hover { cursor: pointer; }
 
-.masonry { display: flex; flex-flow: column wrap; gap: var(--hero-masonry-gap); box-sizing: border-box; width: 100vw; height: 19rem; }
+.masonry { display: flex; flex-flow: column wrap; gap: var(--hero-masonry-gap); box-sizing: border-box; width: calc(100vw - var(--hero-masonry-gap)); height: 19rem; }
 @media screen and (min-width: 1024px) { .masonry { height: 52rem; width: 54rem; transform: translateY(-4.5rem); z-index: 100; } }
 .masonry .brick { opacity: 0; width: 33%; box-sizing: border-box; flex: auto; }
 .masonry .brick.fade-in-1, .masonry .brick.fade-in-2, .masonry .brick.fade-in-3, .masonry .brick.fade-in-4 { animation: fadeIn 1s; -webkit-animation: fadeIn 1s; -moz-animation: fadeIn 1s; -o-animation: fadeIn 1s; -ms-animation: fadeIn 1s; animation-fill-mode: forwards; animation-timing-function: ease-in-out; }
