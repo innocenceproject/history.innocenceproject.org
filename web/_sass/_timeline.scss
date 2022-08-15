@@ -301,7 +301,7 @@
     }
 
     &.light-beige {
-        background-color: $color-light-beige !important;
+        background-color: $color-light-beige  !important;
     }
 
     &-header {
@@ -319,11 +319,11 @@
         }
 
         &.black {
-            color: $color-black !important;
+            color: $color-black  !important;
         }
 
         &.blue {
-            color: $color-blue !important;
+            color: $color-blue  !important;
         }
     }
 
@@ -337,11 +337,11 @@
         }
 
         &.blue {
-            background-color: $color-blue !important;
+            background-color: $color-blue  !important;
         }
 
         &.tan {
-            background-color: $color-tan !important;
+            background-color: $color-tan  !important;
         }
     }
 }
@@ -364,6 +364,7 @@
         @include desktop {
             overflow: hidden;
             position: relative;
+
             img {
                 position: absolute;
                 top: -100%;
@@ -789,6 +790,7 @@
 
     .timeline-header {
         color: $color-white;
+
         @include desktop {
             color: $color-white;
             margin: 4rem 3rem 0 2rem;
@@ -803,6 +805,7 @@
 
     .timeline-subheader {
         color: $color-white;
+
         @include desktop {
             margin: 2rem 3rem 4rem 2rem;
         }
@@ -867,6 +870,7 @@
 
     .timeline-header {
         color: $color-white;
+
         @include desktop {
             color: $color-white;
             margin: 4rem 3rem 0 5.5rem;
@@ -967,7 +971,7 @@
         }
     }
 
-    .quote-container + .timeline-victory-seal {
+    .quote-container+.timeline-victory-seal {
         @include desktop {
             float: right;
             transform: translate(51px, -15px);
@@ -1041,6 +1045,7 @@
 
     .timeline-header {
         color: $color-black;
+
         @include desktop {
             margin: 4rem 3rem 0 5.5rem;
             line-height: 1.2;
@@ -1078,33 +1083,36 @@
 }
 
 .flex-30-70 {
-    > div:first-child {
+    >div:first-child {
         width: 22rem;
         align-self: flex-start;
     }
-    > div:last-child {
+
+    >div:last-child {
         width: 36rem;
         margin-left: 4rem;
     }
 }
 
 .flex-70-30 {
-    > div:first-child {
+    >div:first-child {
         width: 36rem;
         margin-right: 4rem;
     }
-    > div:last-child {
+
+    >div:last-child {
         width: 22rem;
         align-self: flex-start;
     }
 }
 
 .flex-75-25 {
-    > div:first-child {
+    >div:first-child {
         width: 38rem;
         margin-right: 4rem;
     }
-    > div:last-child {
+
+    >div:last-child {
         width: 20rem;
         align-self: flex-start;
     }
@@ -1125,12 +1133,12 @@
 .image-group {
     height: 250px !important;
 
-    > div {
+    >div {
         flex: 1;
         overflow: hidden;
     }
 
-    > div > img {
+    >div>img {
         object-fit: cover;
         height: 100%;
         width: 100%;
@@ -1167,12 +1175,15 @@
 
 .reveal {
     position: relative;
-    transform: translateY(50px);
     opacity: 0;
-    transition: transform 1.2s cubic-bezier(.165,.84,.44,1), opacity 1s ease-out;
 }
 
 .reveal.active {
-    transform: translateY(0);
-    opacity: 1;
+    animation: elementReveal $element-reveal-time;
+    -webkit-animation: elementReveal $element-reveal-time;
+    -moz-animation: elementReveal $element-reveal-time;
+    -o-animation: elementReveal $element-reveal-time;
+    -ms-animation: elementReveal $element-reveal-time;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
 }
