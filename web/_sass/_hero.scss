@@ -1,5 +1,9 @@
 .hero {
     overflow: hidden;
+
+    @include desktop {
+        overflow: visible;
+    }
 }
 
 .hero-body {
