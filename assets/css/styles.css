@@ -3029,6 +3029,8 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .zoom-1p3 { transform: scale(1.3); }
 
+@keyframes fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
 .navbar { display: flex; justify-content: space-between; height: 4.5rem; }
 @media screen and (min-width: 1024px) { .navbar { background-color: transparent; z-index: 500; } }
 
@@ -3070,7 +3072,13 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .masonry { display: flex; flex-flow: column wrap; gap: var(--hero-masonry-gap); box-sizing: border-box; width: 100vw; height: 19rem; }
 @media screen and (min-width: 1024px) { .masonry { height: 52rem; width: 54rem; transform: translateY(-4.5rem); z-index: 100; } }
-.masonry .brick { align-items: center; background-size: cover; background-position: center; box-sizing: border-box; display: flex; flex-grow: 0; justify-content: center; }
+.masonry .brick { opacity: 0; width: 33%; box-sizing: border-box; flex: auto; }
+.masonry .brick.fade-in-1, .masonry .brick.fade-in-2, .masonry .brick.fade-in-3, .masonry .brick.fade-in-4 { animation: fadeIn 1s; -webkit-animation: fadeIn 1s; -moz-animation: fadeIn 1s; -o-animation: fadeIn 1s; -ms-animation: fadeIn 1s; animation-fill-mode: forwards; animation-timing-function: ease-in-out; }
+.masonry .brick.fade-in-1 { animation-delay: 0.5s; }
+.masonry .brick.fade-in-2 { animation-delay: 1.5s; }
+.masonry .brick.fade-in-3 { animation-delay: 2.5s; }
+.masonry .brick.fade-in-4 { animation-delay: 3.5s; }
+.masonry .brick img { object-fit: cover; height: 100%; width: 100%; }
 .masonry .brick.top { background-position: top; }
 .masonry.top .brick:nth-child(1) { height: calc(40% - var(--hero-masonry-gap)); }
 .masonry.top .brick:nth-child(2) { height: calc(60% - var(--hero-masonry-gap)); }
@@ -3360,11 +3368,14 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (min-width: 769px), print { .image-group .tablet-position-3 { object-position: 50% -31px; } }
 @media screen and (min-width: 769px), print { .image-group .tablet-position-4 { object-position: 50% -56px; } }
 
-.sidebar-timeline { display: none; position: absolute; right: 100%; color: #808080; line-height: 2.0; transform: translate(-50px, 0px); height: 50395px; }
+.sidebar-timeline { display: none; position: absolute; right: 100%; line-height: 1.8; transform: translate(-50px, 0px); height: 50395px; }
 @media screen and (min-width: 1408px) { .sidebar-timeline { display: block; } }
-.sidebar-timeline a { text-decoration: none; }
+@media screen and (min-width: 1408px) and (min-height: 810px) { .sidebar-timeline { line-height: 2.0; } }
+@media screen and (min-width: 1408px) and (min-height: 950px) { .sidebar-timeline { line-height: 2.2; } }
+
+.sidebar-timeline li.active > a { color: #4368e8; font-weight: 700; }
+.sidebar-timeline li a { color: #808080; text-decoration: none; }
 .sidebar-timeline .sticky-container { position: -webkit-sticky; position: sticky; top: 20px; }
-.sidebar-timeline .active { color: #4368e8; font-weight: 700; }
 
 footer { background-color: #000; color: #fff; padding-top: 4rem; }
 @media screen and (min-width: 1024px) { footer { padding-top: 7rem; } }
