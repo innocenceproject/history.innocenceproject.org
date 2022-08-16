@@ -3188,7 +3188,6 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .eyebrow { display: flex; width: fit-content; padding-right: 7px; align-items: center; margin-bottom: 2rem; }
 @media screen and (min-width: 1024px) { .eyebrow { margin-bottom: 5rem; } }
-.eyebrow.light-beige { background-color: #f8f7f0 !important; }
 .eyebrow-header { display: inline; padding: .1rem .5rem 0 .5rem; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; height: 1.25rem; line-height: 1.5; }
 @media screen and (min-width: 1024px) { .eyebrow-header { font-size: 1rem; height: 2rem; line-height: 1.7; padding: 0.2rem 0.3rem 0 0.8rem; } }
 .eyebrow-header.black { color: #000 !important; }
@@ -3233,7 +3232,8 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (max-width: 1023px) { .block-black img { width: 25rem; margin: 0 auto; } }
 .block-black .timeline-header { color: #fff; line-height: 1.2; }
 .block-black .eyebrow { width: fit-content; margin-bottom: 4rem; }
-.block-black .eyebrow-header { color: #fff; background-color: #000; border: 1px solid #fff; }
+.block-black .eyebrow-header { color: #fff; background-color: #000; border: 1px solid #fff; line-height: 1.4; padding-right: .75rem; }
+@media screen and (min-width: 1024px) { .block-black .eyebrow-header { line-height: 1.7; padding-right: .9rem; } }
 .block-black .eyebrow-dot { background-color: #fff; }
 .block-black .timeline-subheader { color: #fff; }
 .block-black .timeline-description { color: #eceffc; }
@@ -3250,6 +3250,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (max-width: 1023px) { .block-beige img:nth-child(2) { width: 20rem; margin: 2rem 0 0 0; } }
 .block-beige .highlight { color: #fff; font-weight: 700; color: #f8f7f0; font-weight: 700; background-image: linear-gradient(to right, #f8f7f0 50%, #4368e8 50%); background-position: 0; background-size: 200%; transition: all 1.5s; transition-timing-function: ease-in; }
 .block-beige .eyebrow-header { color: #000; background-color: #fff; }
+@media screen and (min-width: 1024px) { .block-beige .eyebrow-header { padding-right: 0.75rem; } }
 .block-beige .eyebrow-dot { background-color: #dc9d7e; }
 .block-beige .description-bullet { background-color: #4368e8; }
 
@@ -3261,6 +3262,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .block-beige-full-image .eyebrow { margin-bottom: 2rem; }
 @media screen and (min-width: 1024px) { .block-beige-full-image .eyebrow { margin-top: 5rem; margin-left: 3.5rem; } }
 .block-beige-full-image .eyebrow-header { background-color: #fff; color: #000; }
+@media screen and (min-width: 1024px) { .block-beige-full-image .eyebrow-header { padding-right: 0.75rem; } }
 .block-beige-full-image .eyebrow-dot { background-color: #4368e8; }
 .block-beige-full-image .timeline-description { color: #808080; }
 @media screen and (min-width: 1024px) { .block-beige-full-image .timeline-description { margin: 3rem 0 3rem 5rem; padding: 0 4rem 0 0; } }
@@ -3280,6 +3282,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .block-beige2 .eyebrow { margin-bottom: 2rem; }
 @media screen and (min-width: 1024px) { .block-beige2 .eyebrow { margin-bottom: 4rem; } }
 .block-beige2 .eyebrow-header { color: #000; background-color: #fff; }
+@media screen and (min-width: 1024px) { .block-beige2 .eyebrow-header { padding-right: 0.75rem; } }
 .block-beige2 .eyebrow-dot { background-color: #dc9d7e; }
 .block-beige2 .description-bullet { background-color: #4368e8; }
 
@@ -3292,7 +3295,8 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .block-blue .header-container .timeline-header .highlight { color: #eceffc; font-weight: 700; background-image: linear-gradient(to right, #eceffc 50%, #4368e8 50%); background-position: 0; background-size: 200%; transition: all 1.5s; transition-timing-function: ease-in; }
 .block-blue .eyebrow { margin-bottom: 2rem; }
 @media screen and (min-width: 1024px) { .block-blue .eyebrow { margin-bottom: 4rem; } }
-.block-blue .eyebrow-header { background-color: #4368e8; color: #fff; border: 1px solid #fff; }
+.block-blue .eyebrow-header { background-color: #4368e8; color: #fff; border: 1px solid #fff; line-height: 1.4; }
+@media screen and (min-width: 1024px) { .block-blue .eyebrow-header { line-height: 1.5; padding-right: 0.75rem; } }
 .block-blue .eyebrow-dot { background-color: #fff; }
 .block-blue .timeline-description { color: #eceffc; }
 .block-blue .description-bullet { background-color: #eceffc; }
@@ -3327,6 +3331,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .block-white .highlight { color: #000; font-weight: 700; }
 .block-white .highlight.blue { color: #eceffc; font-weight: 700; background-image: linear-gradient(to right, #eceffc 50%, #4368e8 50%); background-position: 0; background-size: 200%; transition: all 1.5s; transition-timing-function: ease-in; }
 .block-white .eyebrow-header { color: #4368e8; background-color: #eceffc; }
+@media screen and (min-width: 1024px) { .block-white .eyebrow-header { padding-right: 0.75rem; } }
 .block-white .eyebrow-header.black { color: #000; }
 .block-white .eyebrow-dot { background-color: #4368e8; }
 .block-white .description-bullet { background-color: #4368e8; }
