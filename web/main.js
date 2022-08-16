@@ -1,6 +1,9 @@
 window.addEventListener("scroll", textFadeIn);
+window.addEventListener("scroll", highlightText);
 
-textFadeIn(); // check the scroll position on page load
+textFadeIn(); // check the scroll position on page load:
+highlightText();
+
 sideTimeline();
 
 function sideTimeline() {
@@ -51,4 +54,22 @@ function textFadeIn() {
         }
     }
 
+}
+
+function highlightText() {
+    const highlights = document.querySelectorAll(".hero-highlight, .highlight");
+
+    for (let i = 0; i < highlights.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = highlights[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            highlights[i].classList.add("highlight-now");
+        } 
+        
+        if (elementTop > windowHeight) {
+            highlights[i].classList.remove("highlight-now");
+        }
+    }
 }

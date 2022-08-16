@@ -9,7 +9,7 @@
 .hero-body {
     margin-bottom: 2rem;
     width: 100vw;
-    
+
     @include desktop {
         width: auto;
         display: flex;
@@ -39,9 +39,9 @@
     text-align: center;
     font-size: 70px;
     font-weight: 700;
-    color: #fff;
+    color: $color-white;
     letter-spacing: -0.01em;
-    line-height: 63px;
+    line-height: 1.2;
 
     @include desktop {
         font-size: 74px;
@@ -61,8 +61,16 @@
 }
 
 .hero-highlight {
-    background-color: $color-purple;
     padding: 0.5rem 0.5rem 0 0.5rem;
+    background-image: linear-gradient(to right, white 50%, #4368E8 50%); // bg color, highlight color
+    background-position: 0;
+    background-size: 200%;
+    transition: all .75s;
+    transition-timing-function: ease-in;
+
+    &.highlight-now {
+        background-position: -100%;
+    }
 }
 
 .hero-spacer {
@@ -82,7 +90,7 @@
     border-radius: 50%;
     padding: 5px;
     transform: translate(-88px, 223px);
-    
+
     &:hover {
         cursor: pointer;
     }
@@ -96,7 +104,7 @@
     box-sizing: border-box;
     width: calc(100vw - var(--hero-masonry-gap));
     height: 19rem;
-    
+
     @include desktop {
         height: 52rem;
         width: 54rem;
@@ -110,15 +118,15 @@
         box-sizing: border-box;
         flex: auto;
 
-        &.fade-in-1, 
-        &.fade-in-2, 
+        &.fade-in-1,
+        &.fade-in-2,
         &.fade-in-3,
         &.fade-in-4 {
-            animation: fadeIn $hero-image-fade-in-time;
-            -webkit-animation: fadeIn $hero-image-fade-in-time;
-            -moz-animation: fadeIn $hero-image-fade-in-time;
-            -o-animation: fadeIn $hero-image-fade-in-time;
-            -ms-animation: fadeIn $hero-image-fade-in-time;
+            animation: fadeIn $hero-image-reveal-time;
+            -webkit-animation: fadeIn $hero-image-reveal-time;
+            -moz-animation: fadeIn $hero-image-reveal-time;
+            -o-animation: fadeIn $hero-image-reveal-time;
+            -ms-animation: fadeIn $hero-image-reveal-time;
             animation-fill-mode: forwards;
             animation-timing-function: ease-out;
         }
@@ -152,6 +160,7 @@
 
     &.top {
         .brick {
+
             // setting heights so they meet evenly at the bottom
             &:nth-child(1) {
                 height: calc(40% - #{var(--hero-masonry-gap)});
@@ -187,6 +196,7 @@
 
     &.bottom {
         .brick {
+
             // setting heights so they meet evenly at the bottom
             &:nth-child(1) {
                 height: calc(60% - #{var(--hero-masonry-gap)});
@@ -216,6 +226,7 @@
 
     &.desktop {
         .brick {
+
             // setting heights so they meet evenly at the bottom
             // COLUMN 1
             &:nth-child(1) {
@@ -242,6 +253,7 @@
             &:nth-child(6) {
                 height: calc(28% - #{var(--hero-masonry-gap)});
             }
+
             &:nth-child(7) {
                 height: calc(20% - #{var(--hero-masonry-gap)});
             }

@@ -20,6 +20,10 @@
     }
 }
 
+.highlight-now {
+    background-position: -100% !important;
+}
+
 .accent {
     display: none;
     padding-right: 15px;
@@ -109,6 +113,7 @@
         &.accent-blue {
             color: $color-accent-blue;
         }
+
         &.light-beige {
             color: $color-light-beige;
         }
@@ -528,8 +533,13 @@
     .highlight {
         font-style: italic;
         font-weight: 700;
-        background-color: $color-blue;
-        // padding: .2rem .25rem 0 .25rem;
+        color: $color-white;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $color-black 50%, $color-blue 50%); // bg color, highlight color
+        background-position: 0;
+        background-size: 200%;
+        transition: all $text-highlight-time;
+        transition-timing-function: ease-in;
     }
 
     .description-bullet {
@@ -583,9 +593,15 @@
 
     .highlight {
         color: $color-white;
-        background-color: $color-blue;
         font-weight: 700;
-        // padding: .1rem .25rem 0 .25rem;
+        color: $color-light-beige;
+        font-weight: 700;
+        background-image: linear-gradient(to right, $color-light-beige 50%, $color-blue 50%); // bg color, highlight color
+        background-position: 0;
+        background-size: 200%;
+        transition: all $text-highlight-time;
+        transition-timing-function: ease-in;
+        
     }
 
     .eyebrow {
@@ -699,10 +715,13 @@
             color: $color-blue;
 
             .highlight {
-                color: $color-white;
-                background-color: $color-blue;
+                color: $color-light-beige;
                 font-weight: 700;
-                // padding: 0.3rem 0.25rem 0.3rem 0.25rem;
+                background-image: linear-gradient(to right, $color-light-beige 50%, $color-blue 50%); // bg color, highlight color
+                background-position: 0;
+                background-size: 200%;
+                transition: all $text-highlight-time;
+                transition-timing-function: ease-in;
             }
         }
     }
@@ -738,6 +757,10 @@
 
     strong {
         color: $color-white;
+
+        &.accent-blue {
+            color: $color-accent-blue;
+        }
     }
 
     img {
@@ -755,9 +778,13 @@
             color: $color-blue;
 
             .highlight {
-                color: $color-white;
-                background-color: $color-blue;
-                // padding: .1rem .25rem 0 .25rem;
+                color: $color-accent-blue;
+                font-weight: 700;
+                background-image: linear-gradient(to right, $color-accent-blue 50%, $color-blue 50%); // bg color, highlight color
+                background-position: 0;
+                background-size: 200%;
+                transition: all $text-highlight-time;
+                transition-timing-function: ease-in;
             }
         }
     }
@@ -909,17 +936,16 @@
 
     .highlight {
         color: $color-black;
-        background-color: $color-accent-blue;
         font-weight: 700;
-        // padding: .1rem .25rem 0 .25rem;
-
-        @include desktop {
-            // padding: 0.2rem 0.25rem 0.1rem 0.25rem;
-        }
 
         &.blue {
-            color: $color-white;
-            background-color: $color-blue;
+            color: $color-accent-blue; 
+            font-weight: 700;
+            background-image: linear-gradient(to right, $color-accent-blue 50%, $color-blue 50%); // bg color, highlight color
+            background-position: 0;
+            background-size: 200%;
+            transition: all $text-highlight-time;
+            transition-timing-function: ease-in;
         }
     }
 
