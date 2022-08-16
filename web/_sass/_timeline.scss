@@ -305,9 +305,9 @@
         margin-bottom: 5rem;
     }
 
-    &.light-beige {
-        background-color: $color-light-beige  !important;
-    }
+    // &.light-beige {
+    //     background-color: $color-light-beige  !important;
+    // }
 
     &-header {
         display: inline;
@@ -528,6 +528,14 @@
         color: $color-white;
         background-color: $color-black;
         border: 1px solid $color-white;
+        line-height: 1.4;
+        padding-right: .75rem;
+
+
+        @include desktop {
+            line-height: 1.7;
+            padding-right: .9rem;
+        }
     }
 
     .eyebrow-dot {
@@ -619,6 +627,10 @@
     .eyebrow-header {
         color: $color-black;
         background-color: $color-white;
+
+        @include desktop {
+            padding-right: 0.75rem;
+        }
     }
 
     .eyebrow-dot {
@@ -662,6 +674,10 @@
         &-header {
             background-color: $color-white;
             color: $color-black;
+
+            @include desktop {
+                padding-right: 0.75rem;
+            }
         }
 
         &-dot {
@@ -750,6 +766,10 @@
     .eyebrow-header {
         color: $color-black;
         background-color: $color-white;
+
+        @include desktop {
+            padding-right: 0.75rem;
+        }
     }
 
     .eyebrow-dot {
@@ -810,6 +830,12 @@
             background-color: $color-blue;
             color: $color-white;
             border: 1px solid $color-white;
+            line-height: 1.4;
+
+            @include desktop {
+                line-height: 1.5;
+                padding-right: 0.75rem;
+            }
         }
 
         &-dot {
@@ -962,6 +988,10 @@
     .eyebrow-header {
         color: $color-blue;
         background-color: $color-accent-blue;
+
+        @include desktop {
+            padding-right: 0.75rem;
+        }
 
         &.black {
             color: $color-black;
