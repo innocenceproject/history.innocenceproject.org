@@ -311,15 +311,18 @@
 
     &-header {
         display: inline;
-        padding: 0.1rem 0 0 0.5rem;
+        padding: .1rem .5rem 0 .5rem;
         font-weight: 700;
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 0.04em;
-        line-height: 0;
-
+        height: 1.25rem;
+        line-height: 1.5;
+        
         @include desktop {
             font-size: 1rem;
+            height: 2rem;
+            line-height: 1.7;
             padding: 0.2rem 0.3rem 0 0.8rem;
         }
 
@@ -335,6 +338,10 @@
     &-dot {
         width: 1.25rem;
         height: 1.25rem;
+        transform: translateY(-32px); // for animation
+        transition: all $eyebrow-dot-connect-time;
+        transition-timing-function: ease-out;
+
 
         @include desktop {
             width: 2rem;
@@ -347,6 +354,10 @@
 
         &.tan {
             background-color: $color-tan  !important;
+        }
+
+        &.connect {
+            transform: translateY(0px);
         }
     }
 }
@@ -508,14 +519,15 @@
     }
 
     .eyebrow {
-        background-color: $color-black;
         width: fit-content;
         margin-bottom: 4rem;
-        border: 1px solid $color-white;
+        
     }
 
     .eyebrow-header {
         color: $color-white;
+        background-color: $color-black;
+        border: 1px solid $color-white;
     }
 
     .eyebrow-dot {
@@ -604,12 +616,9 @@
         
     }
 
-    .eyebrow {
-        background-color: $color-white;
-    }
-
     .eyebrow-header {
         color: $color-black;
+        background-color: $color-white;
     }
 
     .eyebrow-dot {
@@ -643,7 +652,6 @@
     }
 
     .eyebrow {
-        background-color: $color-white;
         margin-bottom: 2rem;
 
         @include desktop {
@@ -652,6 +660,7 @@
         }
 
         &-header {
+            background-color: $color-white;
             color: $color-black;
         }
 
@@ -731,7 +740,6 @@
     }
 
     .eyebrow {
-        background-color: $color-white;
         margin-bottom: 2rem;
 
         @include desktop {
@@ -741,6 +749,7 @@
 
     .eyebrow-header {
         color: $color-black;
+        background-color: $color-white;
     }
 
     .eyebrow-dot {
@@ -790,16 +799,17 @@
     }
 
     .eyebrow {
-        background-color: $color-blue;
         margin-bottom: 2rem;
-        border: 1px solid $color-white;
+        
 
         @include desktop {
             margin-bottom: 4rem;
         }
 
         &-header {
+            background-color: $color-blue;
             color: $color-white;
+            border: 1px solid $color-white;
         }
 
         &-dot {
@@ -869,7 +879,6 @@
     }
 
     .eyebrow {
-        background-color: $color-blue;
         margin-bottom: 2rem;
         border: 1px solid $color-white;
 
@@ -879,6 +888,7 @@
         }
 
         &-header {
+            background-color: $color-blue;
             color: $color-white;
         }
 
@@ -949,12 +959,9 @@
         }
     }
 
-    .eyebrow {
-        background-color: $color-accent-blue;
-    }
-
     .eyebrow-header {
         color: $color-blue;
+        background-color: $color-accent-blue;
 
         &.black {
             color: $color-black;
@@ -1044,7 +1051,6 @@
     }
 
     .eyebrow {
-        background-color: $color-accent-blue;
         margin-bottom: 2rem;
 
         @include desktop {
@@ -1054,6 +1060,7 @@
 
         &-header {
             color: $color-blue;
+            background-color: $color-accent-blue;
         }
 
         &-dot {

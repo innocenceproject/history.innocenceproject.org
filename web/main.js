@@ -1,10 +1,14 @@
 window.addEventListener("scroll", textFadeIn);
 window.addEventListener("scroll", highlightText);
+window.addEventListener("scroll", eyebrowDots);
 
-textFadeIn(); // check the scroll position on page load:
-highlightText();
-
+// enable side timeline
 sideTimeline();
+
+// check the scroll position on page load:
+textFadeIn(); 
+highlightText(); 
+eyebrowDots();
 
 function sideTimeline() {
     const blocks = document.querySelectorAll('[data-year]');
@@ -41,15 +45,17 @@ function sideTimeline() {
 
 function textFadeIn() {
     const reveals = document.querySelectorAll(".reveal");
-    
+    const elementVisible = 150;
+
     for (let i = 0; i < reveals.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 150;
 
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
-        } else {
+        }
+
+        if (elementTop > windowHeight) {
             reveals[i].classList.remove("active");
         }
     }
@@ -58,11 +64,11 @@ function textFadeIn() {
 
 function highlightText() {
     const highlights = document.querySelectorAll(".hero-highlight, .highlight");
+    const elementVisible = 150;
 
     for (let i = 0; i < highlights.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = highlights[i].getBoundingClientRect().top;
-        const elementVisible = 150;
 
         if (elementTop < windowHeight - elementVisible) {
             highlights[i].classList.add("highlight-now");
@@ -71,5 +77,24 @@ function highlightText() {
         if (elementTop > windowHeight) {
             highlights[i].classList.remove("highlight-now");
         }
+    }
+}
+
+function eyebrowDots() {
+    const dots = document.querySelectorAll(".eyebrow-dot");
+    const elementVisible = 150;
+    console.log('dots: ', dots)
+    for (let i = 0; i < dots.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = dots[i].getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - elementVisible) {
+            let dot = dots[i];
+            dot.classList.add("connect");
+        } 
+        
+        // if (elementTop > windowHeight) {
+        //     dots[i].classList.remove("connect");
+        // }
     }
 }
