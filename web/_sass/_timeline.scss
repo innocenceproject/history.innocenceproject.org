@@ -338,14 +338,15 @@
     &-dot {
         width: 1.25rem;
         height: 1.25rem;
-        transform: translateY(-32px); // for animation
         transition: all $eyebrow-dot-connect-time;
         transition-timing-function: ease-out;
-
+        transform: translateY(-20px); 
 
         @include desktop {
             width: 2rem;
             height: 2rem;
+            transform: translateY(-32px);
+
         }
 
         &.blue {
@@ -529,7 +530,7 @@
         background-color: $color-black;
         border: 1px solid $color-white;
         line-height: 1.4;
-        padding-right: .75rem;
+        // padding-right: .75rem;
 
 
         @include desktop {
