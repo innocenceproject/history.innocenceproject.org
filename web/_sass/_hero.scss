@@ -132,19 +132,19 @@
         }
 
         &.fade-in-1 {
-            animation-delay: 0.5s;
-        }
-
-        &.fade-in-2 {
             animation-delay: 1.5s;
         }
 
-        &.fade-in-3 {
+        &.fade-in-2 {
             animation-delay: 2.5s;
         }
 
-        &.fade-in-4 {
+        &.fade-in-3 {
             animation-delay: 3.5s;
+        }
+
+        &.fade-in-4 {
+            animation-delay: 4.5s;
         }
 
         img {
