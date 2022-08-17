@@ -3087,10 +3087,10 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (min-width: 1024px) { .masonry { height: 52rem; width: 54rem; transform: translateY(-4.5rem); z-index: 100; } }
 .masonry .brick { opacity: 0; width: 33%; box-sizing: border-box; flex: auto; }
 .masonry .brick.fade-in-1, .masonry .brick.fade-in-2, .masonry .brick.fade-in-3, .masonry .brick.fade-in-4 { animation: fadeIn 1s; -webkit-animation: fadeIn 1s; -moz-animation: fadeIn 1s; -o-animation: fadeIn 1s; -ms-animation: fadeIn 1s; animation-fill-mode: forwards; animation-timing-function: ease-out; }
-.masonry .brick.fade-in-1 { animation-delay: 0.5s; }
-.masonry .brick.fade-in-2 { animation-delay: 1.5s; }
-.masonry .brick.fade-in-3 { animation-delay: 2.5s; }
-.masonry .brick.fade-in-4 { animation-delay: 3.5s; }
+.masonry .brick.fade-in-1 { animation-delay: 1.5s; }
+.masonry .brick.fade-in-2 { animation-delay: 2.5s; }
+.masonry .brick.fade-in-3 { animation-delay: 3.5s; }
+.masonry .brick.fade-in-4 { animation-delay: 4.5s; }
 .masonry .brick img { object-fit: cover; height: 100%; width: 100%; }
 .masonry .brick.top { background-position: top; }
 .masonry.top .brick:nth-child(1) { height: calc(40% - var(--hero-masonry-gap)); }
