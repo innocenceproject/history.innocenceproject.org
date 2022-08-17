@@ -1,11 +1,10 @@
 window.addEventListener("scroll", textFadeIn);
 window.addEventListener("scroll", highlightText);
 window.addEventListener("scroll", eyebrowDots);
+window.addEventListener("load", highlightHero);
 
 // enable side timeline
 sideTimeline();
-
-highlightHero();
 
 // check the scroll position on page load:
 textFadeIn(); 
