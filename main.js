@@ -5,6 +5,8 @@ window.addEventListener("scroll", eyebrowDots);
 // enable side timeline
 sideTimeline();
 
+highlightHero();
+
 // check the scroll position on page load:
 textFadeIn(); 
 highlightText(); 
@@ -62,8 +64,15 @@ function textFadeIn() {
 
 }
 
+function highlightHero() {
+    const heroHighlights = document.querySelectorAll(".hero-highlight");
+    for (let i = 0; i < heroHighlights.length; i++) {
+        heroHighlights[i].classList.add("highlight-now");
+    }
+}
+
 function highlightText() {
-    const highlights = document.querySelectorAll(".hero-highlight, .highlight");
+    const highlights = document.querySelectorAll(".highlight");
     const elementVisible = 150;
 
     for (let i = 0; i < highlights.length; i++) {
@@ -83,7 +92,7 @@ function highlightText() {
 function eyebrowDots() {
     const dots = document.querySelectorAll(".eyebrow-dot");
     const elementVisible = 150;
-    console.log('dots: ', dots)
+
     for (let i = 0; i < dots.length; i++) {
         const windowHeight = window.innerHeight;
         const elementTop = dots[i].getBoundingClientRect().top;
@@ -92,9 +101,5 @@ function eyebrowDots() {
             let dot = dots[i];
             dot.classList.add("connect");
         } 
-        
-        // if (elementTop > windowHeight) {
-        //     dots[i].classList.remove("connect");
-        // }
     }
 }

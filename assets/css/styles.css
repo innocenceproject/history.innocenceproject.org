@@ -3194,8 +3194,8 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (min-width: 1024px) { .eyebrow-header { font-size: 1rem; height: 2rem; line-height: 1.7; padding: 0.2rem 0.3rem 0 0.8rem; } }
 .eyebrow-header.black { color: #000 !important; }
 .eyebrow-header.blue { color: #4368e8 !important; }
-.eyebrow-dot { width: 1.25rem; height: 1.25rem; transform: translateY(-32px); transition: all 2.5s; transition-timing-function: ease-out; }
-@media screen and (min-width: 1024px) { .eyebrow-dot { width: 2rem; height: 2rem; } }
+.eyebrow-dot { width: 1.25rem; height: 1.25rem; transition: all 2.5s; transition-timing-function: ease-out; transform: translateY(-20px); }
+@media screen and (min-width: 1024px) { .eyebrow-dot { width: 2rem; height: 2rem; transform: translateY(-32px); } }
 .eyebrow-dot.blue { background-color: #4368e8 !important; }
 .eyebrow-dot.tan { background-color: #dc9d7e !important; }
 .eyebrow-dot.connect { transform: translateY(0px); }
@@ -3234,7 +3234,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 @media screen and (max-width: 1023px) { .block-black img { width: 25rem; margin: 0 auto; } }
 .block-black .timeline-header { color: #fff; line-height: 1.2; }
 .block-black .eyebrow { width: fit-content; margin-bottom: 4rem; }
-.block-black .eyebrow-header { color: #fff; background-color: #000; border: 1px solid #fff; line-height: 1.4; padding-right: .75rem; }
+.block-black .eyebrow-header { color: #fff; background-color: #000; border: 1px solid #fff; line-height: 1.4; }
 @media screen and (min-width: 1024px) { .block-black .eyebrow-header { line-height: 1.7; padding-right: .9rem; } }
 .block-black .eyebrow-dot { background-color: #fff; }
 .block-black .timeline-subheader { color: #fff; }
