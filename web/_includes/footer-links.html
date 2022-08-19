@@ -1,16 +1,19 @@
 <div class="column footer-links">
-                <div class="columns is-mobile">
-                    {% assign iterations-div = site.data.footer-links.size | divided_by: 4.0 %}
-                    {% assign iterations-round = iterations-div | round %}
-                    {% assign columns = (1..iterations-round) %}
-                    {% for i in columns %}
-                    <div class="column links-column">
-                      <ul>
-                        {% for link in site.data.footer-links limit:4 offset:continue %}
-                          <li><a href="{{ link[1].url }}" {% if link[1].target %}target="{{link[1].target}}"{% endif %}>{{ link[1].text }}</a></li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
+  <div class="columns is-mobile">
+    {% assign iterations-div = site.data.footer-links.size | divided_by: 4.0 %}
+    {% assign iterations-round = iterations-div | round %}
+    {% assign columns = (1..iterations-round) %}
+    {% for i in columns %}
+    <div class="column links-column">
+      <ul>
+        {% for link in site.data.footer-links limit:4 offset:continue %}
+        <li>
+          <a href="{{ link[1].url }}" {% if link[1].target %} target="{{link[1].target}}" {% endif %}>{{ link[1].text
+            }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,26 +1,29 @@
 <footer>
-    <div class="container">
-        <div class="columns mb-0">
-            {% include footer-links.html %}
-            <div class="column subscribe-container">
-                <div class="subscribe-header">Join our mailing list to receive the latest news and updates from the Innocence Project:</div>
-                <div class="email-container">
-                    <form class="footer-subscribe" name="footer-newsletter" action="https://innocenceproject.org/getinvolved/" method="post">
-                        <input type="email" class="form-control" id="email-subscribe" placeholder="Email" name="email-subscribe" />
-                        <button type="submit" class="submit"></button>
-                    </form>
-                </div>
-            </div>
+  <div class="container">
+    <div class="columns mb-0">
+      {% include footer-links.html %}
+      <div class="column subscribe-container">
+        <div class="subscribe-header">Join our mailing list to receive the latest news and updates from the Innocence
+          Project:</div>
+        <div class="email-container">
+          <form class="footer-subscribe" name="footer-newsletter" action="https://innocenceproject.org/getinvolved/"
+            method="post">
+            <input type="email" class="form-control" id="email-subscribe" placeholder="Email" name="email-subscribe" />
+            <button type="submit" class="submit"></button>
+          </form>
         </div>
-          {% include affiliations.html %}
-        <div class="columns">
-          {% include footer-icons.html %}
-        </div>
-        <div class="columns">
-            <div class="column is-full credits pb-6">
-                <div class="credit"><a href="tel:+2123645340" target="_blank">212.364.5340</a> - <a href="mailto:info@innocenceproject.org" target="_blank">info@innocenceproject.org</a></div>
-                <div class="credit">© {{ 'now' | date: "%Y" }} Innocence Project. All Rights Reserved.</div>
-            </div>
-        </div>
+      </div>
     </div>
+    {% include affiliations.html %}
+    <div class="columns">
+      {% include footer-icons.html %}
+    </div>
+    <div class="columns">
+      <div class="column is-full credits pb-6">
+        <div class="credit"><a href="tel:+2123645340" target="_blank">212.364.5340</a> - <a
+            href="mailto:info@innocenceproject.org" target="_blank">info@innocenceproject.org</a></div>
+        <div class="credit">© {{ 'now' | date: "%Y" }} Innocence Project. All Rights Reserved.</div>
+      </div>
+    </div>
+  </div>
 </footer>

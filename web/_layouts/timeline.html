@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-    <body>
-        {% include navbar.html %}
-        {% include hero.html %}
-        {% include founding-summary.html %}
-        <section id="timeline" class="timeline">
-          {% include sidebar.html %}
-          
-          {% for block in site.timeline %}
-            {{ block.content }}
-          {% endfor %}
-          
-          {{ content }}
-        </section>
-        {% include footer.html %}
-    </body>
+{% include head.html %}
+
+<body>
+  {% include navbar.html %}
+  {% include hero.html %}
+  {% include founding-summary.html %}
+  <section id="timeline" class="timeline">
+    {% include sidebar.html %}
+
+    {% for block in site.timeline %}
+    {{ block.content }}
+    {% endfor %}
+
+    {{ content }}
+  </section>
+  {% include footer.html %}
+</body>
+
 </html>
