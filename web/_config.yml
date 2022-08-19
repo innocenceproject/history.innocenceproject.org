@@ -18,8 +18,8 @@
 # theme: minima
 
 # List of plugins to use
-# plugins:
-  # - jekyll-feed
+plugins:
+  - jekyll-seo-tag
   
 # Set URL and subpath for Local development
 url: "http://history.innocenceproject.test" # the base hostname & protocol for your site, e.g. http://example.com
