@@ -75,6 +75,7 @@ preview-image: /assets/images/Barry Scheck and Peter Neufeld.jpeg
 #   disable_in_development: true
 
 collections:
-  - timeline
+  timeline:
+    output: false
 
 
