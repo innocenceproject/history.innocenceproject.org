@@ -1,29 +1,11 @@
-            <div class="column is-full footer-icons">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/innocenceproject/" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/facebook-logo.svg" alt="Facebook logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/innocence" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/twitter-logo.svg" alt="Twitter logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/innocenceproject/" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/ig-logo.svg" alt="Instagram logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.tiktok.com/@innocence" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/tiktok-logo.svg" alt="Tiktok logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/user/innocenceproject" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/youtube-logo.svg" alt="Youtube logo" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<div class="column is-full footer-icons">
+  <ul>
+  {% for link in site.data.social-links %}
+    <li>
+      <a href="{{ link[1].url }}" {% if link[1].target %}target="{{link[1].target}}"{% endif %}>
+        <img loading="lazy" class="footer-icon" src="{{ link[1].icon }}" alt="{{ link[1].alt }}"/>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
