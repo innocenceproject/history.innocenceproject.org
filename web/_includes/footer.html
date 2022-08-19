@@ -1,26 +1,7 @@
 <footer>
     <div class="container">
         <div class="columns mb-0">
-            <div class="column footer-links">
-                <div class="columns is-mobile">
-                    <div class="column links-column">
-                        <ul>
-                            <li><a href="https://innocenceproject.org/contact/">Contact</a></li>
-                            <li><a href="https://innocenceproject.org/donate/" target="_blank">Donate</a></li>
-                            <li><a href="https://innocenceproject.org/careers/">Careers</a></li>
-                            <li><a href="https://innocenceproject.org/privacy-policy/">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="column links-column">
-                        <ul>
-                            <li><a href="https://innocenceproject.org/about/">About</a></li>
-                            <li><a href="https://innocenceproject.org/give/">Ways to Give</a></li>
-                            <li><a href="https://innocenceproject.org/financials/">Financials</a></li>
-                            <li><a href="https://innocenceproject.org/legal/">Legal</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {% include footer-links.html %}
             <div class="column subscribe-container">
                 <div class="subscribe-header">Join our mailing list to receive the latest news and updates from the Innocence Project:</div>
                 <div class="email-container">
@@ -31,44 +12,9 @@
                 </div>
             </div>
         </div>
+          {% include affiliations.html %}
         <div class="columns">
-            <div class="column is-full affiliate-text width-22rem">The Innocence Project is affiliated with Benjamin N. Cardozo School of Law, Yeshiva University.</div>
-        </div>
-        <div class="columns">
-            <div class="column is-full partner-logo">
-                <img loading="lazy" src="{{ site.baseurl }}/assets/images/cardozo-logo.png" alt="Cardoza logo" />
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column is-full footer-icons">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/innocenceproject/" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/facebook-logo.svg" alt="Facebook logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/innocence" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/twitter-logo.svg" alt="Twitter logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/innocenceproject/" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/ig-logo.svg" alt="Instagram logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.tiktok.com/@innocence" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/tiktok-logo.svg" alt="Tiktok logo" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/user/innocenceproject" target="_blank">
-                            <img loading="lazy" class="footer-icon" src="{{ site.baseurl }}/assets/images/icons/youtube-logo.svg" alt="Youtube logo" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
+          {% include footer-icons.html %}
         </div>
         <div class="columns">
             <div class="column is-full credits pb-6">
