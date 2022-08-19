@@ -1,0 +1,25 @@
+contact: 
+  url: http://innocenceproject.org/contact/
+  text: Contact
+donate: 
+  url: https://innocenceproject.org/donate/
+  text: Donate
+  target: _blank
+careers: 
+  url: https://innocenceproject.org/careers/
+  text: Careers
+privacy: 
+  url: https://innocenceproject.org/privacy-policy/
+  text: Privacy Policy
+about: 
+  url: https://innocenceproject.org/about/
+  text: About
+give: 
+  url: https://innocenceproject.org/give/
+  text: Ways to Give
+financials: 
+  url: https://innocenceproject.org/financials/
+  text: Financials
+legal: 
+  url: https://innocenceproject.org/legal/
+  text: Legal
