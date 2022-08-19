@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-
+{% include liquid_variables.liquid %}
 <body>
   {% include navbar.html %}
   {% include hero.html %}
@@ -9,16 +9,13 @@
   <section id="timeline" class="timeline">
     {% include sidebar.html %}
     
-    {% assign timeline_years = site.timeline | map: "year" | compact | uniq %}
-    {% assign timeline_year_header = site.timeline | map: "year_header" | compact %}
-    
     {% for year in timeline_years %}
       {% assign loop_index = forloop.index | minus: 1 %}
       {% assign header_style = timeline_year_header[loop_index] %}
       {% include year-header.html year=year %}
       {% assign year_blocks = site.timeline | where: 'year', year %}
       {% for block in year_blocks %}
-      {{ block.content }}
+        {% include block.html %}
       {% endfor %}
     {% endfor %}
 

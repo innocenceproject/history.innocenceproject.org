@@ -1,0 +1,37 @@
+{% assign year_in_path = block.relative_path | split: "/" %}
+{% assign year = year_in_path[2] | to_integer %}
+
+<!-- Render raw html from .html files -->
+{% if block.relative_path contains '.html' %}
+  {{ block.content }}
+{% endif %}
+        
+{% comment %} Render output markdown from .md files {% endcomment %}
+{% if block.relative_path contains '.md' %}
+<div class="timeline-block {{ block.style.background | default: 'block-blue' }}" data-year="{{ year }}">
+  <div class="container">
+    <div class="is-flex">
+      <div class="accent {{ block.style.accent | default: 'darker-blue' }}"></div>
+      <div class="timeline-block-sub-container is-hidden-desktop">
+        <div class="eyebrow">
+          <div class="eyebrow-dot"></div>
+          <div class="eyebrow-header">{{ block.eyebrow-header | default: "Add eyebrow-header"}}</div>
+        </div>
+        <div class="timeline-generated-touch {{ block.style.classes.mobile | default: "reveal" }}">
+          {{ block.output }}
+        </div>
+      </div>
+
+      <div class="timeline-block-sub-container is-hidden-touch">
+        <div class="eyebrow">
+          <div class="eyebrow-dot"></div>
+          <div class="eyebrow-header">{{ block.eyebrow-header | default: "Add eyebrow-header"}}</div>
+        </div>
+        <div class="timeline-generated-desktop {{ block.style.classes.desktop | default: "reveal" }} ">
+          {{ block.output }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
