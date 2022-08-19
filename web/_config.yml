@@ -28,7 +28,7 @@ destination: /var/www/web
 
 # Set build paths
 source: .
-collections_dir: collections
+#collections_dir: collections
 plugins_dir: _plugins
 layouts_dir: _layouts
 data_dir: _data
@@ -75,9 +75,6 @@ preview-image: /assets/images/Barry Scheck and Peter Neufeld.jpeg
 #   disable_in_development: true
 
 collections:
-  timeline-blocks:
-    order:
-      - 1992-our-founding.md
-    output: false
+  - timeline
 
 

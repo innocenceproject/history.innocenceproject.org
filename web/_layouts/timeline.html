@@ -7,6 +7,15 @@
         {% include founding-summary.html %}
         <section id="timeline" class="timeline">
           {% include sidebar.html %}
+          
+          {% assign year_timeline = site.timeline | group_by: "year" | sort: "year" %}
+          {% for year in year_timeline %}
+            {% assign sorted_year = year.items | sort: "order" %}
+            {% for block in sorted_year %}
+              {{ block.content }}
+            {% endfor %}
+          {% endfor %}
+          
           {{ content }}
         </section>
         {% include footer.html %}
