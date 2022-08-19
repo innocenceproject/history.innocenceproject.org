@@ -5,7 +5,10 @@
         {% include navbar.html %}
         {% include hero.html %}
         {% include founding-summary.html %}
-        {{ content }}
+        <section id="timeline" class="timeline">
+          {% include sidebar.html %}
+          {{ content }}
+        </section>
         {% include footer.html %}
     </body>
 </html>
