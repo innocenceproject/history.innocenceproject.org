@@ -1,8 +1,7 @@
-<!-- Render raw html from .html files -->
+{% comment %} Render raw html from .html files {% endcomment %}
 {% if this_block.relative_path contains '.html' %}
   {{ this_block.content }}
 {% endif %}
-
 {% comment %} Render output markdown from .md files {% endcomment %}
 {% if this_block.relative_path contains '.md' %}
 <div class="timeline-this_block {{ this_block.style.background | default: 'this_block-blue' }}" data-year="{{ year }}">

@@ -8,7 +8,6 @@
   {% include founding-summary.html %}
   <section id="timeline" class="timeline">
     {% include sidebar.html %}
-    
     {% assign current_year = "" | split: "" %}
     {% for block in timeline %}
       {% assign index = forloop.index %}
@@ -22,18 +21,7 @@
         {% assign this_block = block[1] %}
         {% include block.html %}
     {% endfor %}
-
-    {% comment %}
-    {% for year in years %}
-      {% assign loop_index = forloop.index %}
-      {% include year-header.html year=year %}
-      {{ loop_index }}
-      {% include block.html %}
-      {% include block.html %}
-    {% endfor %}
-    {% endcomment %}
     {% include hero_credits.html %}
-
     {{ content }}
   </section>
   {% include footer.html %}
