@@ -1,2 +1,15 @@
 {% assign timeline_years = site.timeline | map: "year" | compact | uniq %}
 {% assign timeline_year_header = site.timeline | map: "year_header" | compact %}
+
+{% assign block_index_years = "" | split: "" %}
+{% assign timeline = "" | split: "" %}
+
+{% for block in site.timeline %}
+  {% assign path_array = block.relative_path | split: "/" %}
+  {% assign year = path_array[1] %}
+  {% assign block_index_years = block_index_years | push: year %}
+{% endfor %}
+
+{% assign timeline = block_index_years | zip_arrays: site.timeline %}
+
+{% assign years = block_index_years | uniq %}

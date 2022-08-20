@@ -1,6 +1,5 @@
 ---
 eyebrow-header: History
-year: 2022
 style:
   background: block-blue
   accent: darker-blue
