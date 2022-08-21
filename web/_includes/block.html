@@ -2,32 +2,217 @@
 {% if this_block.relative_path contains '.html' %}
   {{ this_block.content }}
 {% endif %}
+
 {% comment %} Render output markdown from .md files {% endcomment %}
 {% if this_block.relative_path contains '.md' %}
-<div class="timeline-this_block {{ this_block.style.background | default: 'this_block-blue' }}" data-year="{{ year }}">
-  <div class="container">
-    <div class="is-flex">
-      <div class="accent {{ this_block.style.accent | default: 'darker-blue' }}"></div>
-      <div class="timeline-this_block-sub-container is-hidden-desktop">
-        <div class="eyebrow">
-          <div class="eyebrow-dot"></div>
-          <div class="eyebrow-header">{{ this_block.eyebrow-header | default: "Add eyebrow-header"}}</div>
-        </div>
-        <div class="timeline-generated-touch {{ this_block.style.classes.mobile | default: "reveal" }}">
-          {{ this_block.output }}
-        </div>
-      </div>
 
-      <div class="timeline-this_block-sub-container is-hidden-touch">
-        <div class="eyebrow">
-          <div class="eyebrow-dot"></div>
-          <div class="eyebrow-header">{{ this_block.eyebrow-header | default: "Add eyebrow-header"}}</div>
+{% if this_block.theme == 'white' %}
+<div class="divider"></div>
+{% endif %}
+
+
+{% if this_block.block-layout == 'standard' %}
+<div class="timeline-block block-{{ this_block.theme | default: 'white' }}" data-year="{{ this_block.year }}">
+    <div class="container">
+        <div class="is-flex">
+            <div class="accent {{ this_block.block-left-accent | default: 'light-beige' }}"></div>
+            
+            <div class="timeline-block-sub-container is-hidden-desktop">
+                <div class="eyebrow">
+                    <div class="eyebrow-dot"></div>
+                    <div class="eyebrow-header">{{ this_block.eyebrow-header | default: 'History' }}</div>
+                </div>
+                <div class="timeline-header">{{ this_block.header | default: 'Place header text here' }}</div>
+                <div class="timeline-subheader reveal">{{ this_block.subheader | default 'Place subheader text here' }}</div>
+                <div class="is-flex is-flex-direction-column">
+                
+                    {% if this_block.image %}
+                    <div class="timeline-image reveal">
+                        <img loading="lazy" src="/assets/images/{{ this_block.image }}" alt="{{ this_block.image-alt-text }}" />
+                    </div>
+                    {% endif %}
+                
+                    {% if this_block.description %}
+                    <div class="timeline-description">
+                        <div class="description-bullet"></div>
+                        {{ this_block.description }}
+                    </div>
+                    {% endif %}
+                
+                    {% if this_block.has-victory-seal %}
+                    <div class="timeline-victory-seal seal-far-right mb-0">
+                        <img loading="lazy" src="/assets/images/icons/CollaborativeVictory_Icon.png"
+                            alt="Collaborative Victory" />
+                    </div>
+                    {% endif %}
+                    
+                </div>
+            </div>
+                    
+            <div class="timeline-block-sub-container is-hidden-touch">
+                <div class="eyebrow">
+                    <div class="eyebrow-dot"></div>
+                    <div class="eyebrow-header">{{ this_block.eyebrow-header | default: 'History' }}</div>
+                </div>
+                <div class="timeline-header">{{ this_block.header | default: 'Place header text here' }}</div>
+                <div class="timeline-subheader reveal">{{ this_block.subheader | default 'Place subheader text here' }}</div>
+                <div class="is-flex">
+            
+                    {% if this_block.image %}
+                    <div class="flex-1 timeline-image reveal">
+                        <img loading="lazy" src="/assets/images/{{ this_block.image }}" alt="{{ this_block.image-alt-text }}" />
+                    </div>
+                    {% endif %}
+            
+                    {% if this_block.description %}
+                    <div class="flex-1 timeline-description">
+                        <div class="description-bullet"></div>
+                        {{ this_block.description }}
+                    </div>
+                    {% endif %}
+            
+                </div>
+            
+                {% if this_block.has-victory-seal %}
+                <div class="timeline-victory-seal mb-0">
+                    <img loading="lazy" src="/assets/images/icons/CollaborativeVictory_Icon.png"
+                        alt="Collaborative Victory" />
+                </div>
+                {% endif %}
+            
+            </div>
         </div>
-        <div class="timeline-generated-desktop {{ this_block.style.classes.desktop | default: "reveal" }} ">
-          {{ this_block.output }}
-        </div>
-      </div>
     </div>
-  </div>
 </div>
+{% endif %}
+
+
+{% if this_block.block-layout == 'icon' %}
+<div class="timeline-block block-{{ this_block.theme | default: 'white' }}" data-year="{{ this_block.year }}">
+    <div class="container">
+        <div class="is-flex">
+            <div class="accent {{ this_block.block-left-accent | default: 'light-beige' }}"></div>
+
+            <div class="timeline-block-sub-container is-hidden-desktop">
+                <div class="eyebrow">
+                    <div class="eyebrow-dot"></div>
+                    <div class="eyebrow-header">{{ this_block.eyebrow-header | default: 'History' }}</div>
+                </div>
+                <div class="is-flex is-align-items-center mb-5">
+                    <div class="header-icon-solo mb-0 flex-5">
+                        <img loading="lazy" src="/assets/images/icons/{{ this_block.icon }}.png" alt="{{ this_block.icon }} icon" />
+                    </div>
+                    <div class="timeline-header is-size-175l-5 ml-5 mb-0 flex-11">{{ this_block.header | default: 'Place header text here' }}</div>
+                </div>
+                <div class="timeline-subheader reveal">{{ this_block.subheader | default 'Place subheader text here' }}</div>
+
+                {% if this_block.has-victory-seal %}
+                <div class="timeline-victory-seal seal-far-right mb-0">
+                    <img loading="lazy" src="/assets/images/icons/CollaborativeVictory_Icon.png"
+                        alt="Collaborative Victory" />
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="timeline-block-sub-container is-hidden-touch">
+                <div class="eyebrow">
+                    <div class="eyebrow-dot"></div>
+                    <div class="eyebrow-header">{{ this_block.eyebrow-header | default: 'History' }}</div>
+                </div>
+                <div class="is-flex is-align-items-center">
+                    <div class="header-icon-solo flex-2 mb-0">
+                        <img loading="lazy" src="/assets/images/icons/{{ this_block.icon }}.png" alt="{{ this_block.icon }} icon" />
+                    </div>
+                    <div class="flex-5 ml-4rem">
+                        <div class="timeline-header ml-0 mt-0">{{ this_block.header | default: 'Place header text here' }}</div>
+                        <div class="timeline-subheader reveal ml-0 mb-0">{{ this_block.subheader | default 'Place subheader text here' }}</div>
+                    </div>
+                </div>
+
+                {% if this_block.has-victory-seal %}
+                <div class="timeline-victory-seal mb-0">
+                    <img loading="lazy" src="/assets/images/icons/CollaborativeVictory_Icon.png"
+                        alt="Collaborative Victory" />
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+{% if this_block.block-layout == 'icon-and-image' %}
+<div class="timeline-block block-{{ this_block.theme | default: 'white' }}" data-year="{{ this_block.year }}">
+    <div class="container">
+        <div class="is-flex">
+            <div class="accent {{ this_block.block-left-accent | default: 'light-beige' }}"></div>
+
+            <div class="timeline-block-sub-container is-hidden-desktop">
+                <div class="eyebrow">
+                    <div class="eyebrow-dot"></div>
+                    <div class="eyebrow-header">{{ this_block.eyebrow-header | default: 'History' }}</div>
+                </div>
+                <div class="timeline-subheader reveal">{{ this_block.subheader | default 'Place subheader text here' }}</div>
+                <div class="header-container">
+                    <div class="header-icon">
+                        <img loading="lazy" src="/assets/images/icons/{{ this_block.icon}}.png" alt="{{ this_block.icon}} icon" />
+                    </div>
+                    <div class="timeline-header is-size-p8rem pr-5">{{ this_block.icon-header }}</div>
+                </div>
+                <div class="timeline-image reveal mt-4 mb-0">
+                    <img loading="lazy" src="/assets/images/{{ this_block.image | default: 'placeholder-image.jpg' }}" alt="{{ this_block.image-alt-text | default: 'Man in navy blue suit and tie.' }}" />
+                </div>
+
+                <div class="timeline-description">
+                    <div class="description-bullet"></div>
+                    {{ this_block.description }}
+                </div>
+
+                {% if this_block.has-victory-seal %}
+                <div class="timeline-victory-seal mt-4 mb-0">
+                    <img loading="lazy" src="/assets/images/icons/CollaborativeVictory_Icon.png" alt="Collaborative Victory" />
+                </div>
+                {% endif %}
+
+            </div>
+
+            <div class="timeline-block-sub-container pb-2 is-hidden-touch">
+                <div class="eyebrow">
+                    <div class="eyebrow-dot"></div>
+                    <div class="eyebrow-header">{{ this_block.eyebrow-header | default: 'History' }}</div>
+                </div>
+                <div class="timeline-subheader reveal">{{ this_block.subheader | default 'Place subheader text here' }}</div>
+
+                <div class="is-flex height-35rem mb-5">
+                    <div class="header-container mb-0">
+                        <div class="header-icon">
+                            <img loading="lazy" src="/assets/images/icons/{{ this_block.icon }}.png" alt="{{ this_block.icon }} icon" />
+                        </div>
+                        <div class="timeline-header m-0 font-size-large">{{ this_block.icon-header }}</div>
+                    </div>
+                    <div class="timeline-image reveal height-100 mb-0 ml-5">
+                        <img loading="lazy" class="height-100 fit" src="/assets/images/{{ this_block.image | default: 'placeholder-image.jpg' }}" alt="{{ this_block.image-alt-text | default: 'Man in navy blue suit and tie.' }}" />
+                    </div>
+                </div>
+
+                <div class="timeline-description">
+                    <div class="description-bullet"></div>
+                    {{ this_block.description }}
+                </div>
+
+                {% if this_block.has-victory-seal %}
+                <div class="timeline-victory-seal seal-right-up mt-0">
+                    <img loading="lazy" src="/assets/images/icons/CollaborativeVictory_Icon.png" alt="Collaborative Victory"/>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
 {% endif %}
