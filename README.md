@@ -58,6 +58,49 @@ See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
 └── README.md         |This file
 ```
 
+## Adding Content
+
+See entire process: 
+**(link coming soon)**
+
+
+####Summary:
+- choose template for new timeline block
+    - templates are found her: `/web/templates` 
+    - copy template
+    - create folder and file in `/web/_timeline` for relevant year
+    - paste in completed template
+    - click `Commit` 
+
+*Example to add content for the year 2023:*
+- navigate to `web` folder above, then `templates` folder
+- choose template and copy text
+- go back, then navigate to `_timeline` folder
+- click **Add file** 
+- type in `2023` (slash) `1-custome-file-name.md` 
+- paste template text
+- fill out relevant data in template
+- click `Commit`
+- Done! 👏
+
+## New Content Layouts
+
+There are three different layouts to add new timeline blocks. The first layout (Standard) is the most flexible, with most content fields being optional.
+
+### Standard Layout `/web/templates/standard.md`:
+![Standard Layout](web/templates/screenshot-previews/standard.png "Standard Layout screenshot")
+
+
+### Icon Layout `/web/templates/icon.md`:
+![Standard Layout](web/templates/screenshot-previews/icon.png "Standard Layout screenshot")
+
+
+### Icon and Image Layout `/web/templates/icon-and-image.md`:
+![Standard Layout](web/templates/screenshot-previews/icon-and-image.png "Standard Layout screenshot")
+
+
+ 
+
 
 ```
   7777777777777777777777777777777777777777777777777777777777777777777777777

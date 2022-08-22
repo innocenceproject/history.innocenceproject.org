@@ -12,12 +12,12 @@ year: 2023
 block-layout: icon-and-image
 
 # white, blue, beige2 (default: white)
-theme: white
+theme: beige2
 
 eyebrow-header: Transforming Systems
 
 # options: dna-beige, dna-light-blue, eye-beige, fingerprint-white, fist-blue, law-beige, law-light-blue, law-white, magnifying-glass-beige, magnifying-glass-light-blue, research-white
-icon: law-light-blue
+icon: law-beige
 
 icon-header: Try to keep this header around 15-20 words long, so it won't over flow the content box. 
 
