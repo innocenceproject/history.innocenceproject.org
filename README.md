@@ -64,7 +64,7 @@ See entire process:
 **(link coming soon)**
 
 
-####Summary:
+#### Summary:
 - choose template for new timeline block
     - templates are found her: `/web/templates` 
     - copy template
