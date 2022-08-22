@@ -4667,7 +4667,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .reveal.active { animation: elementReveal 1s; -webkit-animation: elementReveal 1s; -moz-animation: elementReveal 1s; -o-animation: elementReveal 1s; -ms-animation: elementReveal 1s; animation-fill-mode: forwards; animation-timing-function: ease-out; }
 
-.sidebar-timeline { display: none; position: absolute; right: 100%; line-height: 1.8; transform: translate(-50px, 0px); height: 50395px; }
+.sidebar-timeline { display: none; position: absolute; right: 100%; line-height: 1.8; transform: translate(-50px, 0px); height: 51700px; }
 
 @media screen and (min-width: 1408px) { .sidebar-timeline { display: block; } }
 
