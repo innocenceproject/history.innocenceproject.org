@@ -1,0 +1,25 @@
+facebook: 
+  url: https://www.facebook.com/innocenceproject/
+  icon: /assets/images/icons/facebook-logo.svg
+  alt: Facebook logo
+  target: _blank
+twitter: 
+  url: https://twitter.com/innocence
+  icon: /assets/images/icons/twitter-logo.svg
+  alt: Twitter logo
+  target: _blank
+instagram: 
+  url: https://www.instagram.com/innocenceproject/
+  icon: /assets/images/icons/ig-logo.svg
+  alt: Instagram logo
+  target: _blank
+tiktok: 
+  url: https://www.tiktok.com/@innocence
+  icon: /assets/images/icons/tiktok-logo.svg
+  alt: Tiktok logo
+  target: _blank
+youtube: 
+  url: https://www.youtube.com/user/innocenceproject
+  icon: /assets/images/icons/youtube-logo.svg
+  alt: YouTube logo
+  target: _blank

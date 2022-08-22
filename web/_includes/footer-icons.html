@@ -1,0 +1,11 @@
+<div class="column is-full footer-icons">
+  <ul>
+    {% for link in site.data.social-links %}
+    <li>
+      <a href="{{ link[1].url }}" {% if link[1].target %}target="{{link[1].target}}" {% endif %}>
+        <img loading="lazy" class="footer-icon" src="{{ link[1].icon }}" alt="{{ link[1].alt }}" />
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

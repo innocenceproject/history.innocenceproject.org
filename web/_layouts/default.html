@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>{{ page.title }}</title>
-        {% include fonts.html %}
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <meta name="description" content="Timeline history of Innocence Project: Realizing the power of DNA testing in ending wrongful convictions, Barry Scheck and Peter Neufeld founded the Innocence Project as a law clinic at the Benjamin N. Cardozo School of Law in 1992.">
-        <meta property="og:image" content="{{ site.baseurl }}/assets/images/Barry Scheck and Peter Neufeld.jpeg">
-        <script src="main.js" defer></script>
-        {% seo %}
-        {% include analytics.html %}
-    </head>
-    <body>
-        {% include navbar.html %}
-        {{ content }}
-        {% include footer.html %}
-    </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title }}</title>
+  {% include fonts.html %}
+<link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="{{ site.description }}">
+<meta property="og:image" content="{{site.preview-image}}">
+  <script src="main.js" defer></script>
+  {% seo %}
+  {% include analytics.html %}
+</head>
+
+<body>
+  {% include navbar.html %}
+  {% include hero.html %}
+  {% include founding-summary.html %}
+  {{ content }}
+  {% include footer.html %}
+</body>
+
 </html>

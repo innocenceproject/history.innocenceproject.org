@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+{% include liquid_variables.liquid %}
+<body>
+  {% include navbar.html %}
+  {% include hero.html %}
+  {% include founding-summary.html %}
+  <section id="timeline" class="timeline">
+    {% include sidebar.html %}
+    {% assign current_year = "" | split: "" %}
+    {% for block in timeline %}
+      {% assign index = forloop.index %}
+      {% assign block_year = block[0] %}
+      {% unless block_year == current_year.last  %}
+        {% assign year_index = current_year.size %}
+        {% assign current_year = current_year | push: block[0] %}
+        {% assign header_style = timeline_year_header[year_index] %}
+        {% include year-header.html year=current_year.last %}
+      {% endunless %}
+        {% assign this_block = block[1] %}
+        {% include block.html %}
+    {% endfor %}
+    {% include hero_credits.html %}
+    {{ content }}
+  </section>
+  {% include footer.html %}
+</body>
+</html>

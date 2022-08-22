@@ -1,0 +1,9 @@
+{% if header_style.border contains "top" %}<div class="divider"></div>{% endif %}
+<div class="mb-3 is-hidden-desktop" data-year="{{ include.year }}"></div>
+<div class="container" data-year="{{ include.year }}">
+  <div class="is-flex">
+    <div class="accent {{ header_style.accent | default: "accent-blue" }}"></div>
+    <h2 class="year-header" id="year-{{ include.year }}">{{ include.year }}</h2>
+  </div>
+</div>
+{% if header_style.border contains "bottom" %}<div class="divider"></div>{% endif %}
