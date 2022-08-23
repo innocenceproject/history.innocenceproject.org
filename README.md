@@ -6,14 +6,14 @@ Video demo: *(link coming soon)*
 
 #### Summary:
 - if new content contains an image:
-    - navigate to `/web/assets/images`
+    - navigate to `/web/assets/images/timeline`
     - click `Add files`, then `Upload files`
     - drag and drop your image file to upload
     - click `Commit`
 - choose template for new timeline block
-    - templates are found here: `/web/templates` 
+    - templates are found in the `/new-content-templates` folder
     - copy Raw template text
-    - create folder and file in `/web/_timeline` for relevant year
+    - create folder and file in the `/web/_timeline` folder for relevant year
     - paste in completed template
     - click `Commit` 
     - Done. Website should update within a few minutes.
