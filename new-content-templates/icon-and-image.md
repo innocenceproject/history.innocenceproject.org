@@ -21,7 +21,7 @@ icon: law-beige
 
 icon-header: Try to keep this header around 15-20 words long, so it won't over flow the content box. 
 
-# Put image file in web/assets/images folder
+# Put image file in web/assets/images/timeline folder
 image: placeholder-image.jpg
 
 image-alt-text: A short description of the image, for SEO purposes. 

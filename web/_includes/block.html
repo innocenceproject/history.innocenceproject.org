@@ -28,7 +28,7 @@
                 
                     {% if this_block.image %}
                     <div class="timeline-image reveal">
-                        <img loading="lazy" src="/assets/images/{{ this_block.image }}" alt="{{ this_block.image-alt-text }}" />
+                        <img loading="lazy" src="/assets/images/timeline/{{ this_block.image }}" alt="{{ this_block.image-alt-text }}" />
                     </div>
                     {% endif %}
                 
@@ -60,7 +60,7 @@
             
                     {% if this_block.image %}
                     <div class="flex-1 timeline-image reveal">
-                        <img loading="lazy" src="/assets/images/{{ this_block.image }}" alt="{{ this_block.image-alt-text }}" />
+                        <img loading="lazy" src="/assets/images/timeline/{{ this_block.image }}" alt="{{ this_block.image-alt-text }}" />
                     </div>
                     {% endif %}
             
@@ -162,7 +162,7 @@
                     <div class="timeline-header is-size-p8rem pr-5">{{ this_block.icon-header }}</div>
                 </div>
                 <div class="timeline-image reveal mt-4 mb-0">
-                    <img loading="lazy" src="/assets/images/{{ this_block.image | default: 'placeholder-image.jpg' }}" alt="{{ this_block.image-alt-text | default: 'Man in navy blue suit and tie.' }}" />
+                    <img loading="lazy" src="/assets/images/timeline/{{ this_block.image | default: 'placeholder-image.jpg' }}" alt="{{ this_block.image-alt-text | default: 'Man in navy blue suit and tie.' }}" />
                 </div>
 
                 <div class="timeline-description">
@@ -193,7 +193,7 @@
                         <div class="timeline-header m-0 font-size-large">{{ this_block.icon-header }}</div>
                     </div>
                     <div class="timeline-image reveal height-100 mb-0 ml-5">
-                        <img loading="lazy" class="height-100 fit" src="/assets/images/{{ this_block.image | default: 'placeholder-image.jpg' }}" alt="{{ this_block.image-alt-text | default: 'Man in navy blue suit and tie.' }}" />
+                        <img loading="lazy" class="height-100 fit" src="/assets/images/timeline/{{ this_block.image | default: 'placeholder-image.jpg' }}" alt="{{ this_block.image-alt-text | default: 'Man in navy blue suit and tie.' }}" />
                     </div>
                 </div>
 
