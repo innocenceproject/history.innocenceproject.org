@@ -33,16 +33,16 @@ Video demo: *(link coming soon)*
 
 There are three different layouts to add new timeline blocks. The first layout (Standard) is the most flexible, with most content fields being optional.
 
-### Standard Layout `/web/templates/standard.md`:
-![Standard Layout](web/templates/screenshot-previews/standard.png "Standard Layout screenshot")
+### Standard Layout `/new-content-templates/standard.md`:
+![Standard Layout](new-content-templates/screenshot-previews/standard.png "Standard Layout screenshot")
 
 
-### Icon Layout `/web/templates/icon.md`:
-![Standard Layout](web/templates/screenshot-previews/icon.png "Standard Layout screenshot")
+### Icon Layout `/new-content-templates/icon.md`:
+![Standard Layout](new-content-templates/screenshot-previews/icon.png "Standard Layout screenshot")
 
 
-### Icon and Image Layout `/web/templates/icon-and-image.md`:
-![Standard Layout](web/templates/screenshot-previews/icon-and-image.png "Standard Layout screenshot")
+### Icon and Image Layout `/new-content-templates/icon-and-image.md`:
+![Standard Layout](new-content-templates/screenshot-previews/icon-and-image.png "Standard Layout screenshot")
 
 
 
