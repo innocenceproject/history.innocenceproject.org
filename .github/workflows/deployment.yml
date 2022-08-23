@@ -2,8 +2,6 @@
 name: Deployment
 
 env:
-  GH_USER: madeline-holland
-  GH_USER_EMAIL: madeline.holland@ten7.com
   BUILD_SUBDIR: build
   REPO_SUBDIR: src
   WEBROOT_SUBDIR: src/web
