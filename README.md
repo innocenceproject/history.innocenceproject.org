@@ -64,16 +64,21 @@ See entire process: [https://www.loom.com/share/91cc4386238a4547ad5351829e5e1a89
 
 
 #### Summary:
+- if image,
+    - navigate to `/web/assets/images`
+    - click `Add files`, then `Upload files`
+    - drag and drop your image file to upload
+    - click `Commit`
 - choose template for new timeline block
-    - templates are found her: `/web/templates` 
-    - copy template
+    - templates are found here: `/web/templates` 
+    - copy Raw template text
     - create folder and file in `/web/_timeline` for relevant year
     - paste in completed template
     - click `Commit` 
 
 *Example to add content for the year 2023:*
 - navigate to `web` folder above, then `templates` folder
-- choose template and copy text
+- choose template, click `Raw Text`, copy text
 - go back, then navigate to `_timeline` folder
 - click **Add file** 
 - type in `2023` (slash) `1-custome-file-name.md` 
