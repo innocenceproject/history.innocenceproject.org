@@ -25,7 +25,7 @@ theme: white
 # accent-blue, tan, blue, darker-blue, light-beige, light-beige2 (default: light-beige)
 block-left-accent: light-beige
 
-# Put image file in web/assets/images folder
+# Put image file in web/assets/images/timeline folder
 image: placeholder-image.jpg
 
 image-alt-text: Put image alt text here. Short, accurate description what the image shows, for SEO purposes. 
