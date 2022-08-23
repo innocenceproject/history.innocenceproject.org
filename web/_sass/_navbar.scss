@@ -16,6 +16,18 @@
 
 .navbar-item {
     padding-left: 1.5rem;
+
+    // donate button
+    .buttons {  
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        @include desktop {
+            top: 11px;
+            right: 8px;
+        }
+    }
 }
 
 .navbar-item img {
