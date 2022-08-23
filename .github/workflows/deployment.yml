@@ -38,8 +38,8 @@ jobs:
           ref: gh-pages
           path: ${{ env.BUILD_SUBDIR }}
           
-      - name: Checkout dev or preview build repo
-        if: github.ref_name == ('develop' || 'preview')
+      - name: Checkout dev build repo
+        if: github.ref_name == ('develop')
         uses: actions/checkout@v3
         with:
           ref: gh-pages-${{ github.ref_name }}
@@ -62,8 +62,8 @@ jobs:
           working-directory: ${{env.WEBROOT_SUBDIR}}
           ruby-version: '3.0'
         
-      - name: Build Preview or Develop 
-        if: github.ref_name == ('develop' || 'preview')
+      - name: Build Develop 
+        if: github.ref_name == ('develop')
         run: |
           cd ${GITHUB_WORKSPACE}/${{ env.WEBROOT_SUBDIR }}
           bundle config set --local path 'vendor/bundle'
@@ -103,9 +103,3 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           git push --force origin HEAD:gh-pages-develop
-          
-      - name: Push preview
-        if: ${{ github.ref_name == 'preview' }}
-        run: |
-          cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
-          git push --force origin HEAD:gh-pages-preview
