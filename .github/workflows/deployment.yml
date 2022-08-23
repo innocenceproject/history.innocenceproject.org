@@ -88,8 +88,8 @@ jobs:
           cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           touch .nojekyll
           echo "history.innocenceproject.org" > CNAME
-          git config --global user.email ${{ env.GH_USER_EMAIL }}
-          git config --global user.name ${{ env.GH_USER }}
+          git config --global user.email "$(git log -n 1 --pretty=format:%an)"
+          git config --global user.name "$(git log -n 1 --pretty=format:%ae)"
           git add .
           git commit -a -m "Automated build from commit: $GITHUB_SHA"
         continue-on-error: true
