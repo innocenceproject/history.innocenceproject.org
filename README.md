@@ -55,7 +55,7 @@ docker compose exec web /bin/bash  # Enter the container (by default at /var/www
 # When you enter the container it will automatically install jekyll and dependencies, but not build the site. 
 
 # Build the site using jekyll, rebuilding automatically when changes are made.
-bundle exec jekyll build --watch --incremental # Add -V (verbose) for more information how long each build step is taking
+bundle exec jekyll build --watch # Add -V (verbose) for more information how long each build step is taking
 ```
 
 ### Checking a build from GitHub locally:
