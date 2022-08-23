@@ -60,8 +60,7 @@ See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
 
 ## Adding Content
 
-See entire process: 
-**(link coming soon)**
+See entire process: [https://www.loom.com/share/91cc4386238a4547ad5351829e5e1a89](https://www.loom.com/share/91cc4386238a4547ad5351829e5e1a89)
 
 
 #### Summary:
