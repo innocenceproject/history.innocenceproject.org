@@ -4050,6 +4050,8 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .mt-neg3rem { margin-top: -3rem !important; }
 
+.mt-neg2rem { margin-top: -2rem !important; }
+
 .mb-neg63px { margin-bottom: -63px !important; }
 
 .mr-7rem { margin-right: 7rem !important; }
@@ -4063,6 +4065,8 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .transformX-neg97px { transform: translateY(-97px); }
 
 .translateY-neg3px { transform: translateY(-3px); }
+
+.translateY-10px { transform: translateY(10px); }
 
 .translate-27-27 { transform: translate(27px, -27px); }
 
@@ -4088,6 +4092,10 @@ body { font-family: aktiv-grotesk, sans-serif; }
 .navbar-brand { align-items: center; }
 
 .navbar-item { padding-left: 1.5rem; }
+
+.navbar-item .buttons { position: fixed; top: 0; right: 0; }
+
+@media screen and (min-width: 1024px) { .navbar-item .buttons { top: 11px; right: 8px; } }
 
 .navbar-item img { max-height: 3rem; transform: translateX(-25px); }
 
