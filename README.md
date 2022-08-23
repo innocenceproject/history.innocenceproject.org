@@ -1,5 +1,51 @@
 # History of the Innocence Project
 
+## Adding Content
+
+Video demo: *(link coming soon)*
+
+#### Summary:
+- if new content contains an image:
+    - navigate to `/web/assets/images`
+    - click `Add files`, then `Upload files`
+    - drag and drop your image file to upload
+    - click `Commit`
+- choose template for new timeline block
+    - templates are found here: `/web/templates` 
+    - copy Raw template text
+    - create folder and file in `/web/_timeline` for relevant year
+    - paste in completed template
+    - click `Commit` 
+    - Done. Website should update within a few minutes.
+
+*Example to add content for the year 2023:*
+- navigate to `web` folder above, then `templates` folder
+- choose template, click `Raw Text`, copy text
+- go back, then navigate to `_timeline` folder
+- click **Add file** 
+- type in `2023` (slash) `1-custome-file-name.md` 
+- paste template text
+- fill out relevant data in template
+- click `Commit`
+- Done! 👏
+
+## New Content Layouts
+
+There are three different layouts to add new timeline blocks. The first layout (Standard) is the most flexible, with most content fields being optional.
+
+### Standard Layout `/web/templates/standard.md`:
+![Standard Layout](web/templates/screenshot-previews/standard.png "Standard Layout screenshot")
+
+
+### Icon Layout `/web/templates/icon.md`:
+![Standard Layout](web/templates/screenshot-previews/icon.png "Standard Layout screenshot")
+
+
+### Icon and Image Layout `/web/templates/icon-and-image.md`:
+![Standard Layout](web/templates/screenshot-previews/icon-and-image.png "Standard Layout screenshot")
+
+
+
 ### To use this repo:
 ```
 docker compose build               # Build the custom Docker container.
@@ -57,50 +103,6 @@ See the [jekyll](https://jekyllrb.com/docs/) documentation for info on Jekyll.
 ├── flight-deck.yml   |Settings for Apache & the container
 └── README.md         |This file
 ```
-
-## Adding Content
-
-See entire process: 
-**(link coming soon)**
-
-
-#### Summary:
-- choose template for new timeline block
-    - templates are found her: `/web/templates` 
-    - copy template
-    - create folder and file in `/web/_timeline` for relevant year
-    - paste in completed template
-    - click `Commit` 
-
-*Example to add content for the year 2023:*
-- navigate to `web` folder above, then `templates` folder
-- choose template and copy text
-- go back, then navigate to `_timeline` folder
-- click **Add file** 
-- type in `2023` (slash) `1-custome-file-name.md` 
-- paste template text
-- fill out relevant data in template
-- click `Commit`
-- Done! 👏
-
-## New Content Layouts
-
-There are three different layouts to add new timeline blocks. The first layout (Standard) is the most flexible, with most content fields being optional.
-
-### Standard Layout `/web/templates/standard.md`:
-![Standard Layout](web/templates/screenshot-previews/standard.png "Standard Layout screenshot")
-
-
-### Icon Layout `/web/templates/icon.md`:
-![Standard Layout](web/templates/screenshot-previews/icon.png "Standard Layout screenshot")
-
-
-### Icon and Image Layout `/web/templates/icon-and-image.md`:
-![Standard Layout](web/templates/screenshot-previews/icon-and-image.png "Standard Layout screenshot")
-
-
- 
-
 
 ```
   7777777777777777777777777777777777777777777777777777777777777777777777777
