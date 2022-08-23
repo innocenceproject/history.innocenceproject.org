@@ -46,7 +46,10 @@ There are three different layouts to add new timeline blocks. The first layout (
 
 
 
-### To use this repo:
+## Developers
+---
+
+### To develop using Docker Compose locally:
 ```
 docker compose build               # Build the custom Docker container.
 docker compose up -d               # Start it.
@@ -60,7 +63,7 @@ bundle exec jekyll build --watch # Add -V (verbose) for more information how lon
 
 ### Checking a build from GitHub locally:
 
-When pushing to the Develop branch the CI builds the site on GitHub using the same process that is used for the live site. But instead of the site building to the actual site, it pushes the resultant build (build artifacts) to the [gh-pages-develop](https://github.com/ten7/history.innocenceproject.org/tree/gh-pages-develop) branch on GitHub. 
+When pushing to the [develop](https://github.com/ten7/history.innocenceproject.org/tree/develop) branch the [CI](.github/workflows/deployment.yml) builds the site on GitHub using the same process that is used for the live site. But instead of the site being deployed to live, it pushes the resultant build (build artifacts) to the [gh-pages-develop](https://github.com/ten7/history.innocenceproject.org/tree/gh-pages-develop) branch on GitHub. 
 Steps to check the build:
   1. Download the [zip of that branch](https://github.com/ten7/history.innocenceproject.org/archive/refs/heads/gh-pages-develop.zip) and unzip to the "site"
   2. Unzip the files inside the folder inside to the `site` folder.
