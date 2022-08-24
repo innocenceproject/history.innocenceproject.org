@@ -1,9 +1,8 @@
-$color-purple: #5860f4;
 $color-light-beige: #f8f7f0;
 $color-light-beige_2: #f0efe8;
 $color-tan: #dc9d7e;
 $color-accent-blue: #eceffc;
-$color-blue: #4368e8;
+$color-blue: #5660FE;
 $color-darker-blue: #294ECE;
 $color-gray: #808080;
 $color-light-gray: #eceffc;
@@ -55,7 +54,7 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    color: $color-purple;
+    color: $color-black;
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin: 3rem 0 1rem 0;
@@ -76,7 +75,7 @@ body {
     color: #000;
     line-height: 24px;
     letter-spacing: -0.01em;
-    margin: 3rem 0 4rem 0;
+    margin: 3rem 0 1rem 0;
     // padding: 0 1.25rem;
 
     @include desktop {
@@ -113,7 +112,7 @@ body {
     text-align: center;
     font-size: 2.25rem;
     font-weight: 700;
-    color: $color-purple;
+    color: $color-blue;
     line-height: 1.2;
     letter-spacing: -0.01em;
     margin: 3rem 0 2rem 0;
