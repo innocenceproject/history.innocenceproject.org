@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Make directories
-      - run: |
+        run: |
           mkdir ${GITHUB_WORKSPACE}/${{ env.REPO_SUBDIR }}
           mkdir ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
  
