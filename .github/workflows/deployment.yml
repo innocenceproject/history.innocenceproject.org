@@ -83,7 +83,7 @@ jobs:
           JEKYLL_ENV=production bundle exec jekyll build -V --config _config.yml,_config_gh_main.yml
 
       - name: Optimize Images
-        if: github.ref_name == 'develop'
+        if: github.ref_name == 'main'
         run: |
           cd ${GITHUB_WORKSPACE}/${{ env.WEBROOT_SUBDIR }}
           bundle exec image_optim --no-svgo --no-pngcrush --no-oxipng --no-jhead --no-gifsicle --no-jpegtran --no-advpng --no-pngout --no-pngquant --verbose --timeout 3 --recursive ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}/assets/images/
