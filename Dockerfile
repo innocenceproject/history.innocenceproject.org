@@ -3,7 +3,7 @@ FROM ten7/flightdeck-web-8.0
 USER root
 
 RUN apk update
-RUN apk add --no-cache make ruby ruby-dev ruby-dbg gcc build-base nodejs
+RUN apk add --no-cache make ruby ruby-dev ruby-dbg gcc build-base nodejs jpegoptim optipng 
 ADD --chown=apache:apache ./scripts/.bashrc /var/www/
 
 ADD ./scripts/jekyll-setup.sh /usr/local/bin/
