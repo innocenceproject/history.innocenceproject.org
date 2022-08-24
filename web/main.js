@@ -7,7 +7,7 @@ window.addEventListener("load", highlightHero);
 sideTimeline();
 
 // set social-container height
-setSocialContainerHeight();
+//setSocialContainerHeight();
 
 // check the scroll position on page load:
 textFadeIn(); 
@@ -29,11 +29,11 @@ function sideTimeline() {
     // get page height
     const body = document.body;
     const html = document.documentElement;
-    const pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+    //const pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
     // set .sidebar-timeline height to .94% of page height
-    const timeline = document.querySelector('.sidebar-timeline');
-    timeline.style.height = (pageHeight * .94) + 'px';
+    //const timeline = document.querySelector('.sidebar-timeline');
+    //timeline.style.height = (pageHeight * .94) + 'px';
 
     const blocks = document.querySelectorAll('[data-year]');
     const sideTimelineYears = document.querySelectorAll('nav li');

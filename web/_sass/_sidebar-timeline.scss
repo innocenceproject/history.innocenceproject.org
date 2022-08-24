@@ -1,14 +1,18 @@
 .sidebar-timeline {
-    display: none;
-    position: absolute;
-    right: 100%;
-    
+    display: flex;
+    flex-direction: column;
+    //position: absolute;
+    position: sticky;
+    top: 1vh;
+    left: 1vh;
     line-height: 1.8;
-    transform: translate(-50px, 0px);
-    height: 0; // set in main.js
+    // transform: translate(-50px, 0px);
+    height: 100%; // important for stopping at the footer!
+    overflow: scroll;
 
     @include fullhd {
-        display: block;
+        //display: block;
+        position: sticky;
 
         @media (min-height: 810px) {
             line-height: 2.0;
@@ -17,6 +21,11 @@
         @media (min-height: 950px) {
             line-height: 2.2;
         }
+
+    }
+
+    ul {
+    
     }
 
     li {
@@ -34,7 +43,8 @@
     .sticky-container {
         position: -webkit-sticky;
         position: sticky;
-        top: 20px;
+        top: 1vh;
+
     }
 
     

@@ -10,14 +10,14 @@
     color: $color-gray;
 
     @include fullhd {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 0; // set in main.js
-        margin: 2.5rem 0 0 0;
+        position: sticky;
+        bottom: 1vh;
+        right: 1vh;
+        height: 100%;
+        margin: 0;
         flex-direction: column;
         font-size: 1rem;
-        transform: translate(91px, -23px);
+        // transform: translate(91px, -23px);
     }
 
     .sticky-container {
@@ -30,7 +30,8 @@
             
             position: -webkit-sticky;
             position: sticky;
-            top: 77vh;
+            bottom: 1vh;
+            right: 1vh;
         }
 
     }
