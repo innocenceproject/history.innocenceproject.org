@@ -12,6 +12,15 @@ highlightText();
 eyebrowDots();
 
 function sideTimeline() {
+    // get page height
+    const body = document.body;
+    const html = document.documentElement;
+    const pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+    // set .sidebar-timeline height to .94% of page height
+    const timeline = document.querySelector('.sidebar-timeline');
+    timeline.style.height = (pageHeight * .94) + 'px';
+
     const blocks = document.querySelectorAll('[data-year]');
     const sideTimelineYears = document.querySelectorAll('nav li');
     const yearsArray = Array.from(sideTimelineYears);
