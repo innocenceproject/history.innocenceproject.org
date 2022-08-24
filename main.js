@@ -6,10 +6,24 @@ window.addEventListener("load", highlightHero);
 // enable side timeline
 sideTimeline();
 
+// set social-container height
+setSocialContainerHeight();
+
 // check the scroll position on page load:
 textFadeIn(); 
 highlightText(); 
 eyebrowDots();
+
+function setSocialContainerHeight() {
+    // get page height
+    const body = document.body;
+    const html = document.documentElement;
+    const pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+    // set .social-container height to .94% of page height
+    const socialContainer = document.querySelector('.social-container');
+    socialContainer.style.height = (pageHeight * .94) + 'px';
+}
 
 function sideTimeline() {
     // get page height
