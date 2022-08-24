@@ -4087,7 +4087,9 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .social-container { display: flex; align-items: center; width: fit-content; text-transform: uppercase; text-align: center; margin: 2.5rem auto; gap: .75rem; font-size: .75rem; color: #808080; }
 
-@media screen and (min-width: 1408px) { .social-container { position: absolute; right: 0; top: 0; height: 100rem; margin: 2.5rem 0 0 0; flex-direction: column; font-size: 1rem; transform: translate(91px, 1190px); } }
+@media screen and (min-width: 1408px) { .social-container { position: absolute; right: 0; top: 0; height: 0px; margin: 2.5rem 0 0 0; flex-direction: column; font-size: 1rem; transform: translate(91px, 0px); } }
+
+.social-container .sticky-container { position: -webkit-sticky; position: sticky; top: 20px; }
 
 .social-icon-container .circle { border: 1px solid #eceffc; border-radius: 50%; height: 2.5rem; width: 2.5rem; display: flex; align-items: center; justify-content: center; }
 
