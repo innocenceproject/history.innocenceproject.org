@@ -1,11 +1,15 @@
 facebook: 
   url: https://www.facebook.com/innocenceproject/
+  share-url: https://www.facebook.com/sharer/sharer.php?u=https%3A//history.innocenceproject.org/
   icon: /assets/images/icons/facebook-logo.svg
+  icon-blue: /assets/images/icons/facebook-logo-blue.svg
   alt: Facebook logo
   target: _blank
 twitter: 
   url: https://twitter.com/innocence
+  share-url: https://twitter.com/intent/tweet?text=https%3A//www.facebook.com/sharer/sharer.php?u=https%253A//history.innocenceproject.org/
   icon: /assets/images/icons/twitter-logo.svg
+  icon-blue: /assets/images/icons/twitter-logo-blue.svg
   alt: Twitter logo
   target: _blank
 instagram: 
@@ -22,4 +26,11 @@ youtube:
   url: https://www.youtube.com/user/innocenceproject
   icon: /assets/images/icons/youtube-logo.svg
   alt: YouTube logo
+  target: _blank
+linkedin:
+  url: https://www.linkedin.com/company/innocence-project/
+  share-url: https://www.linkedin.com/shareArticle?mini=true&url=https%3A//history.innocenceproject.org/&title=History%20of%20Innocence%20Project&summary=Checkout%20this%20timeline%20history%20of%20Innocence%20Project!&source=
+  icon: /assets/images/icons/linkedin-logo.svg
+  icon-blue: /assets/images/icons/linkedin-logo-blue.svg
+  alt: Linkedin logo
   target: _blank

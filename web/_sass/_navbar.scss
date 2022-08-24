@@ -67,7 +67,8 @@
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
-    background-color: $color-purple !important;
+    background-color: $color-blue !important;
+    border: 0;
     position: absolute;
     right: 0;
     top: 0;
@@ -75,6 +76,10 @@
     height: $navbar-height;
     width: 6rem;
     text-decoration: none;
+
+    &:hover {
+        color: #fff;
+    }
 
     @include desktop {
         position: relative;
