@@ -9,7 +9,7 @@
   <section id="timeline" class="timeline">
     {% include sidebar.html %}
     {% assign current_year = "" | split: "" %}
-    <section id="timeline-blocks">
+    <section class="timeline-blocks">
     {% for block in timeline %}
       {% assign index = forloop.index %}
       {% assign block_year = block[0] %}

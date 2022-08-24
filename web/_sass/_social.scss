@@ -4,10 +4,23 @@
     width: fit-content;
     text-transform: uppercase;
     text-align: center;
-    margin: 2.5rem auto;
     gap: .75rem;
     font-size: .75rem;
     color: $color-gray;
+    order:1;
+    flex-direction: row;
+
+    @include desktop {
+        position: sticky;
+        bottom: 1vh;
+        height: 100%;
+        margin: 0;
+        flex-direction: column;
+        align-self: flex-end;
+        order: 3;
+        font-size: 1rem;
+        // transform: translate(91px, -23px);
+    }
 
     @include fullhd {
         position: sticky;
@@ -32,7 +45,6 @@
             position: -webkit-sticky;
             position: sticky;
             bottom: 1vh;
-            right: 1vh;
         }
 
     }

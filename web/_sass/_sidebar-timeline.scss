@@ -8,12 +8,14 @@
     // transform: translate(-50px, 0px);
     height: 100%; // important for stopping at the footer!
     overflow: scroll;
+    order: 1;
 
     @include fullhd {
         //display: block;
         position: sticky;
 
         align-self: flex-start;
+        order: 1;
 
         @media (min-height: 810px) {
             line-height: 2.0;
