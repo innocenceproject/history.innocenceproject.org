@@ -2,8 +2,6 @@
 name: Deployment
 
 env:
-  GH_USER: madeline-holland
-  GH_USER_EMAIL: madeline.holland@ten7.com
   BUILD_SUBDIR: build
   REPO_SUBDIR: src
   WEBROOT_SUBDIR: src/web
@@ -14,7 +12,6 @@ on:
     branches: 
       - main
       - develop
-      - preview
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -23,7 +20,8 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Make directories
+        run: |
           mkdir ${GITHUB_WORKSPACE}/${{ env.REPO_SUBDIR }}
           mkdir ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
  
@@ -40,8 +38,8 @@ jobs:
           ref: gh-pages
           path: ${{ env.BUILD_SUBDIR }}
           
-      - name: Checkout dev or preview build repo
-        if: github.ref_name == ('develop' || 'preview')
+      - name: Checkout dev build repo
+        if: github.ref_name == 'develop'
         uses: actions/checkout@v3
         with:
           ref: gh-pages-${{ github.ref_name }}
@@ -64,8 +62,8 @@ jobs:
           working-directory: ${{env.WEBROOT_SUBDIR}}
           ruby-version: '3.0'
         
-      - name: Build Preview or Develop 
-        if: github.ref_name == ('develop' || 'preview')
+      - name: Build Develop 
+        if: github.ref_name == 'develop'
         run: |
           cd ${GITHUB_WORKSPACE}/${{ env.WEBROOT_SUBDIR }}
           bundle config set --local path 'vendor/bundle'
@@ -82,14 +80,20 @@ jobs:
           bundle install
           bundle exec jekyll clean
           JEKYLL_ENV=production bundle exec jekyll build -V --config _config.yml,_config_gh_main.yml
+
+      - name: Optimize Images
+        if: github.ref_name == 'main'
+        run: |
+          cd ${GITHUB_WORKSPACE}/${{ env.WEBROOT_SUBDIR }}
+          bundle exec image_optim --no-svgo --no-pngcrush --no-oxipng --no-jhead --no-gifsicle --no-jpegtran --no-advpng --no-pngout --no-pngquant --verbose --timeout 3 --recursive ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}/assets/images/
         
       - name: Commit changes
         run: |
           cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           touch .nojekyll
           echo "history.innocenceproject.org" > CNAME
-          git config --global user.email ${{ env.GH_USER_EMAIL }}
-          git config --global user.name ${{ env.GH_USER }}
+          git config --global user.email "$(git log -n 1 --pretty=format:%an)"
+          git config --global user.name "$(git log -n 1 --pretty=format:%ae)"
           git add .
           git commit -a -m "Automated build from commit: $GITHUB_SHA"
         continue-on-error: true
@@ -105,9 +109,3 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
           git push --force origin HEAD:gh-pages-develop
-          
-      - name: Push preview
-        if: ${{ github.ref_name == 'preview' }}
-        run: |
-          cd ${GITHUB_WORKSPACE}/${{ env.BUILD_SUBDIR }}
-          git push --force origin HEAD:gh-pages-preview

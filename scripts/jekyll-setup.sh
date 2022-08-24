@@ -17,4 +17,4 @@ npm ci
 
 cat /etc/motd
 echo "The site is now ready for building!"
-echo "Run: bundle exec jekyll build --watch --incremental to build."
+echo "Run: bundle exec jekyll build --watch to build."

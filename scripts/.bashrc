@@ -4,4 +4,5 @@ export COMPOSER_MEMORY_LIMIT='-1'
 bash -c jekyll-setup.sh
 cd /var/www/src
 # Prevent ansible from changing the last line of the file
+# This is a hack, do not do this.
 return

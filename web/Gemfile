@@ -16,10 +16,15 @@ gem "jekyll", "~> 4.2.2", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "rubyzip", "~> 2.3.0"
+  gem "jekyll-seo-tag", "~> 2.8.0"
 end
 
+# Add image_optimizer
+gem "image_optim", "~> 0.31"
+gem "image_optim_pack" # Does not work locally, but may on GitHub actions.
+
 # Theme gem
-gem "minima", "~> 2.5"
+#gem "minima", "~> 2.5"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
