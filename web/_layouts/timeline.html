@@ -9,6 +9,7 @@
   <section id="timeline" class="timeline">
     {% include sidebar.html %}
     {% assign current_year = "" | split: "" %}
+    <section id="timeline-blocks">
     {% for block in timeline %}
       {% assign index = forloop.index %}
       {% assign block_year = block[0] %}
@@ -23,6 +24,7 @@
     {% endfor %}
     {% include hero_credits.html %}
     {{ content }}
+  </section>
   </section>
   {% include footer.html %}
 </body>

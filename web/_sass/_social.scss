@@ -12,10 +12,11 @@
     @include fullhd {
         position: sticky;
         bottom: 1vh;
-        right: 1vh;
         height: 100%;
         margin: 0;
         flex-direction: column;
+        align-self: flex-end;
+        order: 3;
         font-size: 1rem;
         // transform: translate(91px, -23px);
     }
