@@ -139,7 +139,11 @@ footer {
             justify-content: center;
 
             li {
-                margin-right: 3rem;
+                margin-right: 2rem;
+                
+                @include desktop {
+                    margin-right: 3rem;
+                }
 
                 &:last-child {
                     margin-right: 0;

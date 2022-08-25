@@ -1,7 +1,9 @@
 window.addEventListener("scroll", textFadeIn);
+window.addEventListener("scroll", socialVisibility);
 window.addEventListener("scroll", highlightText);
 window.addEventListener("scroll", eyebrowDots);
 window.addEventListener("load", highlightHero);
+
 
 // enable side timeline
 sideTimeline();
@@ -10,6 +12,55 @@ sideTimeline();
 textFadeIn(); 
 highlightText(); 
 eyebrowDots();
+socialVisibility();
+
+function socialVisibility() {
+    const widescreenSocialContainer = document.querySelector('.social-container.widescreen');
+    const timeline = document.querySelector('.timeline');
+    const photoCredits = document.querySelector('.photo-credits-text');
+
+    const windowHeight = window.innerHeight;
+    const buffer = 100; // px
+
+    const timelineTop = timeline.getBoundingClientRect().top;
+    const photoCreditsTop = photoCredits.getBoundingClientRect().top;
+    
+    function hideSocial() {
+        widescreenSocialContainer.classList.remove("visible");
+        widescreenSocialContainer.classList.add("hidden");
+    }
+
+    function showSocial() {
+        widescreenSocialContainer.classList.remove("hidden");
+        widescreenSocialContainer.classList.add("visible");
+    }
+
+    // hide social container above timeline
+    if (timelineTop > windowHeight) {
+        hideSocial();
+    }
+
+    // show social container at timeline
+    if (timelineTop < windowHeight - buffer) {
+        showSocial();
+    } 
+
+    // hide social container at photo credits
+    if (photoCreditsTop < windowHeight - buffer) {
+        hideSocial();
+    }
+}
+
+function setSocialContainerHeight() {
+    // get page height
+    const body = document.body;
+    const html = document.documentElement;
+    const pageHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+    // set .social-container height to .94% of page height
+    const socialContainer = document.querySelector('.social-container');
+    socialContainer.style.height = (pageHeight * .94) + 'px';
+}
 
 function sideTimeline() {
     // get page height
