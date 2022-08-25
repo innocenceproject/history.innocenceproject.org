@@ -1,3 +1,11 @@
+.widescreen-social-wrapper {
+    display: none;
+
+    @include fullhd {
+        display: block;
+    }
+}
+
 .social-container {
     display: flex;
     align-items: center;
@@ -6,33 +14,24 @@
     text-align: center;
     margin: 2.5rem auto;
     gap: .75rem;
-    font-size: .75rem;
+    font-size: .85rem;
     color: $color-gray;
 
-    @include fullhd {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 0; // set in main.js
-        margin: 2.5rem 0 0 0;
-        flex-direction: column;
-        font-size: 1rem;
-        transform: translate(91px, -23px);
-    }
-
-    .sticky-container {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        
-        @include fullhd {
-            flex-direction: column;
-            
-            position: -webkit-sticky;
-            position: sticky;
-            top: 77vh;
+    &.widescreen {
+        &.hidden {
+            visibility: hidden;
         }
 
+        &.visible {
+            visibility: visible;
+        }
+
+        position: fixed;
+        bottom: 25px;
+        flex-direction: column;
+        transform: translateX(1201px);
+
+        
     }
 }
 

@@ -7,7 +7,7 @@
   {% include hero.html %}
   {% include founding-summary.html %}
   <section id="timeline" class="timeline">
-    {% include sidebar.html %}
+    {% include sidebar-timeline.html %}
     {% assign current_year = "" | split: "" %}
     {% for block in timeline %}
       {% assign index = forloop.index %}
