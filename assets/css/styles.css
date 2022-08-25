@@ -4087,11 +4087,11 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .social-container { display: flex; align-items: center; width: fit-content; text-transform: uppercase; text-align: center; margin: 2.5rem auto; gap: .75rem; font-size: .75rem; color: #808080; }
 
-@media screen and (min-width: 1408px) { .social-container { position: sticky; bottom: 1vh; right: 1vh; height: 100%; margin: 0; flex-direction: column; font-size: 1rem; } }
+@media screen and (min-width: 1408px) { .social-container { position: absolute; right: 0; top: 0; height: 0; margin: 2.5rem 0 0 0; flex-direction: column; font-size: 1rem; transform: translate(91px, -23px); } }
 
 .social-container .sticky-container { display: flex; align-items: center; gap: 1rem; }
 
-@media screen and (min-width: 1408px) { .social-container .sticky-container { flex-direction: column; position: -webkit-sticky; position: sticky; bottom: 1vh; right: 1vh; } }
+@media screen and (min-width: 1408px) { .social-container .sticky-container { flex-direction: column; position: -webkit-sticky; position: sticky; top: 77vh; } }
 
 .social-icon-container .circle { border: 1px solid #eceffc; border-radius: 50%; height: 2.5rem; width: 2.5rem; display: flex; align-items: center; justify-content: center; }
 
@@ -4693,9 +4693,9 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .reveal.active { animation: elementReveal 1s; -webkit-animation: elementReveal 1s; -moz-animation: elementReveal 1s; -o-animation: elementReveal 1s; -ms-animation: elementReveal 1s; animation-fill-mode: forwards; animation-timing-function: ease-out; }
 
-.sidebar-timeline { display: flex; flex-direction: column; position: sticky; top: 1vh; left: 1vh; line-height: 1.8; height: 100%; overflow: scroll; }
+.sidebar-timeline { display: none; position: absolute; right: 100%; line-height: 1.8; transform: translate(-50px, 0px); height: 0; }
 
-@media screen and (min-width: 1408px) { .sidebar-timeline { position: sticky; } }
+@media screen and (min-width: 1408px) { .sidebar-timeline { display: block; } }
 
 @media screen and (min-width: 1408px) and (min-height: 810px) { .sidebar-timeline { line-height: 2.0; } }
 
@@ -4705,7 +4705,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .sidebar-timeline li a { color: #808080; text-decoration: none; }
 
-.sidebar-timeline .sticky-container { position: -webkit-sticky; position: sticky; top: 1vh; }
+.sidebar-timeline .sticky-container { position: -webkit-sticky; position: sticky; top: 20px; }
 
 footer { background-color: #000; color: #fff; padding-top: 4rem; overflow: hidden; }
 
