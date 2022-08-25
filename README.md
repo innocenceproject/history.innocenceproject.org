@@ -2,7 +2,7 @@
 
 ## Adding Content
 
-Video demo: [https://www.loom.com/share/2de13e1553414a0681039de1168eddb4](https://www.loom.com/share/2de13e1553414a0681039de1168eddb4)
+Video demo: [https://www.loom.com/share/1377597c302f4b6cbbe20c0f65d3a066](https://www.loom.com/share/1377597c302f4b6cbbe20c0f65d3a066)
 
 #### Summary:
 - if new content contains an image:
