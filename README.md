@@ -5,18 +5,28 @@
 Video demo: [https://www.loom.com/share/1377597c302f4b6cbbe20c0f65d3a066](https://www.loom.com/share/1377597c302f4b6cbbe20c0f65d3a066)
 
 #### Summary:
-- if new content contains an image:
+- **If new content contains an image:**
     - navigate to `/web/assets/images/timeline`
     - click `Add files`, then `Upload files`
     - drag and drop your image file to upload
     - click `Commit`
-- choose template for new timeline block
+- **Choose template for new timeline block**
     - templates are found in the `/new-content-templates` folder
-    - copy Raw template text
+    - hit 'Copy Raw Text' button to copy template in clipboard
     - create folder and file in the `/web/_timeline` folder for relevant year
-    - paste in completed template
-    - click `Commit` 
+    - paste in template, fill out relevant data
+    - click `Commit`
+    - write summary of commit (ex. 'Added content for 2023.') 
     - Done. Website should update within a few minutes.
+- **If you need to go back or delete**
+    - delete folder if only 1 entry
+        - navigate to folder
+        - in upper right hand area, click 'Delete Folder' button
+        - if asked, provide brief commit summary
+    - if there are multiple time blocks but you only need to delete 1,
+        - navigate to specific year and template file of corresponding timeblock
+        - upper right hand area, click the trash can icon to delete file
+        - if asked, provide brief commit summary
 
 *Example to add content for the year 2023:*
 - navigate to `web` folder above, then `templates` folder
