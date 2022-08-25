@@ -15,6 +15,7 @@ header: Short Test Header
 
 subheader: This is test subheader text. A couple lines here will look great in the timeline block. Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
+# image caption
 description: Description text goes here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quasi, incidunt, consequatur, nisi quia in tempore sit maxime non ratione cupiditate veritatis id quas illum magnam blanditiis rerum. Laboriosam odit sapiente vel vitae quos tempore ab iure labore eaque excepturi eligendi rem et aliquam nemo ipsum veniam voluptates dicta fuga eveniet officiis perspiciatis consequatur, voluptatem doloribus tenetur. Nemo fugit architecto praesentium ducimus qui similique sunt corporis et laborum, obcaecati, nostrum modi itaque inventore molestias molestiae?
 
 eyebrow-header: History
