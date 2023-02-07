@@ -4409,7 +4409,7 @@ body { font-family: aktiv-grotesk, sans-serif; }
 
 .block-black { background-color: #000; }
 
-@media screen and (max-width: 1023px) { .block-black img { width: 25rem; margin: 0 auto; } }
+@media screen and (max-width: 1023px) { .block-black img { width: 30rem; margin: 0 auto; } }
 
 .block-black .timeline-header { color: #fff; line-height: 1.2; }
 
