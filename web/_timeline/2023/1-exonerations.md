@@ -21,7 +21,7 @@ description: In September 2023, Leonard Mack was exonerated of rape and two coun
 eyebrow-header: Restoring Freedom
 
 # white, black, blue, beige, beige2 (default: white)
-theme: blue
+theme: white
 
 # accent-blue, tan, blue, darker-blue, light-beige, light-beige2 (default: light-beige)
 block-left-accent: darker-blue
