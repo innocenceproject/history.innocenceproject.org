@@ -29,7 +29,7 @@ block-left-accent: darker-blue
 # Put image file in web/assets/images/timeline folder
 image: leonard-mack.jpg
 
-image-alt-text: Put image alt text here. Short, accurate description what the image shows, for SEO purposes. 
+image-alt-text: Leonard Mack
 
 has-victory-seal: true
 ---
