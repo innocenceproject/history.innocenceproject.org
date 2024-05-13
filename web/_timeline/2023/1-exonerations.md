@@ -16,7 +16,7 @@ header: Securing Exonerations Across the Country
 subheader: The Innocence Project helps exonerate nine innocent people across states such as New York, Texas, Hawaii, Oklahoma, and Louisiana. They include Leonard Mack, whose wrongful conviction of 47 years is the longest to be vacated based on new DNA evidence known to the organization. 
 
 # image caption
-description: In September 2023, Leonard Mack was exonerated of rape and two counts of criminal possession of a weapon. (Image: Elijah Craig II/Innocence Project)
+description: In September 2023, Leonard Mack was exonerated of rape and two counts of criminal possession of a weapon. Image Elijah Craig II/Innocence Project 
 
 eyebrow-header: Restoring Freedom
 
