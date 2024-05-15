@@ -13,7 +13,7 @@ block-layout: standard
 
 header: Wrongful Conviction on the Big Screen
 
-subheader: <em>Conviction</em>, a biographical drama directed by Tony Goldwyn on exoneree Kenneth Waters, premieres. Mr. Goldwyn later joins the Innocence Project’s board of directors in 2017.
+subheader: <em>Conviction</em>, a biographical drama directed by Tony Goldwyn on exoneree <strong>Kenneth Waters</strong>, premieres. Mr. Goldwyn later joins the Innocence Project’s board of directors in 2017.
 
 # image caption
 description: <em>Conviction</em>, starring Hilary Swank and Sam Rockwell, follows Betty Anne Waters (pictured left) as she works tirelessly to exonerate her brother Kenneth (pictured right). Mr. Waters was wrongly convicted of a 1980 murder in Massachusetts before he was exonerated in 2001.  
