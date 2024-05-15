@@ -13,7 +13,7 @@ block-layout: standard
 
 header: Achieving Vindication in Illinois
 
-subheader: Bennie Starks, one of the Innocence Project’s longest active clients, is exonerated, with the assistance of Schiff Harden LLP and Lake County attorneys Lauren Kaeseberg, John Curnyn, and Jed Stone. Mr. Starks was wrongly convicted of a rape and battery based on invalid bite mark analysis, flawed serology, and hair analysis.
+subheader: <strong>Bennie Starks</strong>, one of the Innocence Project’s longest active clients, is exonerated, with the assistance of Schiff Harden LLP and Lake County attorneys Lauren Kaeseberg, John Curnyn, and Jed Stone. Mr. Starks was wrongly convicted of a rape and battery based on invalid bite mark analysis, flawed serology, and hair analysis.
 # image caption
 description: "Bennie Starks was wrongly incarcerated for 27 years before he was finally exonerated. (Image: Ingrid Bonne/Innocence Project)"
 
