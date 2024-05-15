@@ -13,7 +13,7 @@ block-layout: standard
 
 header: Death-Row Exonerations and a Moratorium on the Death Penalty
 
-subheader: A series of death-row exonerations in Illinois prompts the convening of the National Conference on Wrongful Convictions and the Death Penalty at Northwestern University School of Law. The conference, along with subsequent death-row exonerations that include that of Innocence Project client Ronald Jones, help propel the effort to get a successful moratorium on the death penalty in the state — the nation’s first. 
+subheader: A series of death-row exonerations in Illinois prompts the convening of the National Conference on Wrongful Convictions and the Death Penalty at Northwestern University School of Law. The conference, along with subsequent death-row exonerations that include that of Innocence Project client <strong>Ronald Jones</strong>, help propel the effort to get a successful moratorium on the death penalty in the state — the nation’s first. 
 
 # image caption
 description: In 1989, Ronald Jones was wrongly convicted of rape and murder largely based on eyewitness misidentification, a false confession, and the misapplication of forensic science. Following his conviction, a judge sentenced him to death.   
