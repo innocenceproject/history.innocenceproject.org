@@ -13,7 +13,7 @@ block-layout: standard
 
 header: Exonerations in Mississippi
 
-subheader: The Innocence Project secures the exoneration of Kennedy Brewer, who was sentenced to death based on invalid bite mark comparison evidence. DNA testing identified the actual person who committed the crime, which led to the exonerations of both Mr. Brewer and Levon Brooks, the latter of whom had been serving a life sentence for a related murder and was also represented by the Mississippi Innocence Project. 
+subheader: The Innocence Project secures the exoneration of <strong>Kennedy Brewer</strong>, who was sentenced to death based on invalid bite mark comparison evidence. DNA testing identified the actual person who committed the crime, which led to the exonerations of both Mr. Brewer and <strong>Levon Brooks</strong>, the latter of whom had been serving a life sentence for a related murder and was also represented by the Mississippi Innocence Project. 
 
 # image caption
 description: Kennedy Brewer (pictured second from right) wrongly served 15 years in prison while Levon Brooks (pictured second from left) was wrongly incarcerated for 16 years, before the two were exonerated.
