@@ -13,7 +13,7 @@ block-layout: standard
 
 header: Innocent Men and <em>The Innocent Man</em>
 
-subheader: "Dennis Fritz and Ron Williamson are exonerated of a murder they did not commit. Their case eventually inspires John Grisham’s first nonfiction book, <em>The Innocent Man: Murder and Injustice in a Small Town</em>, which is published in 2006 and becomes a bestseller. Mr. Grisham later becomes an Innocence Project board member." 
+subheader: "<strong>Dennis Fritz</strong> and <strong>Ron Williamson</strong> are exonerated of a murder they did not commit. Their case eventually inspires John Grisham’s first nonfiction book, <em>The Innocent Man: Murder and Injustice in a Small Town</em>, which is published in 2006 and becomes a bestseller. Mr. Grisham later becomes an Innocence Project board member." 
 
 # image caption
 description: Following their wrongful convictions, Dennis Fritz (pictured left) was sentenced to life in prison and Ron Williamson (pictured right) was sentenced to death. They served 11 years in prison before they were exonerated.
