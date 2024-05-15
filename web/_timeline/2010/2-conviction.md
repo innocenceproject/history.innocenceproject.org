@@ -21,7 +21,7 @@ description: <em>Conviction</em>, starring Hilary Swank and Sam Rockwell, follow
 eyebrow-header: Advancing the Movement
 
 # white, black, blue, beige, beige2 (default: white)
-theme: black
+theme: blue
 
 # accent-blue, tan, blue, darker-blue, light-beige, light-beige2 (default: light-beige)
 block-left-accent: white
