@@ -4751,7 +4751,7 @@ footer .partner-logo { margin-bottom: 1.75rem; }
 
 footer .partner-logo > img { width: 107px; height: auto; }
 
-footer .footer-icons { margin-bottom: 1rem; }
+footer .footer-icons { margin-top: 1rem; margin-bottom: 1rem; }
 
 footer .footer-icons ul { display: flex; width: 100%; justify-content: center; }
 
