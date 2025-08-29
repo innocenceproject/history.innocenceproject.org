@@ -28,7 +28,7 @@ theme: beige
 block-left-accent: light-beige
 
 # Put image file in web/assets/images/timeline folder
-image: Renay Lynch.jpg
+image: Renay Lynch.JPG
 
 image-alt-text: Renay Lynch
 
