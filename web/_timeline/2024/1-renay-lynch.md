@@ -13,7 +13,7 @@ block-layout: standard
 
 header: 250th Innocence Project Victory
 
-subheader: <strong>Renay Lynch</strong> who served 24 years in prison after being wrongly convicted of the second-degree murder and first-degree robbery of her landlord, is exonerated. Her exoneration is the Innocence Project's 250th victory.
+subheader: <strong>Renay Lynch</strong>, who served 24 years in prison after being wrongly convicted of the second-degree murder and first-degree robbery of her landlord, is exonerated. Her exoneration is the Innocence Project's 250th victory.
 
 
 # image caption
