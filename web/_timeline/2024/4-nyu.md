@@ -11,6 +11,8 @@ year: 2024
 # Do not change. Example of 'standard' layout: 1992 'Our Founding' block. 
 block-layout: standard
 
+header: A New Partnership
+
 subheader: The Innocence Project launches a partnership with New York University School of Law that expands its capacity and amplifies its impact. 
 
 eyebrow-header: History
