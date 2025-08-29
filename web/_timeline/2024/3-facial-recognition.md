@@ -12,7 +12,7 @@ year: 2024
 block-layout: icon
 
 # options: dna-beige, dna-light-blue, eye-beige, fingerprint-white, fist-blue, law-beige, law-light-blue, law-white, magnifying-glass-beige, magnifying-glass-light-blue, research-white
-icon: law-blue
+icon: law-beige
 
 header: Facial Recognition in Maryland
 
