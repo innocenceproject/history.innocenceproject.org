@@ -27,7 +27,7 @@ theme: white
 block-left-accent: light-beige
 
 # Put image file in web/assets/images/timeline folder
-image: Indiana Eyewitness Identification Reform.jpg
+image: Indiana Eyewitness Identification Reform.jpeg
 
 image-alt-text: Eyewitness identification reform in Indiana
 
