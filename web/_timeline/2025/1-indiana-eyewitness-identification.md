@@ -16,7 +16,7 @@ header: Eyewitness Identification Reform in Indiana
 subheader: Indiana becomes the first state to adopt guidelines for the use of facial recognition technology, which has increasingly contributed to wrongful arrests. 
 
 # image caption
-description: Working with exoneree Leon Benson, as well as the Notre Dame Exoneration Justice Clinic and the Indiana Public Defenders Council, we secured Indiana's first eyewitness identification reform. (Image: Courtesy of the Innocence Project)
+description: "Working with exoneree Leon Benson, as well as the Notre Dame Exoneration Justice Clinic and the Indiana Public Defenders Council, we secured Indiana's first eyewitness identification reform. (Image: Courtesy of the Innocence Project)"
 
 eyebrow-header: Transforming Systems
 
