@@ -13,7 +13,7 @@ block-layout: standard
 
 header: Eyewitness Identification Reform in Indiana
 
-subheader: Indiana becomes the first state to adopt guidelines for the use of facial recognition technology, which has increasingly contributed to wrongful arrests. 
+subheader: Indiana passes a law requiring police to advise witnesses that the accused person may or may not be in the lineup, use fillers that match the witnesses’ description so the accused person doesn’t stand out, and record the witnesses’ confidence level at the time of identification. With the law's passage, Indiana also becomes the first state to adopt guidelines for the use of facial recognition technology, which has increasingly contributed to wrongful arrests. 
 
 # image caption
 description: "Working with exoneree Leon Benson, as well as the Notre Dame Exoneration Justice Clinic and the Indiana Public Defenders Council, we secured Indiana's first eyewitness identification reform. (Image: Courtesy of the Innocence Project)"
